@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+{{ .Hugo.Generator }}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  {{- block "title" . -}}
+  {{ .Site.Title }}
+  {{- end -}}
+</title>
+<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+{{ if (fileExists "layouts/partials/favicons.html") -}}
+{{ partial "favicons.html" . -}}
+{{- end }}
+<link rel="stylesheet" href="{{ "normalize.css?v=5.0.0" | relURL }}">
+<link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
+{{ partial "opengraph.html" . -}}
+{{ partial "twitter_cards.html" . -}}
+</head>
+<body>
+<div class="outer">
+<div class="vertical-line"></div>
+<div class="inner-margin">
+<header class="column-right inherit">
+<div class="content-vertical-center">
+<div class="content-max-width">
+<h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+<p>{{ .Site.Params.Description }}</p>
+</div>
+</div>
+</header>
+</div>
+</div>
+<div class="outer-main">
+<div class="vertical-line"></div>
+<div class="inner-margin">
+<div class="column-right">
+<nav id="global-menu" class="clearfix inherit">
+<ul>
+  <li><a href="{{ "/" | relURL }}">blog</a></li>
+  <li><a href="{{ "about" | relURL }}">about</a></li>
+  <li><a href="{{ "product" | relURL }}">product</a></li>
+</ul>
+</nav>
+<div id="main">
+<div class="content-margin">
+<div class="content-max-width">
+  {{- block "main" . }}
+  {{- end }}
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="column-left">
+<div id="search">
+<form method="GET" action="https://duckduckgo.com">
+  <div class="inner-margin">
+  <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo">
+  <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
+  </div>
+  <button class="search-icon" type="submit">
+  <span class="icon">search</span>
+  </button>
+</form>
+</div>
+<aside id="side-menu">
+<div class="content-margin">
+<section class="inherit">
+<h2>Feeds</h2>
+<a class="rss-icon" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
+</section>
+<section class="tags">
+<h2><a href="{{ "tags" | relURL }}">Tags</a></h2>
+<ul>
+  {{- range $key, $value := .Site.Taxonomies.tags.ByCount }}
+  <li><a href="{{ "tags" | relURL }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  {{- end }}
+</ul>
+</section>
+<section class="archives">
+<h2><a href="{{ "archives" | relURL }}">Archives</a></h2>
+<ul>
+  {{- range $key, $value := first 10 .Site.Taxonomies.archives.Alphabetical.Reverse }}
+  <li><a href="{{ "archives" | relURL }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  {{- end }}
+</ul>
+</section>
+{{ if (fileExists "layouts/partials/banners.html") -}}
+<section>
+<h2>Banners</h2>
+{{ partial "banners.html" . -}}
+</section>
+{{- end }}
+</div>
+</aside>
+</div>
+</div>
+<div class="outer">
+<div class="vertical-line"></div>
+<div class="inner-margin">
+<footer class="column-right">
+<div class="content-vertical-center">
+<div class="content-max-width">
+<p>&copy; {{ .Site.Copyright }}</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body>
+</html>

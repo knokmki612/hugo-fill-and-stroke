@@ -1,0 +1,6 @@
+<video controls>
+  {{- $videos := .Page.Resources.Match ( .Get "src" ) }}
+  {{- range $video := $videos }}
+  {{ with $video }}<source src="{{ .RelPermalink }}">{{ end }}
+  {{- end }}
+</video>

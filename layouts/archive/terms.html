@@ -1,0 +1,14 @@
+{{ define "title" -}}
+  {{ .Title }} - {{ .Site.Title }}
+{{- end }}
+{{- define "main" }}
+<article>
+{{- $data := .Data }}
+<h2>{{ humanize $data.Plural }}</h2>
+<ul>
+  {{- range $key, $value := .Data.Terms.Alphabetical.Reverse }}
+  <li><a href="{{ $data.Plural | relURL }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  {{- end }}
+</ul>
+</article>
+{{- end }}

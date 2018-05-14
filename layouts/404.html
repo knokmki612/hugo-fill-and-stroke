@@ -1,0 +1,9 @@
+{{ define "title" -}}
+  404 Not Found - {{ .Site.Title }}
+{{- end }}
+{{- define "main" }}
+<article>
+<h2>404 Not Found</h2>
+<p>Go back to <a href="{{ "/" | relURL }}">Top page</a></p>
+</article>
+{{- end }}

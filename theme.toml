@@ -1,0 +1,11 @@
+name = "Pencil and Ruler"
+license = "GPLv3"
+licenselink = "https://github.com/knokmki612/hugo-pencil-and-ruler/blob/master/LICENSE"
+description = "A simple design made by a line, for blog"
+homepage = "https://github.com/knokmki612/hugo-pencil-and-ruler/"
+tags = ["blog"]
+min_version = "0.37.1"
+
+[author]
+  name = "knokmki612"
+  homepage = "https://kuno.kdns.info/"
