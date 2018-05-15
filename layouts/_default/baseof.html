@@ -11,7 +11,7 @@
 </title>
 <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 {{ if (fileExists "layouts/partials/favicons.html") -}}
-{{ partial "favicons.html" . -}}
+{{ partialCached "favicons.html" . -}}
 {{- end }}
 <link rel="stylesheet" href="{{ "normalize.css?v=5.0.0" | relURL }}">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
@@ -90,7 +90,7 @@
 {{ if (fileExists "layouts/partials/banners.html") -}}
 <section>
 <h2>Banners</h2>
-{{ partial "banners.html" . -}}
+{{ partialCached "banners.html" . -}}
 </section>
 {{- end }}
 </div>
