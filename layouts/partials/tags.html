@@ -1,0 +1,5 @@
+<ul>
+  {{- range $key, $value := .Site.Taxonomies.tags.ByCount }}
+  <li><a href="{{ "tags" | relURL }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  {{- end }}
+</ul>

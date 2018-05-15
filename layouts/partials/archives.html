@@ -1,0 +1,5 @@
+<ul>
+  {{- range $key, $value := first 10 .Site.Taxonomies.archives.Alphabetical.Reverse }}
+  <li><a href="{{ "archives" | relURL }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  {{- end }}
+</ul>
