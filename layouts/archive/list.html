@@ -4,19 +4,11 @@
 {{ template "_internal/pagination.html" . }}
 {{- range $paginator.Pages }}
 <aside class="clearfix">
-  <div class="social-icon inherit">
-  <a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}&nbsp;-&nbsp;{{ .Site.Title }}" target="_blank"><span class="icon">twitter</span></a>
-  <a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank"><span class="icon">facebook</span></a>
-  <a href="http://b.hatena.ne.jp/entry//{{ .Permalink }}" target="_blank"><span class="icon">hatebu</span></a>
-  </div>
-  <div class="date">
-  <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006/01/02" }}</time>
-  </div>
-  <div class="tags">
-  {{ range $key, $value := .Params.tags -}}
-  {{ if $key }}, {{ end }}<a href="{{ "tags" | relURL }}/{{ . | urlize }}">{{ . }}</a>
-  {{- end }}
-  </div>
+{{ partial "article/share.html" -}}
+<div class="date">
+<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006/01/02" }}</time>
+</div>
+{{ partial "article/tags.html" . -}}
 </aside>
 <article>
 <h2 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
