@@ -16,10 +16,6 @@
 }
 
 .content-margin {
-  margin: 20px 10px;
-}
-
-.content-vertical-center {
   padding: 20px 10px;
 }
 
@@ -91,25 +87,32 @@
 }
 
 header {
+  border-left: solid 1px;
   display: table;
 
   @include max-screen(749px) {
     border-bottom: solid 1px;
+    border-left: none;
     width: 100%;
   }
 }
 
 .global-menu {
   border-bottom: solid 1px;
+  border-left: solid 1px;
 
   @include max-screen(749px) {
+    border-left: none;
     width: 100%;
   }
 }
 
 main {
+  border-left: solid 1px;
+
   @include max-screen(749px) {
     border-bottom: solid 1px;
+    border-left: none;
     width: 100%;
   }
 }
@@ -118,7 +121,7 @@ main {
   border-bottom: solid 1px;
   display: inline-block;
   float: left;
-  height: 50px;
+  height: 51px;
   width: inherit;
 
   @include max-screen(749px) {
@@ -136,9 +139,11 @@ main {
 }
 
 footer {
+  border-left: solid 1px;
   display: table;
 
   @include max-screen(749px) {
+    border-left: none;
     float: left;
     width: 100%;
   }

@@ -20,20 +20,16 @@
 </head>
 <body>
 <div class="outer">
-<div class="vertical-line"></div>
 <div class="inner-margin">
-<header class="column-right inherit">
-<div class="content-vertical-center">
+<header class="column-right inherit content-margin">
 <div class="content-max-width">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
-</div>
 </div>
 </header>
 </div>
 </div>
 <div class="outer-main">
-<div class="vertical-line"></div>
 <div class="inner-margin">
 <div class="column-right">
 <nav class="global-menu clearfix inherit">
@@ -43,12 +39,10 @@
   <li><a href="{{ "product" | relURL }}">product</a></li>
 </ul>
 </nav>
-<main>
-<div class="content-margin">
+<main class="content-margin">
 <div class="content-max-width">
   {{- block "main" . }}
   {{- end }}
-</div>
 </div>
 </main>
 </div>
@@ -65,8 +59,7 @@
   </button>
 </form>
 </div>
-<nav class="side-menu">
-<div class="content-margin">
+<nav class="side-menu content-margin">
 <section class="inherit">
 <h2>Feeds</h2>
 <a class="rss-icon" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
@@ -85,18 +78,14 @@
 {{ partialCached "banners.html" . -}}
 </section>
 {{- end }}
-</div>
-</aside>
+</nav>
 </div>
 </div>
 <div class="outer">
-<div class="vertical-line"></div>
 <div class="inner-margin">
-<footer class="column-right">
-<div class="content-vertical-center">
+<footer class="column-right content-margin">
 <div class="content-max-width">
 <p>&copy; {{ .Site.Copyright }}</p>
-</div>
 </div>
 </footer>
 </div>

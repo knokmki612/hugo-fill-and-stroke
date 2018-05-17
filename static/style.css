@@ -3,6 +3,10 @@ html {
   color: #2c2c2c;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 p,
 dd,
 dt,
@@ -84,10 +88,6 @@ ul ul {
 }
 
 .content-margin {
-  margin: 20px 10px;
-}
-
-.content-vertical-center {
   padding: 20px 10px;
 }
 
@@ -163,29 +163,38 @@ ul ul {
 }
 
 header {
+  border-left: solid 1px;
   display: table;
 }
 
 @media only screen and (max-width: 749px) {
   header {
     border-bottom: solid 1px;
+    border-left: none;
     width: 100%;
   }
 }
 
 .global-menu {
   border-bottom: solid 1px;
+  border-left: solid 1px;
 }
 
 @media only screen and (max-width: 749px) {
   .global-menu {
+    border-left: none;
     width: 100%;
   }
+}
+
+main {
+  border-left: solid 1px;
 }
 
 @media only screen and (max-width: 749px) {
   main {
     border-bottom: solid 1px;
+    border-left: none;
     width: 100%;
   }
 }
@@ -194,7 +203,7 @@ header {
   border-bottom: solid 1px;
   display: inline-block;
   float: left;
-  height: 50px;
+  height: 51px;
   width: inherit;
 }
 
@@ -216,11 +225,13 @@ header {
 }
 
 footer {
+  border-left: solid 1px;
   display: table;
 }
 
 @media only screen and (max-width: 749px) {
   footer {
+    border-left: none;
     float: left;
     width: 100%;
   }
