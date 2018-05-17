@@ -38,15 +38,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.inherit a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.article-title a {
-  text-decoration: none;
-}
-
 pre {
   border: 1px solid;
   overflow: auto;
@@ -76,6 +67,15 @@ ul ul {
 @font-face {
   font-family: "kuno";
   src: url("/kuno.ttf");
+}
+
+.inherit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-title a {
+  text-decoration: none;
 }
 
 .icon {
