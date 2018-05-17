@@ -1,0 +1,33 @@
+{
+  "name": "hugo-pencil-and-ruler",
+  "version": "0.1.0",
+  "description": "hugo theme: A simple design made by a line, for blog",
+  "main": "sass/style.sass",
+  "scripts": {
+    "build": "node-sass sass/ --importer node_modules/node-sass-package-importer/dist/cli.js --output-style expanded --output static/",
+    "start": "node-sass --watch sass/ --importer node_modules/node-sass-package-importer/dist/cli.js --output-style expanded --output static/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
+  },
+  "keywords": [
+    "hugo"
+  ],
+  "author": "knokmki612 <knokmki612@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/knokmki612/hugo-pencil-and-ruler/issues"
+  },
+  "homepage": "https://github.com/knokmki612/hugo-pencil-and-ruler#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "node-sass-package-importer": "^5.1.3",
+    "normalize.css": "^8.0.0",
+    "sass-mediaqueries": "^1.6.1",
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.0"
+  }
+}
