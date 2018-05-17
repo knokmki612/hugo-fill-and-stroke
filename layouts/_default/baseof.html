@@ -36,25 +36,25 @@
 <div class="vertical-line"></div>
 <div class="inner-margin">
 <div class="column-right">
-<nav id="global-menu" class="clearfix inherit">
+<nav class="global-menu clearfix inherit">
 <ul>
   <li><a href="{{ "/" | relURL }}">blog</a></li>
   <li><a href="{{ "about" | relURL }}">about</a></li>
   <li><a href="{{ "product" | relURL }}">product</a></li>
 </ul>
 </nav>
-<div id="main">
+<main>
 <div class="content-margin">
 <div class="content-max-width">
   {{- block "main" . }}
   {{- end }}
 </div>
 </div>
-</div>
+</main>
 </div>
 </div>
 <div class="column-left">
-<div id="search">
+<div class="search">
 <form method="GET" action="https://duckduckgo.com">
   <div class="inner-margin">
   <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo">
@@ -65,7 +65,7 @@
   </button>
 </form>
 </div>
-<aside id="side-menu">
+<nav class="side-menu">
 <div class="content-margin">
 <section class="inherit">
 <h2>Feeds</h2>

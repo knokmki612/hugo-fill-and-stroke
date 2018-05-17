@@ -99,7 +99,7 @@ header {
   }
 }
 
-#global-menu {
+.global-menu {
   border-bottom: solid 1px;
 
   @include max-screen(749px) {
@@ -107,14 +107,14 @@ header {
   }
 }
 
-#main {
+main {
   @include max-screen(749px) {
     border-bottom: solid 1px;
     width: 100%;
   }
 }
 
-#search {
+.search {
   border-bottom: solid 1px;
   display: inline-block;
   float: left;
@@ -126,7 +126,7 @@ header {
   }
 }
 
-#side-menu {
+.side-menu {
   float: left;
 
   @include max-screen(749px) {
@@ -155,29 +155,29 @@ header p {
   margin: 1em 0 0 0;
 }
 
-#global-menu ul {
+.global-menu ul {
   height: 50px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#global-menu li {
+.global-menu li {
   float: left;
   font-size: 18px;
 }
 
-#global-menu a {
+.global-menu a {
   display: block;
   line-height: 1;
   padding: 16px 10px;
 }
 
-#global-menu a:hover {
+.global-menu a:hover {
   background-color: #ccc;
 }
 
-#search .inner-margin {
+.search .inner-margin {
   margin-left: 0;
   margin-right: 70px;
 }

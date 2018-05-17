@@ -169,30 +169,28 @@ header {
 @media only screen and (max-width: 749px) {
   header {
     border-bottom: solid 1px;
-    display: table;
     width: 100%;
   }
 }
 
-#global-menu {
+.global-menu {
   border-bottom: solid 1px;
 }
 
 @media only screen and (max-width: 749px) {
-  #global-menu {
-    border-bottom: solid 1px;
+  .global-menu {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 749px) {
-  #main {
+  main {
     border-bottom: solid 1px;
     width: 100%;
   }
 }
 
-#search {
+.search {
   border-bottom: solid 1px;
   display: inline-block;
   float: left;
@@ -201,17 +199,17 @@ header {
 }
 
 @media only screen and (max-width: 749px) {
-  #search {
+  .search {
     width: 100%;
   }
 }
 
-#side-menu {
+.side-menu {
   float: left;
 }
 
 @media only screen and (max-width: 749px) {
-  #side-menu {
+  .side-menu {
     border-bottom: solid 1px;
     width: 100%;
   }
@@ -223,7 +221,6 @@ footer {
 
 @media only screen and (max-width: 749px) {
   footer {
-    display: table;
     float: left;
     width: 100%;
   }
@@ -240,29 +237,29 @@ header p {
   margin: 1em 0 0 0;
 }
 
-#global-menu ul {
+.global-menu ul {
   height: 50px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#global-menu li {
+.global-menu li {
   float: left;
   font-size: 18px;
 }
 
-#global-menu a {
+.global-menu a {
   display: block;
   line-height: 1;
   padding: 16px 10px;
 }
 
-#global-menu a:hover {
+.global-menu a:hover {
   background-color: #ccc;
 }
 
-#search .inner-margin {
+.search .inner-margin {
   margin-left: 0;
   margin-right: 70px;
 }
