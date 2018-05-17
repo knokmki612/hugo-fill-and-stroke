@@ -20,45 +20,33 @@
 </head>
 <body>
 <div class="outer">
-<div class="inner-margin">
-<header class="column-right inherit content-margin">
+<header class="inherit content-margin">
 <div class="content-max-width">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
 </div>
 </header>
+<div></div>
 </div>
-</div>
-<div class="outer-main">
-<div class="inner-margin">
-<div class="column-right">
-<nav class="global-menu clearfix inherit">
-<ul>
+<div class="outer">
+<nav class="global-menu inherit">
+<ul class="clearfix">
   <li><a href="{{ "/" | relURL }}">blog</a></li>
   <li><a href="{{ "about" | relURL }}">about</a></li>
   <li><a href="{{ "product" | relURL }}">product</a></li>
 </ul>
 </nav>
-<main class="content-margin">
-<div class="content-max-width">
-  {{- block "main" . }}
-  {{- end }}
-</div>
-</main>
-</div>
-</div>
-<div class="column-left">
 <div class="search">
 <form method="GET" action="https://duckduckgo.com">
-  <div class="inner-margin">
   <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
-  </div>
   <button class="search-icon" type="submit">
   <span class="icon">search</span>
   </button>
 </form>
 </div>
+</div>
+<div class="outer -main">
 <nav class="side-menu content-margin">
 <section class="inherit">
 <h2>Feeds</h2>
@@ -79,16 +67,20 @@
 </section>
 {{- end }}
 </nav>
+<main class="content-margin">
+<div class="content-max-width">
+{{- block "main" . }}
+{{- end }}
 </div>
+</main>
 </div>
 <div class="outer">
-<div class="inner-margin">
-<footer class="column-right content-margin">
+<footer class="content-margin">
 <div class="content-max-width">
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
 </footer>
-</div>
+<div></div>
 </div>
 </body>
 </html>
