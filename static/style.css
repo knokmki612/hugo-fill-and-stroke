@@ -299,6 +299,7 @@ footer p {
 
 .social-icon span {
   font-size: 2em;
+  line-height: 1;
 }
 
 .social-icon span:hover {
