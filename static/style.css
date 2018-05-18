@@ -102,6 +102,7 @@ ul ul {
   }
   .outer-main > *:last-child {
     flex: 1;
+    overflow: hidden;
   }
 }
 
@@ -306,10 +307,6 @@ aside {
   justify-content: space-between;
 }
 
-article {
-  overflow: hidden;
-}
-
 article + article {
   border-top: 1px dashed;
   margin-top: 25px;
@@ -347,6 +344,7 @@ article li {
 
 article blockquote {
   line-height: 1.6;
+  overflow: auto;
 }
 
 article video {
@@ -365,7 +363,6 @@ article video {
 }
 
 .pagination {
-  font-size: 16px;
   padding: 0;
   text-align: center;
 }

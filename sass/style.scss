@@ -120,6 +120,7 @@ ul {
 
     > *:last-child {
       flex: 1;
+      overflow: hidden;
     }
   }
 }
@@ -315,7 +316,6 @@ aside {
 }
 
 article {
-  overflow: hidden;
 
   & + & {
     border-top: 1px dashed;
@@ -354,6 +354,7 @@ article {
 
   blockquote {
     line-height: 1.6;
+    overflow: auto;
   }
 
   video {
@@ -373,7 +374,6 @@ article {
 }
 
 .pagination {
-  font-size: 16px;
   padding: 0;
   text-align: center;
 
