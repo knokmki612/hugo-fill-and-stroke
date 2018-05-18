@@ -1,17 +1,11 @@
-html {
-  background-color: #fff;
-  color: #2c2c2c;
-}
-
 * {
   box-sizing: border-box;
 }
 
-p,
-dd,
-dt,
-li,
-table {
+html {
+  background-color: #fff;
+  color: #2c2c2c;
+  font-family: sans-serif;
   font-size: 16px;
 }
 
@@ -78,7 +72,7 @@ ul ul {
   text-decoration: none;
 }
 
-.article-title a {
+.title a {
   text-decoration: none;
 }
 
@@ -87,154 +81,50 @@ ul ul {
   font-feature-settings: "liga";
 }
 
-.content-margin {
-  padding: 20px 10px;
-}
-
-.clearfix:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-@media only screen and (min-width: 750px) {
-  .vertical-line {
-    background-color: #2c2c2c;
-    height: 100%;
-    left: 249px;
-    position: absolute;
-    top: 0;
-    width: 1px;
-  }
-}
-
 @media only screen and (min-width: 750px) {
   .outer {
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
   }
-}
-
-@media only screen and (min-width: 750px) {
-  .outer-main {
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-    min-height: calc(100% - 170px);
-    overflow: hidden;
-    position: relative;
+  .outer > *:first-child {
+    flex: 1;
   }
-}
-
-@media only screen and (min-width: 750px) {
-  .column-right {
-    float: right;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 750px) {
-  .column-left {
+  .outer > *:last-child {
     width: 250px;
   }
-}
-
-@media only screen and (min-width: 750px) {
-  .inner-margin {
-    margin-left: 250px;
+  .outer-main {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 170px);
+  }
+  .outer-main > *:first-child {
+    width: 250px;
+  }
+  .outer-main > *:last-child {
+    flex: 1;
   }
 }
 
-.content-max-width {
+.inner {
   margin: 0 auto;
   max-width: 600px;
 }
 
 @media only screen and (max-width: 749px) {
-  .content-max-width {
+  .inner {
     max-width: 465px;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .content-max-width {
+  .inner {
     margin: 0 calc(50% - 175px) 0 calc(50% - 425px);
-    max-width: 600px;
   }
 }
 
 header {
   border-left: solid 1px;
-  display: table;
-}
-
-@media only screen and (max-width: 749px) {
-  header {
-    border-bottom: solid 1px;
-    border-left: none;
-    width: 100%;
-  }
-}
-
-.global-menu {
-  border-bottom: solid 1px;
-  border-left: solid 1px;
-}
-
-@media only screen and (max-width: 749px) {
-  .global-menu {
-    border-left: none;
-    width: 100%;
-  }
-}
-
-main {
-  border-left: solid 1px;
-}
-
-@media only screen and (max-width: 749px) {
-  main {
-    border-bottom: solid 1px;
-    border-left: none;
-    width: 100%;
-  }
-}
-
-.search {
-  border-bottom: solid 1px;
-  display: inline-block;
-  float: left;
-  height: 51px;
-  width: inherit;
-}
-
-@media only screen and (max-width: 749px) {
-  .search {
-    width: 100%;
-  }
-}
-
-.side-menu {
-  float: left;
-}
-
-@media only screen and (max-width: 749px) {
-  .side-menu {
-    border-bottom: solid 1px;
-    width: 100%;
-  }
-}
-
-footer {
-  border-left: solid 1px;
-  display: table;
-}
-
-@media only screen and (max-width: 749px) {
-  footer {
-    border-left: none;
-    float: left;
-    width: 100%;
-  }
+  padding: 20px 10px;
 }
 
 header h1 {
@@ -248,11 +138,28 @@ header p {
   margin: 1em 0 0 0;
 }
 
+@media only screen and (max-width: 749px) {
+  header {
+    border-left: none;
+  }
+}
+
+.global-menu {
+  border-left: solid 1px;
+  border-top: solid 1px;
+}
+
 .global-menu ul {
   height: 50px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.global-menu ul:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .global-menu li {
@@ -270,24 +177,94 @@ header p {
   background-color: #ccc;
 }
 
-.search .inner-margin {
-  margin-left: 0;
-  margin-right: 70px;
+@media only screen and (max-width: 749px) {
+  .global-menu {
+    border-left: none;
+  }
+}
+
+.search {
+  border-top: solid 1px;
+  display: inline-block;
+  width: 100%;
+}
+
+.search form {
+  display: flex;
+}
+
+@media only screen and (max-width: 749px) {
+  .search {
+    border-top: none;
+  }
+}
+
+.side-menu {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 749px) {
+  .side-menu {
+    align-items: flex-start;
+    border-bottom: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .side-menu section {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .side-menu section:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+main {
+  border-bottom: solid 1px;
+  border-left: solid 1px;
+  border-top: solid 1px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 749px) {
+  main {
+    border-bottom: none;
+    border-left: none;
+  }
+}
+
+footer {
+  border-left: solid 1px;
+  padding: 20px 10px;
+}
+
+footer p {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 749px) {
+  footer {
+    border-left: none;
+    border-top: solid 1px;
+  }
 }
 
 .search-box {
   border: none;
-  float: left;
   height: 30px;
   margin: 10px;
   padding: 0;
-  width: 100%;
+  width: calc(100% - 70px);
 }
 
 .search-icon {
   background: none;
   border: none;
-  float: right;
   line-height: 0;
   padding: 16px;
 }
@@ -316,10 +293,6 @@ header p {
   margin-top: 4px;
 }
 
-.social-icon {
-  float: right;
-}
-
 .social-icon span {
   font-size: 32px;
 }
@@ -328,18 +301,22 @@ header p {
   background: #ccc;
 }
 
+aside {
+  display: flex;
+  justify-content: space-between;
+}
+
 article {
   overflow: hidden;
 }
 
-article + aside {
+article + article {
   border-top: 1px dashed;
   margin-top: 25px;
   padding-top: 25px;
 }
 
 article + .pagination {
-  border: none;
   padding-top: 0;
 }
 
@@ -377,29 +354,14 @@ article video {
 }
 
 .image {
-  font-size: 0;
   margin: 0;
-  padding: 1%;
   text-align: center;
 }
 
 .image img {
   box-sizing: content-box;
   max-height: 50vh;
-}
-
-.video {
-  padding-top: 56.25%;
-  position: relative;
-  width: 100%;
-}
-
-.video iframe {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
 .pagination {
@@ -412,20 +374,12 @@ article video {
   display: inline-block;
 }
 
-.edit-history {
-  text-align: center;
-}
-
 section + section {
   margin-top: 20px;
 }
 
 section h2 {
   font-size: 14px;
-}
-
-.rss-icon span {
-  font-size: 40px;
 }
 
 section ul {
@@ -436,18 +390,15 @@ section ul {
 section li {
   font-size: 14px;
   line-height: 1.4;
-}
-
-.tags li {
   margin: 0.5em 0;
 }
 
-.archives li {
-  margin: 0.5em 0;
+@media only screen and (max-width: 749px) {
+  section li:nth-child(n + 4) {
+    display: none;
+  }
 }
 
-footer p {
-  line-height: 1;
-  margin: 0;
-  text-align: center;
+.rss-icon span {
+  font-size: 40px;
 }

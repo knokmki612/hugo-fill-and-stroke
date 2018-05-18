@@ -12,7 +12,7 @@
 <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 {{ if (fileExists "layouts/partials/favicons.html") -}}
 {{ partialCached "favicons.html" . -}}
-{{- end }}
+{{ end -}}
 <link rel="stylesheet" href="{{ "normalize.css?v=8.0.0" | relURL }}">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
@@ -20,8 +20,8 @@
 </head>
 <body>
 <div class="outer">
-<header class="inherit content-margin">
-<div class="content-max-width">
+<header>
+<div class="inner inherit">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
 </div>
@@ -30,7 +30,7 @@
 </div>
 <div class="outer">
 <nav class="global-menu inherit">
-<ul class="clearfix">
+<ul>
   <li><a href="{{ "/" | relURL }}">blog</a></li>
   <li><a href="{{ "about" | relURL }}">about</a></li>
   <li><a href="{{ "product" | relURL }}">product</a></li>
@@ -46,17 +46,17 @@
 </form>
 </div>
 </div>
-<div class="outer -main">
-<nav class="side-menu content-margin">
+<div class="outer-main">
+<nav class="side-menu">
 <section class="inherit">
 <h2>Feeds</h2>
 <a class="rss-icon" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
 </section>
-<section class="tags">
+<section>
 <h2><a href="{{ "tags" | relURL }}">Tags</a></h2>
 {{ partialCached "tags.html" . -}}
 </section>
-<section class="archives">
+<section>
 <h2><a href="{{ "archives" | relURL }}">Archives</a></h2>
 {{ partialCached "archives.html" . -}}
 </section>
@@ -67,16 +67,16 @@
 </section>
 {{- end }}
 </nav>
-<main class="content-margin">
-<div class="content-max-width">
+<main>
+<div class="inner">
 {{- block "main" . }}
 {{- end }}
 </div>
 </main>
 </div>
 <div class="outer">
-<footer class="content-margin">
-<div class="content-max-width">
+<footer>
+<div class="inner">
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
 </footer>

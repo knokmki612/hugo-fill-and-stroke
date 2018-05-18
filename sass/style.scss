@@ -1,12 +1,91 @@
 @import "~sass-mediaqueries/_media-queries";
-@import "_base";
+
+$color-base: #fff;
+$color-text: #2c2c2c;
+$color-gray: #ccc;
+$size-base: 16px;
+$size-letter-spacing: 0.08em;
+$screen-normal: 750px;
+$screen-large: 1600px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-base;
+  color: $color-text;
+  font-family: sans-serif;
+  font-size: $size-base;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+a {
+
+  &:link {
+    color: #28b;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #168;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: #3af;
+    text-decoration: underline;
+  }
+}
+
+pre {
+  border: 1px solid;
+  overflow: auto;
+  padding: 5px;
+  word-wrap: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 1em 0 1em 0;
+
+  ul {
+    margin: 0;
+  }
+}
+
+@font-face {
+  font-family: "kuno";
+  src: url("/kuno.ttf");
+}
 
 .inherit a {
   color: inherit;
   text-decoration: none;
 }
 
-.article-title a {
+.title a {
   text-decoration: none;
 }
 
@@ -15,65 +94,65 @@
   font-feature-settings: "liga";
 }
 
-.content-margin {
-  padding: 20px 10px;
-}
-
-.clearfix:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-@include min-screen(750px) {
+@include min-screen($screen-normal) {
 
   .outer {
     display: flex;
     flex-direction: row-reverse;
 
-    & > *:first-child {
+    > *:first-child {
       flex: 1;
     }
 
-    & > *:last-child {
+    > *:last-child {
+      width: 250px;
+    }
+  }
+
+  .outer-main {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 170px);
+
+    > *:first-child {
       width: 250px;
     }
 
-    &.-main {
-      flex-direction: row;
-      min-height: calc(100vh - 170px);
-
-      & > *:first-child {
-        flex-grow: initial;
-        width: 250px;
-      }
-
-      & > *:last-child {
-        flex: 1;
-        overflow: hidden;
-        width: initial;
-      }
+    > *:last-child {
+      flex: 1;
     }
   }
 }
 
-.content-max-width {
+.inner {
   margin: 0 auto;
   max-width: 600px;
 
-  @include max-screen(749px) {
+  @include max-screen($screen-normal - 1px) {
     max-width: 465px;
   }
 
-  @include min-screen(1600px) {
+  @include min-screen($screen-large) {
     margin: 0 calc(50% - 175px) 0 calc(50% - 425px);
   }
 }
 
 header {
   border-left: solid 1px;
+  padding: 20px 10px;
 
-  @include max-screen(749px) {
+  h1 {
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1;
+    margin: 1em 0 0 0;
+  }
+
+  @include max-screen($screen-normal - 1px) {
     border-left: none;
   }
 }
@@ -82,7 +161,35 @@ header {
   border-left: solid 1px;
   border-top: solid 1px;
 
-  @include max-screen(749px) {
+  ul {
+    height: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+
+  li {
+    float: left;
+    font-size: 18px;
+  }
+
+  a {
+    display: block;
+    line-height: 1;
+    padding: 16px 10px;
+
+    &:hover {
+      background-color: $color-gray;
+    }
+  }
+
+  @include max-screen($screen-normal - 1px) {
     border-left: none;
   }
 }
@@ -92,7 +199,11 @@ header {
   display: inline-block;
   width: 100%;
 
-  @include max-screen(749px) {
+  form {
+    display: flex;
+  }
+
+  @include max-screen($screen-normal - 1px) {
     border-top: none;
   }
 }
@@ -100,20 +211,21 @@ header {
 .side-menu {
   border-bottom: solid 1px;
   border-top: solid 1px;
+  padding: 10px;
 
-  @include max-screen(749px) {
+  @include max-screen($screen-normal - 1px) {
     align-items: flex-start;
     border-bottom: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 
-    & > section {
+    & section {
       display: inline-block;
       margin: 0 10px;
     }
 
-    & > section:last-child {
+    & section:last-child {
       margin-bottom: 10px;
     }
   }
@@ -123,8 +235,9 @@ main {
   border-bottom: solid 1px;
   border-left: solid 1px;
   border-top: solid 1px;
+  padding: 10px;
 
-  @include max-screen(749px) {
+  @include max-screen($screen-normal - 1px) {
     border-bottom: none;
     border-left: none;
   }
@@ -132,48 +245,18 @@ main {
 
 footer {
   border-left: solid 1px;
+  padding: 20px 10px;
 
-  @include max-screen(749px) {
+  p {
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  @include max-screen($screen-normal - 1px) {
     border-left: none;
     border-top: solid 1px;
   }
-}
-
-header h1 {
-  font-weight: normal;
-  line-height: 1;
-  margin: 0;
-}
-
-header p {
-  line-height: 1;
-  margin: 1em 0 0 0;
-}
-
-.global-menu ul {
-  height: 50px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.global-menu li {
-  float: left;
-  font-size: 18px;
-}
-
-.global-menu a {
-  display: block;
-  line-height: 1;
-  padding: 16px 10px;
-}
-
-.global-menu a:hover {
-  background-color: #ccc;
-}
-
-.search > form {
-  display: flex;
 }
 
 .search-box {
@@ -189,15 +272,15 @@ header p {
   border: none;
   line-height: 0;
   padding: 16px;
-}
 
-.search-icon:hover {
-  background-color: #ccc;
-}
+  &:hover {
+    background-color: $color-gray;
+  }
 
-.search-icon span {
-  font-size: 18px;
-  line-height: 1;
+  span {
+    font-size: 18px;
+    line-height: 1;
+  }
 }
 
 .date {
@@ -216,141 +299,118 @@ header p {
 }
 
 .social-icon {
-  float: right;
+
+  span {
+    font-size: 32px;
+
+    &:hover {
+      background: $color-gray;
+    }
+  }
 }
 
-.social-icon span {
-  font-size: 32px;
-}
-
-.social-icon span:hover {
-  background: #ccc;
+aside {
+  display: flex;
+  justify-content: space-between;
 }
 
 article {
   overflow: hidden;
-}
 
-article + aside {
-  border-top: 1px dashed;
-  margin-top: 25px;
-  padding-top: 25px;
-}
+  & + & {
+    border-top: 1px dashed;
+    margin-top: 25px;
+    padding-top: 25px;
+  }
 
-article + .pagination {
-  border: none;
-  padding-top: 0;
-}
+  & + .pagination {
+    padding-top: 0;
+  }
 
-article h2 {
-  font-weight: normal;
-  line-height: 1.5em;
-  margin: 1em 0;
-  padding: 0;
-}
+  h2 {
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 1em 0;
+    padding: 0;
+  }
 
-article hr {
-  border: 1px inset;
-  margin: 1.5em 0;
-}
+  hr {
+    border: 1px inset;
+    margin: 1.5em 0;
+  }
 
-article h3 {
-  margin: 2em 0 1.5em 0;
-}
+  h3 {
+    margin: 2em 0 1.5em 0;
+  }
 
-article p {
-  line-height: 1.6;
-  margin: 1.5em 0;
-}
+  p {
+    line-height: 1.6;
+    margin: 1.5em 0;
+  }
 
-article li {
-  line-height: 1.6;
-}
+  li {
+    line-height: 1.6;
+  }
 
-article blockquote {
-  line-height: 1.6;
-}
+  blockquote {
+    line-height: 1.6;
+  }
 
-article video {
-  width: 100%;
+  video {
+    width: 100%;
+  }
 }
 
 .image {
-  font-size: 0;
   margin: 0;
-  padding: 1%;
   text-align: center;
-}
 
-.image img {
-  box-sizing: content-box;
-  max-height: 50vh;
-  max-width: 100%;
-}
-
-.video {
-  padding-top: 56.25%;
-  position: relative;
-  width: 100%;
-}
-
-.video iframe {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
+  img {
+    box-sizing: content-box;
+    max-height: 50vh;
+    max-width: 100%;
+  }
 }
 
 .pagination {
   font-size: 16px;
   padding: 0;
   text-align: center;
+
+  li {
+    display: inline-block;
+  }
 }
 
-.pagination li {
-  display: inline-block;
-}
+section {
 
-section + section {
-  margin-top: 20px;
-}
+  & + & {
+    margin-top: 20px;
+  }
 
-section h2 {
-  font-size: 14px;
-}
+  h2 {
+    font-size: 14px;
+  }
 
-.rss-icon span {
-  font-size: 40px;
-}
+  ul {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+  }
 
-section ul {
-  margin: 0.5em 0;
-  padding-left: 1.5em;
-}
+  li {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0.5em 0;
 
-section li {
-  font-size: 14px;
-  line-height: 1.4;
+    @include max-screen($screen-normal - 1px) {
 
-  @include max-screen(749px) {
-
-    &:nth-child(n + 4) {
-      display: none;
+      &:nth-child(n + 4) {
+        display: none;
+      }
     }
   }
 }
 
-.tags li {
-  margin: 0.5em 0;
-}
-
-.archives li {
-  margin: 0.5em 0;
-}
-
-footer p {
-  line-height: 1;
-  margin: 0;
-  text-align: center;
+.rss-icon span {
+  font-size: 40px;
 }
