@@ -4,7 +4,6 @@ $color-base: #fff;
 $color-text: #2c2c2c;
 $color-gray: #ccc;
 $size-base: 16px;
-$size-letter-spacing: 0.08em;
 $screen-normal: 750px;
 $screen-large: 1600px;
 
@@ -17,18 +16,19 @@ html {
   color: $color-text;
   font-family: sans-serif;
   font-size: $size-base;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 a {
@@ -52,7 +52,7 @@ a {
 pre {
   border: 1px solid;
   overflow: auto;
-  padding: 5px;
+  padding: 0.5em;
   word-wrap: normal;
 }
 
@@ -63,12 +63,16 @@ table {
 th,
 td {
   border: 1px solid;
-  padding: 5px;
+  padding: 0.5em;
+}
+
+p {
+  margin: 1em 0;
 }
 
 ul {
   list-style-type: disc;
-  margin: 1em 0 1em 0;
+  margin: 1em 0;
 
   ul {
     margin: 0;
@@ -140,7 +144,7 @@ ul {
 
 header {
   border-left: solid 1px;
-  padding: 20px 10px;
+  padding: 1.25em 0.625em;
 
   h1 {
     font-weight: normal;
@@ -150,7 +154,8 @@ header {
 
   p {
     line-height: 1;
-    margin: 1em 0 0 0;
+    margin: 0;
+    margin-top: 1em;
   }
 
   @include max-screen($screen-normal - 1px) {
@@ -177,13 +182,13 @@ header {
 
   li {
     float: left;
-    font-size: 18px;
+    font-size: 1.125em;
   }
 
   a {
     display: block;
     line-height: 1;
-    padding: 16px 10px;
+    padding: 1rem 0.625rem;
 
     &:hover {
       background-color: $color-gray;
@@ -212,22 +217,18 @@ header {
 .side-menu {
   border-bottom: solid 1px;
   border-top: solid 1px;
-  padding: 10px;
+  padding: 0.625em;
 
   @include max-screen($screen-normal - 1px) {
     align-items: flex-start;
     border-bottom: none;
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0.625em 0;
 
-    & section {
+    section {
       display: inline-block;
-      margin: 0 10px;
-    }
-
-    & section:last-child {
-      margin-bottom: 10px;
+      margin: 0 0.625em;
     }
   }
 }
@@ -236,7 +237,7 @@ main {
   border-bottom: solid 1px;
   border-left: solid 1px;
   border-top: solid 1px;
-  padding: 10px;
+  padding: 0.625em;
 
   @include max-screen($screen-normal - 1px) {
     border-bottom: none;
@@ -246,7 +247,7 @@ main {
 
 footer {
   border-left: solid 1px;
-  padding: 20px 10px;
+  padding: 1.25em 0.625em;
 
   p {
     line-height: 1;
@@ -262,47 +263,47 @@ footer {
 
 .search-box {
   border: none;
-  height: 30px;
-  margin: 10px;
+  height: 1.875em;
+  margin: 0.625em;
   padding: 0;
-  width: calc(100% - 70px);
+  width: calc(100% - 4.375em);
 }
 
 .search-icon {
   background: none;
   border: none;
   line-height: 0;
-  padding: 16px;
+  padding: 1em;
 
   &:hover {
     background-color: $color-gray;
   }
 
   span {
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 1;
   }
 }
 
 .date {
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: bold;
   line-height: 1;
 }
 
 .tags {
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1;
 }
 
 .date + .tags {
-  margin-top: 4px;
+  margin-top: 0.25em;
 }
 
 .social-icon {
 
   span {
-    font-size: 32px;
+    font-size: 2em;
 
     &:hover {
       background: $color-gray;
@@ -316,11 +317,16 @@ aside {
 }
 
 article {
+  line-height: 1.6;
+
+  > * + * {
+    margin: 1.5rem 0;
+  }
 
   & + & {
     border-top: 1px dashed;
-    margin-top: 25px;
-    padding-top: 25px;
+    margin-top: 3em;
+    padding-top: 1.5em;
   }
 
   & + .pagination {
@@ -329,31 +335,14 @@ article {
 
   h2 {
     font-weight: normal;
-    line-height: 1.5em;
-    margin: 1em 0;
-    padding: 0;
   }
 
   hr {
     border: 1px inset;
-    margin: 1.5em 0;
-  }
-
-  h3 {
-    margin: 2em 0 1.5em 0;
-  }
-
-  p {
-    line-height: 1.6;
-    margin: 1.5em 0;
-  }
-
-  li {
-    line-height: 1.6;
   }
 
   blockquote {
-    line-height: 1.6;
+    margin: 0 2.5em;
     overflow: auto;
   }
 
@@ -363,7 +352,6 @@ article {
 }
 
 .image {
-  margin: 0;
   text-align: center;
 
   img {
@@ -385,11 +373,13 @@ article {
 section {
 
   & + & {
-    margin-top: 20px;
+    margin-top: 1em;
   }
 
   h2 {
-    font-size: 14px;
+    font-size: 0.875em;
+    margin: 0;
+    margin-bottom: 0.5rem;
   }
 
   ul {
@@ -398,9 +388,9 @@ section {
   }
 
   li {
-    font-size: 14px;
+    font-size: 0.875em;
     line-height: 1.4;
-    margin: 0.5em 0;
+    margin: 0.375rem 0;
 
     @include max-screen($screen-normal - 1px) {
 
@@ -412,5 +402,6 @@ section {
 }
 
 .rss-icon span {
-  font-size: 40px;
+  font-size: 2.5em;
+  line-height: 1;
 }

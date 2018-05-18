@@ -7,18 +7,19 @@ html {
   color: #2c2c2c;
   font-family: sans-serif;
   font-size: 16px;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 a:link {
@@ -39,7 +40,7 @@ a:hover {
 pre {
   border: 1px solid;
   overflow: auto;
-  padding: 5px;
+  padding: 0.5em;
   word-wrap: normal;
 }
 
@@ -50,12 +51,16 @@ table {
 th,
 td {
   border: 1px solid;
-  padding: 5px;
+  padding: 0.5em;
+}
+
+p {
+  margin: 1em 0;
 }
 
 ul {
   list-style-type: disc;
-  margin: 1em 0 1em 0;
+  margin: 1em 0;
 }
 
 ul ul {
@@ -125,7 +130,7 @@ ul ul {
 
 header {
   border-left: solid 1px;
-  padding: 20px 10px;
+  padding: 1.25em 0.625em;
 }
 
 header h1 {
@@ -136,7 +141,8 @@ header h1 {
 
 header p {
   line-height: 1;
-  margin: 1em 0 0 0;
+  margin: 0;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -165,13 +171,13 @@ header p {
 
 .global-menu li {
   float: left;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 
 .global-menu a {
   display: block;
   line-height: 1;
-  padding: 16px 10px;
+  padding: 1rem 0.625rem;
 }
 
 .global-menu a:hover {
@@ -203,7 +209,7 @@ header p {
 .side-menu {
   border-bottom: solid 1px;
   border-top: solid 1px;
-  padding: 10px;
+  padding: 0.625em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -212,14 +218,11 @@ header p {
     border-bottom: none;
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0.625em 0;
   }
   .side-menu section {
     display: inline-block;
-    margin: 0 10px;
-  }
-  .side-menu section:last-child {
-    margin-bottom: 10px;
+    margin: 0 0.625em;
   }
 }
 
@@ -227,7 +230,7 @@ main {
   border-bottom: solid 1px;
   border-left: solid 1px;
   border-top: solid 1px;
-  padding: 10px;
+  padding: 0.625em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -239,7 +242,7 @@ main {
 
 footer {
   border-left: solid 1px;
-  padding: 20px 10px;
+  padding: 1.25em 0.625em;
 }
 
 footer p {
@@ -257,17 +260,17 @@ footer p {
 
 .search-box {
   border: none;
-  height: 30px;
-  margin: 10px;
+  height: 1.875em;
+  margin: 0.625em;
   padding: 0;
-  width: calc(100% - 70px);
+  width: calc(100% - 4.375em);
 }
 
 .search-icon {
   background: none;
   border: none;
   line-height: 0;
-  padding: 16px;
+  padding: 1em;
 }
 
 .search-icon:hover {
@@ -275,27 +278,27 @@ footer p {
 }
 
 .search-icon span {
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 1;
 }
 
 .date {
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: bold;
   line-height: 1;
 }
 
 .tags {
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1;
 }
 
 .date + .tags {
-  margin-top: 4px;
+  margin-top: 0.25em;
 }
 
 .social-icon span {
-  font-size: 32px;
+  font-size: 2em;
 }
 
 .social-icon span:hover {
@@ -307,10 +310,18 @@ aside {
   justify-content: space-between;
 }
 
+article {
+  line-height: 1.6;
+}
+
+article > * + * {
+  margin: 1.5rem 0;
+}
+
 article + article {
   border-top: 1px dashed;
-  margin-top: 25px;
-  padding-top: 25px;
+  margin-top: 3em;
+  padding-top: 1.5em;
 }
 
 article + .pagination {
@@ -319,31 +330,14 @@ article + .pagination {
 
 article h2 {
   font-weight: normal;
-  line-height: 1.5em;
-  margin: 1em 0;
-  padding: 0;
 }
 
 article hr {
   border: 1px inset;
-  margin: 1.5em 0;
-}
-
-article h3 {
-  margin: 2em 0 1.5em 0;
-}
-
-article p {
-  line-height: 1.6;
-  margin: 1.5em 0;
-}
-
-article li {
-  line-height: 1.6;
 }
 
 article blockquote {
-  line-height: 1.6;
+  margin: 0 2.5em;
   overflow: auto;
 }
 
@@ -352,7 +346,6 @@ article video {
 }
 
 .image {
-  margin: 0;
   text-align: center;
 }
 
@@ -372,11 +365,13 @@ article video {
 }
 
 section + section {
-  margin-top: 20px;
+  margin-top: 1em;
 }
 
 section h2 {
-  font-size: 14px;
+  font-size: 0.875em;
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 section ul {
@@ -385,9 +380,9 @@ section ul {
 }
 
 section li {
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.4;
-  margin: 0.5em 0;
+  margin: 0.375rem 0;
 }
 
 @media only screen and (max-width: 749px) {
@@ -397,5 +392,6 @@ section li {
 }
 
 .rss-icon span {
-  font-size: 40px;
+  font-size: 2.5em;
+  line-height: 1;
 }
