@@ -86,6 +86,12 @@
 <script type="text/javascript">
 const observer = window.lozad();
 observer.observe();
+if(document.getElementsByClassName("twitter-tweet").length > 0) {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://platform.twitter.com/widgets.js";
+  document.body.appendChild(script);
+}
 </script>
 </body>
 </html>
