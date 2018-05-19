@@ -6,7 +6,8 @@
     {{- with .Get "rel" }} rel="{{ . }}"{{ end -}}>
   {{- end }}
   {{- $img := .Page.Resources.GetMatch ( .Get "src" ) -}}
-  <img src="{{ with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" alt="{{ .Get "alt" }}" />
+  <img class="lozad" data-src="{{ with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" alt="{{ .Get "alt" }}" />
+  <noscript><img src="{{ with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" alt="{{ .Get "alt" }}" /></noscript>
   {{- if .Get "link"}}</a>{{ end }}
   {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
   <figcaption>{{ if isset .Params "title" }}<h4>{{ .Get "title" }}</h4>{{ end }}
