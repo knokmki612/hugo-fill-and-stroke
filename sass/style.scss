@@ -3,7 +3,6 @@
 $color-base: #fff;
 $color-text: #2c2c2c;
 $color-gray: #ccc;
-$size-base: 16px;
 $screen-normal: 750px;
 $screen-large: 1600px;
 
@@ -15,8 +14,6 @@ html {
   background-color: $color-base;
   color: $color-text;
   font-family: sans-serif;
-  font-size: $size-base;
-  line-height: 1.2;
 }
 
 h1 {
