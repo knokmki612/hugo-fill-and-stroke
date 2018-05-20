@@ -30,11 +30,7 @@
 </div>
 <div class="outer">
 <nav class="global-menu inherit">
-<ul>
-  <li><a href="{{ "/" | relURL }}">blog</a></li>
-  <li><a href="{{ "about" | relURL }}">about</a></li>
-  <li><a href="{{ "product" | relURL }}">product</a></li>
-</ul>
+{{ partialCached "global-menu.html" . -}}
 </nav>
 <div class="search">
 <form method="GET" action="https://duckduckgo.com">
