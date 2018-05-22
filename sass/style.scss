@@ -6,7 +6,7 @@ $color-gray: #ccc;
 $screen-normal: 750px;
 $screen-large: 1600px;
 $width-side-menu: 15.625em;
-$width-inner: 40em;
+$width-inner: 38em;
 
 * {
   box-sizing: border-box;
@@ -133,7 +133,7 @@ ul {
   max-width: $width-inner;
 
   @include max-screen($screen-normal - 1px) {
-    max-width: $width-inner - 10em;
+    max-width: $width-inner - 8em;
   }
 
   @include min-screen($screen-large) {
