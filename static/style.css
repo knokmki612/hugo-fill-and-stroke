@@ -111,7 +111,7 @@ ul ul {
 
 .inner {
   margin: 0 auto;
-  max-width: 40em;
+  max-width: 38em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -122,7 +122,7 @@ ul ul {
 
 @media only screen and (min-width: 1600px) {
   .inner {
-    margin: 0 calc(50% - 12.1875em) 0 calc(50% - 27.8125em);
+    margin: 0 calc(50% - 11.1875em) 0 calc(50% - 26.8125em);
   }
 }
 
@@ -387,6 +387,10 @@ section li {
   section li:nth-child(n + 4) {
     display: none;
   }
+}
+
+section img {
+  max-width: 100%;
 }
 
 .rss-icon span {
