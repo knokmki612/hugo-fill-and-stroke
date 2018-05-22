@@ -93,15 +93,15 @@ ul ul {
     flex: 1;
   }
   .outer > *:last-child {
-    width: 250px;
+    width: 15.625em;
   }
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 13.625em - 1px);
   }
   .outer-main > *:first-child {
-    width: 250px;
+    width: 15.625em;
   }
   .outer-main > *:last-child {
     flex: 1;
@@ -111,18 +111,18 @@ ul ul {
 
 .inner {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 40em;
 }
 
 @media only screen and (max-width: 749px) {
   .inner {
-    max-width: 465px;
+    max-width: 30em;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .inner {
-    margin: 0 calc(50% - 175px) 0 calc(50% - 425px);
+    margin: 0 calc(50% - 12.1875em) 0 calc(50% - 27.8125em);
   }
 }
 
@@ -155,7 +155,6 @@ header p {
 }
 
 .global-menu ul {
-  height: 50px;
   list-style: none;
   margin: 0;
   padding: 0;

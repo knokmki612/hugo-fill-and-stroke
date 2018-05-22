@@ -5,6 +5,8 @@ $color-text: #2c2c2c;
 $color-gray: #ccc;
 $screen-normal: 750px;
 $screen-large: 1600px;
+$width-side-menu: 15.625em;
+$width-inner: 40em;
 
 * {
   box-sizing: border-box;
@@ -106,17 +108,17 @@ ul {
     }
 
     > *:last-child {
-      width: 250px;
+      width: $width-side-menu;
     }
   }
 
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 13.625em - 1px);
 
     > *:first-child {
-      width: 250px;
+      width: $width-side-menu;
     }
 
     > *:last-child {
@@ -128,14 +130,14 @@ ul {
 
 .inner {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: $width-inner;
 
   @include max-screen($screen-normal - 1px) {
-    max-width: 465px;
+    max-width: $width-inner - 10em;
   }
 
   @include min-screen($screen-large) {
-    margin: 0 calc(50% - 175px) 0 calc(50% - 425px);
+    margin: 0 calc(50% - #{($width-inner - $width-side-menu) / 2}) 0 calc(50% - #{($width-inner + $width-side-menu) / 2});
   }
 }
 
@@ -165,7 +167,6 @@ header {
   border-top: solid 1px;
 
   ul {
-    height: 50px;
     list-style: none;
     margin: 0;
     padding: 0;
