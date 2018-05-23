@@ -98,7 +98,7 @@ ul ul {
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 13.625em - 1px);
+    min-height: calc(100vh - 13.625em - 2px);
   }
   .outer-main > *:first-child {
     width: 15.625em;
@@ -150,6 +150,7 @@ header p {
 }
 
 .global-menu {
+  border-bottom: solid 1px;
   border-left: solid 1px;
   border-top: solid 1px;
 }
@@ -183,11 +184,13 @@ header p {
 
 @media only screen and (max-width: 749px) {
   .global-menu {
+    border-bottom: none;
     border-left: none;
   }
 }
 
 .search {
+  border-bottom: solid 1px;
   border-top: solid 1px;
   display: inline-block;
   width: 100%;
@@ -205,14 +208,12 @@ header p {
 
 .side-menu {
   border-bottom: solid 1px;
-  border-top: solid 1px;
   padding: 0.625em;
 }
 
 @media only screen and (max-width: 749px) {
   .side-menu {
     align-items: flex-start;
-    border-bottom: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0.625em 0;
@@ -226,7 +227,6 @@ header p {
 main {
   border-bottom: solid 1px;
   border-left: solid 1px;
-  border-top: solid 1px;
   padding: 0.625em;
 }
 

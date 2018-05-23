@@ -115,7 +115,7 @@ ul {
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 13.625em - 1px);
+    min-height: calc(100vh - 13.625em - 2px);
 
     > *:first-child {
       width: $width-side-menu;
@@ -163,6 +163,7 @@ header {
 }
 
 .global-menu {
+  border-bottom: solid 1px;
   border-left: solid 1px;
   border-top: solid 1px;
 
@@ -194,11 +195,13 @@ header {
   }
 
   @include max-screen($screen-normal - 1px) {
+    border-bottom: none;
     border-left: none;
   }
 }
 
 .search {
+  border-bottom: solid 1px;
   border-top: solid 1px;
   display: inline-block;
   width: 100%;
@@ -214,12 +217,10 @@ header {
 
 .side-menu {
   border-bottom: solid 1px;
-  border-top: solid 1px;
   padding: 0.625em;
 
   @include max-screen($screen-normal - 1px) {
     align-items: flex-start;
-    border-bottom: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0.625em 0;
@@ -234,7 +235,6 @@ header {
 main {
   border-bottom: solid 1px;
   border-left: solid 1px;
-  border-top: solid 1px;
   padding: 0.625em;
 
   @include max-screen($screen-normal - 1px) {
