@@ -7,7 +7,7 @@
 <h2>{{ humanize $data.Plural }}</h2>
 <ul>
   {{- range $key, $value := .Data.Terms.Alphabetical }}
-  <li><a href="{{ $data.Plural | relURL }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  <li><a href="{{ $data.Plural | relURL }}/{{ $value.Name | urlize }}/">{{ $value.Name }}</a> ({{ $value.Count }})</li>
   {{- end }}
 </ul>
 </article>

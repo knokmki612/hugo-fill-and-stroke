@@ -49,11 +49,11 @@
 <a class="rss-icon" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
 </section>
 <section>
-<h2><a href="{{ "tags" | relURL }}">Tags</a></h2>
+<h2><a href="{{ "tags" | relURL }}/">Tags</a></h2>
 {{ partialCached "tags.html" . -}}
 </section>
 <section>
-<h2><a href="{{ "archives" | relURL }}">Archives</a></h2>
+<h2><a href="{{ "archives" | relURL }}/">Archives</a></h2>
 {{ partialCached "archives.html" . -}}
 </section>
 {{ if (fileExists "layouts/partials/banners.html") -}}
