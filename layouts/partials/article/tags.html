@@ -1,6 +1,5 @@
 <div class="tags">
-{{ range $key, $value := .Params.tags -}}
+{{ range $key, $value := $.Params.tags -}}
 {{ if $key }}, {{ end }}<a href="{{ "tags" | relURL }}/{{ . | urlize }}/">{{ . }}</a>
 {{- end }}
 </div>
-
