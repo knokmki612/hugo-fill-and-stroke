@@ -56,10 +56,6 @@ td {
   padding: 0.5em;
 }
 
-p {
-  margin: 1em 0;
-}
-
 p > a:link {
   text-decoration: underline;
 }
