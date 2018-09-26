@@ -116,6 +116,7 @@ ul ul {
 .inner {
   margin: 0 auto;
   max-width: 38em;
+  padding: 0 0.625em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -132,7 +133,7 @@ ul ul {
 
 header {
   border-left: solid 1rem #eee;
-  padding: 1.25em 0.625em;
+  padding: 1.25em 0;
 }
 
 header h1 {
@@ -231,7 +232,6 @@ header p {
 main {
   border-bottom: solid 1rem #eee;
   border-left: solid 1rem #eee;
-  padding: 0.625em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -243,7 +243,7 @@ main {
 
 footer {
   border-left: solid 1rem #eee;
-  padding: 1.25em 0.625em;
+  padding: 1.25em 0;
 }
 
 footer p {
@@ -313,21 +313,26 @@ aside {
 }
 
 article {
+  margin: 4rem auto;
+  max-width: 38em;
+  padding: 0 0.625em;
   line-height: 1.6;
+}
+
+@media only screen and (max-width: 749px) {
+  article {
+    max-width: 30em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  article {
+    margin: 4rem calc(50% - 11.1875em) 4rem calc(50% - 26.8125em);
+  }
 }
 
 article > * + * {
   margin: 1.5rem 0;
-}
-
-article + article {
-  border-top: 1px dashed;
-  margin-top: 3em;
-  padding-top: 1.5em;
-}
-
-article + .pagination {
-  padding-top: 0;
 }
 
 article h2 {
@@ -336,12 +341,14 @@ article h2 {
 }
 
 article hr {
-  border: 1px inset;
+  border: none;
+  border-top: solid 0.5rem #eee;
 }
 
 article blockquote {
-  margin: 0 2.5em;
+  border-left: solid 0.5rem #eee;
   overflow: auto;
+  padding: 0 2.5em;
 }
 
 article video {
@@ -358,9 +365,30 @@ article video {
   max-width: 100%;
 }
 
+hr {
+  border: none;
+  margin: 0;
+  border-top: solid 1rem #eee;
+}
+
 .pagination {
+  margin: 1rem auto;
+  max-width: 38em;
+  padding: 0 0.625em;
   padding: 0;
   text-align: center;
+}
+
+@media only screen and (max-width: 749px) {
+  .pagination {
+    max-width: 30em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .pagination {
+    margin: 1rem calc(50% - 11.1875em) 1rem calc(50% - 26.8125em);
+  }
 }
 
 .pagination li {

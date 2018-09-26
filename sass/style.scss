@@ -9,21 +9,35 @@ $screen-large: 1600px;
 $width-side-menu: 15.625em;
 $width-inner: 38em;
 
-@mixin border($direction) {
+@mixin border($direction, $width: 1rem) {
   @if str-index($direction, "top") {
-    border-top: solid 1rem $color-light-gray;
+    border-top: solid $width $color-light-gray;
   }
 
   @if str-index($direction,"right") {
-    border-right: solid 1rem $color-light-gray;
+    border-right: solid $width $color-light-gray;
   }
 
   @if str-index($direction, "bottom") {
-    border-bottom: solid 1rem $color-light-gray;
+    border-bottom: solid $width $color-light-gray;
   }
 
   @if str-index($direction, "left") {
-    border-left: solid 1rem $color-light-gray;
+    border-left: solid $width $color-light-gray;
+  }
+}
+
+@mixin inner($vertical-margin: 0) {
+  margin: $vertical-margin auto;
+  max-width: $width-inner;
+  padding: 0 0.625em;
+
+  @include max-screen($screen-normal - 1px) {
+    max-width: $width-inner - 8em;
+  }
+
+  @include min-screen($screen-large) {
+    margin: $vertical-margin calc(50% - #{($width-inner - $width-side-menu) / 2}) $vertical-margin calc(50% - #{($width-inner + $width-side-menu) / 2});
   }
 }
 
@@ -155,22 +169,13 @@ ul {
 }
 
 .inner {
-  margin: 0 auto;
-  max-width: $width-inner;
-
-  @include max-screen($screen-normal - 1px) {
-    max-width: $width-inner - 8em;
-  }
-
-  @include min-screen($screen-large) {
-    margin: 0 calc(50% - #{($width-inner - $width-side-menu) / 2}) 0 calc(50% - #{($width-inner + $width-side-menu) / 2});
-  }
+  @include inner();
 }
 
 header {
   @include border("left");
 
-  padding: 1.25em 0.625em;
+  padding: 1.25em 0;
 
   h1 {
     font-weight: normal;
@@ -261,8 +266,6 @@ header {
 main {
   @include border("bottom left");
 
-  padding: 0.625em;
-
   @include max-screen($screen-normal - 1px) {
     border-bottom: none;
     border-left: none;
@@ -272,7 +275,7 @@ main {
 footer {
   @include border("left");
 
-  padding: 1.25em 0.625em;
+  padding: 1.25em 0;
 
   p {
     line-height: 1;
@@ -344,20 +347,12 @@ aside {
 }
 
 article {
+  @include inner(4rem);
+
   line-height: 1.6;
 
   > * + * {
     margin: 1.5rem 0;
-  }
-
-  & + & {
-    border-top: 1px dashed;
-    margin-top: 3em;
-    padding-top: 1.5em;
-  }
-
-  & + .pagination {
-    padding-top: 0;
   }
 
   h2 {
@@ -366,12 +361,16 @@ article {
   }
 
   hr {
-    border: 1px inset;
+    border: none;
+
+    @include border("top", 0.5rem);
   }
 
   blockquote {
-    margin: 0 2.5em;
+    @include border("left", 0.5rem);
+
     overflow: auto;
+    padding: 0 2.5em;
   }
 
   video {
@@ -389,7 +388,16 @@ article {
   }
 }
 
+hr {
+  border: none;
+  margin: 0;
+
+  @include border("top");
+}
+
 .pagination {
+  @include inner(1rem);
+
   padding: 0;
   text-align: center;
 
