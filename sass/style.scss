@@ -3,10 +3,29 @@
 $color-base: #fff;
 $color-text: #2c2c2c;
 $color-gray: #ccc;
+$color-light-gray: #eee;
 $screen-normal: 750px;
 $screen-large: 1600px;
 $width-side-menu: 15.625em;
 $width-inner: 38em;
+
+@mixin border($direction) {
+  @if str-index($direction, "top") {
+    border-top: solid 1rem $color-light-gray;
+  }
+
+  @if str-index($direction,"right") {
+    border-right: solid 1rem $color-light-gray;
+  }
+
+  @if str-index($direction, "bottom") {
+    border-bottom: solid 1rem $color-light-gray;
+  }
+
+  @if str-index($direction, "left") {
+    border-left: solid 1rem $color-light-gray;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -149,7 +168,8 @@ ul {
 }
 
 header {
-  border-left: solid 1px;
+  @include border("left");
+
   padding: 1.25em 0.625em;
 
   h1 {
@@ -170,9 +190,7 @@ header {
 }
 
 .global-menu {
-  border-bottom: solid 1px;
-  border-left: solid 1px;
-  border-top: solid 1px;
+  @include border("top bottom left");
 
   ul {
     list-style: none;
@@ -208,8 +226,8 @@ header {
 }
 
 .search {
-  border-bottom: solid 1px;
-  border-top: solid 1px;
+  @include border("top bottom");
+
   display: inline-block;
   width: 100%;
 
@@ -223,7 +241,8 @@ header {
 }
 
 .side-menu {
-  border-bottom: solid 1px;
+  @include border("bottom");
+
   padding: 0.625em;
 
   @include max-screen($screen-normal - 1px) {
@@ -240,8 +259,8 @@ header {
 }
 
 main {
-  border-bottom: solid 1px;
-  border-left: solid 1px;
+  @include border("bottom left");
+
   padding: 0.625em;
 
   @include max-screen($screen-normal - 1px) {
@@ -251,7 +270,8 @@ main {
 }
 
 footer {
-  border-left: solid 1px;
+  @include border("left");
+
   padding: 1.25em 0.625em;
 
   p {
@@ -261,8 +281,9 @@ footer {
   }
 
   @include max-screen($screen-normal - 1px) {
+    @include border("top");
+
     border-left: none;
-    border-top: solid 1px;
   }
 }
 

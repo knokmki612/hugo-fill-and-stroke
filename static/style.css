@@ -131,7 +131,7 @@ ul ul {
 }
 
 header {
-  border-left: solid 1px;
+  border-left: solid 1rem #eee;
   padding: 1.25em 0.625em;
 }
 
@@ -154,9 +154,9 @@ header p {
 }
 
 .global-menu {
-  border-bottom: solid 1px;
-  border-left: solid 1px;
-  border-top: solid 1px;
+  border-top: solid 1rem #eee;
+  border-bottom: solid 1rem #eee;
+  border-left: solid 1rem #eee;
 }
 
 .global-menu ul {
@@ -194,8 +194,8 @@ header p {
 }
 
 .search {
-  border-bottom: solid 1px;
-  border-top: solid 1px;
+  border-top: solid 1rem #eee;
+  border-bottom: solid 1rem #eee;
   display: inline-block;
   width: 100%;
 }
@@ -211,7 +211,7 @@ header p {
 }
 
 .side-menu {
-  border-bottom: solid 1px;
+  border-bottom: solid 1rem #eee;
   padding: 0.625em;
 }
 
@@ -229,8 +229,8 @@ header p {
 }
 
 main {
-  border-bottom: solid 1px;
-  border-left: solid 1px;
+  border-bottom: solid 1rem #eee;
+  border-left: solid 1rem #eee;
   padding: 0.625em;
 }
 
@@ -242,7 +242,7 @@ main {
 }
 
 footer {
-  border-left: solid 1px;
+  border-left: solid 1rem #eee;
   padding: 1.25em 0.625em;
 }
 
@@ -254,8 +254,8 @@ footer p {
 
 @media only screen and (max-width: 749px) {
   footer {
+    border-top: solid 1rem #eee;
     border-left: none;
-    border-top: solid 1px;
   }
 }
 
