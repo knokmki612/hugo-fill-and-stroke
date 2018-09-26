@@ -6,8 +6,8 @@ $color-gray: #ccc;
 $color-light-gray: #eee;
 $screen-normal: 750px;
 $screen-large: 1600px;
-$width-side-menu: 15.625em;
-$width-inner: 38em;
+$width-side-menu: 14.375em + 0.625em * 2;
+$width-inner: 38em + 0.625em * 2;
 
 @mixin border($direction, $width: 1rem) {
   @if str-index($direction, "top") {
@@ -159,7 +159,7 @@ ul {
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 13.625em - 2px);
+    min-height: calc(100vh - 13.625em - 2em);
 
     > *:first-child {
       width: $width-side-menu;

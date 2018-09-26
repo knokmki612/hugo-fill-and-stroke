@@ -106,7 +106,7 @@ ul ul {
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 13.625em - 2px);
+    min-height: calc(100vh - 13.625em - 2em);
   }
   .outer-main > *:first-child {
     width: 15.625em;
@@ -119,19 +119,19 @@ ul ul {
 
 .inner {
   margin: 0 auto;
-  max-width: 38em;
+  max-width: 39.25em;
   padding: 0 0.625em;
 }
 
 @media only screen and (max-width: 749px) {
   .inner {
-    max-width: 30em;
+    max-width: 31.25em;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .inner {
-    margin: 0 calc(50% - 11.1875em) 0 calc(50% - 26.8125em);
+    margin: 0 calc(50% - 11.8125em) 0 calc(50% - 27.4375em);
   }
 }
 
@@ -318,20 +318,20 @@ aside {
 
 article {
   margin: 4rem auto;
-  max-width: 38em;
+  max-width: 39.25em;
   padding: 0 0.625em;
   line-height: 1.6;
 }
 
 @media only screen and (max-width: 749px) {
   article {
-    max-width: 30em;
+    max-width: 31.25em;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   article {
-    margin: 4rem calc(50% - 11.1875em) 4rem calc(50% - 26.8125em);
+    margin: 4rem calc(50% - 11.8125em) 4rem calc(50% - 27.4375em);
   }
 }
 
@@ -383,7 +383,7 @@ hr {
 
 .pagination {
   margin: 1rem auto;
-  max-width: 38em;
+  max-width: 39.25em;
   padding: 0 0.625em;
   padding: 0;
   text-align: center;
@@ -391,13 +391,13 @@ hr {
 
 @media only screen and (max-width: 749px) {
   .pagination {
-    max-width: 30em;
+    max-width: 31.25em;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .pagination {
-    margin: 1rem calc(50% - 11.1875em) 1rem calc(50% - 26.8125em);
+    margin: 1rem calc(50% - 11.8125em) 1rem calc(50% - 27.4375em);
   }
 }
 
