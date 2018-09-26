@@ -356,8 +356,15 @@ article {
   }
 
   h2 {
+    @include border("top bottom", 0.5rem);
+
     font-weight: normal;
-    margin: 0;
+  }
+
+  h3 {
+    @include border("bottom", 0.5rem);
+
+    display: inline;
   }
 
   hr {

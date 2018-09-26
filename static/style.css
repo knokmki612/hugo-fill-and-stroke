@@ -336,8 +336,14 @@ article > * + * {
 }
 
 article h2 {
+  border-top: solid 0.5rem #eee;
+  border-bottom: solid 0.5rem #eee;
   font-weight: normal;
-  margin: 0;
+}
+
+article h3 {
+  border-bottom: solid 0.5rem #eee;
+  display: inline;
 }
 
 article hr {
