@@ -40,7 +40,7 @@ a:hover {
 }
 
 pre {
-  border: 1px solid;
+  border: 1px solid #eee;
   overflow: auto;
   padding: 0.5em;
   word-wrap: normal;
@@ -50,9 +50,13 @@ table {
   border-collapse: collapse;
 }
 
+thead {
+  background-color: #eee;
+}
+
 th,
 td {
-  border: 1px solid;
+  border: 1px solid #eee;
   padding: 0.5em;
 }
 

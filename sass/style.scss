@@ -86,7 +86,7 @@ a {
 }
 
 pre {
-  border: 1px solid;
+  border: 1px solid $color-light-gray;
   overflow: auto;
   padding: 0.5em;
   word-wrap: normal;
@@ -96,9 +96,13 @@ table {
   border-collapse: collapse;
 }
 
+thead {
+  background-color: $color-light-gray;
+}
+
 th,
 td {
-  border: 1px solid;
+  border: 1px solid $color-light-gray;
   padding: 0.5em;
 }
 
