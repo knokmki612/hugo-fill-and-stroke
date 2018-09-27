@@ -106,7 +106,7 @@ ul ul {
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 13.625rem - 2rem);
+    min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
   }
   .outer-main > *:first-child {
     width: 15.625rem;
@@ -382,7 +382,7 @@ hr {
 }
 
 .pagination {
-  margin: 1rem auto;
+  margin: 0.625rem auto;
   max-width: 39.25rem;
   padding: 0 0.625rem;
   padding: 0;
@@ -397,7 +397,7 @@ hr {
 
 @media only screen and (min-width: 1600px) {
   .pagination {
-    margin: 1rem calc(50% - 11.8125rem) 1rem calc(50% - 27.4375rem);
+    margin: 0.625rem calc(50% - 11.8125rem) 0.625rem calc(50% - 27.4375rem);
   }
 }
 

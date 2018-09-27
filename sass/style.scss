@@ -159,7 +159,7 @@ ul {
   .outer-main {
     display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 13.625rem - 2rem);
+    min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
 
     > *:first-child {
       width: $width-side-menu;
@@ -407,7 +407,7 @@ hr {
 }
 
 .pagination {
-  @include inner(1rem);
+  @include inner(0.625rem);
 
   padding: 0;
   text-align: center;
