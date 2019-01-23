@@ -21,15 +21,15 @@
 <body>
 <div class="outer">
 <header>
-<div class="inner inherit">
-<h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+<div class="inner">
+<h1><a class="-color-inherit" href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
 </div>
 </header>
 <div></div>
 </div>
 <div class="outer">
-<nav class="global-menu inherit">
+<nav class="global-menu">
 {{ partialCached "global-menu.html" . -}}
 </nav>
 <div class="search">
@@ -44,9 +44,9 @@
 </div>
 <div class="outer-main">
 <nav class="side-menu">
-<section class="inherit">
+<section>
 <h2>Feeds</h2>
-<a class="rss-icon" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
+<a class="rss-icon -color-inherit" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
 </section>
 <section>
 <h2><a href="{{ "tags" | relURL }}/">Tags</a></h2>

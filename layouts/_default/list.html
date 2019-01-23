@@ -4,7 +4,7 @@
 {{ partial "pagination.html" . }}
 {{- range $key, $value := $paginator.Pages }}
 <article>
-<h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<h2><a class="-text-decoration-none" href="{{ .Permalink }}">{{ .Title }}</a></h2>
 <aside>
 <div>
 {{ partial "article/date.html" . -}}
