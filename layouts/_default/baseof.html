@@ -45,6 +45,13 @@
 </div>
 <div class="outer-main">
 <nav class="side-menu">
+<input class="menu-button" type="checkbox">
+<div class="menu-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div class="menu">
 <section>
 <h2>Feeds</h2>
 <a class="rss-icon -color-inherit" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
@@ -63,6 +70,7 @@
 {{ partialCached "banners.html" . -}}
 </section>
 {{- end }}
+</div>
 </nav>
 <main>
 {{- block "main" . }}
