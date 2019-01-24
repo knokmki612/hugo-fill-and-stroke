@@ -169,14 +169,8 @@ header p {
   padding: 0;
 }
 
-.global-menu ul:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
 .global-menu li {
-  float: left;
+  display: inline-block;
   font-size: 1.125rem;
 }
 
