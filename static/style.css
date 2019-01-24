@@ -218,11 +218,7 @@ header p {
 @media only screen and (max-width: 800px) {
   .side-menu {
     border: none;
-    height: 2.875rem;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    padding-top: 0;
   }
 }
 
@@ -287,15 +283,15 @@ hr {
 }
 
 .menu-button {
+  bottom: 0.625rem;
   cursor: pointer;
   display: inline-block;
   height: 2.25rem;
   left: 0.625rem;
   opacity: 0;
-  position: absolute;
-  top: 0.625rem;
+  position: fixed;
   width: 2.5rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu-button:checked ~ .menu-icon > span:first-child {
@@ -323,12 +319,12 @@ hr {
 
 .menu-icon {
   background-color: #eee;
+  bottom: 0.625rem;
   display: inline-block;
   left: 0.625rem;
   padding: 0.5rem;
-  position: absolute;
-  top: 0.625rem;
-  z-index: 1;
+  position: fixed;
+  z-index: 2;
 }
 
 .menu-icon span {
@@ -358,11 +354,11 @@ hr {
     left: 0;
     overflow-y: scroll;
     padding: 0.625rem;
-    padding-top: 3.5rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     transform: translateX(-100%);
     transition: 0.25s ease;
+    z-index: 1;
   }
 }
 
@@ -389,6 +385,12 @@ section li {
 
 section img {
   max-width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  section:last-child {
+    padding-bottom: 3.5rem;
+  }
 }
 
 .rss-icon span {
