@@ -251,7 +251,7 @@ header {
 
   @include max-screen($screen-normal) {
     border: none;
-    padding-top: 0;
+    padding: 0;
   }
 }
 
