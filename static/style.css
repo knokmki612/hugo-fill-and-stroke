@@ -298,10 +298,6 @@ hr {
   z-index: 2;
 }
 
-.menu-button:hover ~ .menu-icon {
-  background-color: #ccc;
-}
-
 .menu-button:checked ~ .menu-icon > span:first-child {
   transform: translateY(0.5rem) rotate(45deg) scaleX(0.75);
 }

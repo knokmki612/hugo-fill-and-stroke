@@ -328,10 +328,6 @@ hr {
   width: 2.5rem;
   z-index: 2;
 
-  &:hover ~ .menu-icon {
-    background-color: $color-gray;
-  }
-
   &:checked ~ .menu-icon > span:first-child {
     transform: translateY(0.5rem) rotate(45deg) scaleX(0.75);
   }
