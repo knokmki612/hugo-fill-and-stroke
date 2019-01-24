@@ -31,13 +31,16 @@ $width-inner: 38rem + 0.625rem * 2;
   margin: $vertical-margin auto;
   max-width: $width-inner;
   padding: 0 0.625rem;
+  transform: none;
+  transition: transform 0.25s ease;
 
   @include max-screen($screen-normal) {
     max-width: $width-inner - 8rem;
+    transition: none;
   }
 
   @include min-screen($screen-large) {
-    margin: $vertical-margin calc(50% - #{($width-inner - $width-side-menu) / 2}) $vertical-margin calc(50% - #{($width-inner + $width-side-menu) / 2});
+    transform: translateX(-$width-side-menu / 2);
   }
 }
 
