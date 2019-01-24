@@ -167,7 +167,6 @@ ul {
 
     > *:last-child {
       flex: 1;
-      overflow: hidden;
     }
   }
 }
@@ -329,7 +328,7 @@ hr {
 
 section {
 
-  & + & {
+  & ~ & {
     margin-top: 1rem;
   }
 
@@ -415,7 +414,7 @@ article {
 
   line-height: 1.6;
 
-  > * + * {
+  > * ~ * {
     margin: 1.5rem 0;
   }
 

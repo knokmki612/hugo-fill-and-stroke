@@ -113,7 +113,6 @@ ul ul {
   }
   .outer-main > *:last-child {
     flex: 1;
-    overflow: hidden;
   }
 }
 
@@ -295,7 +294,7 @@ hr {
   line-height: 1;
 }
 
-section + section {
+section ~ section {
   margin-top: 1rem;
 }
 
@@ -403,7 +402,7 @@ article {
   }
 }
 
-article > * + * {
+article > * ~ * {
   margin: 1.5rem 0;
 }
 
