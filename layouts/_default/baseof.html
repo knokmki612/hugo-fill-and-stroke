@@ -13,6 +13,7 @@
 {{ if (fileExists "layouts/partials/favicons.html") -}}
 {{ partialCached "favicons.html" . -}}
 {{ end -}}
+<link rel="preload" href="{{ "kuno.ttf" | relURL }}" as="font">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
