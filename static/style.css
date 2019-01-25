@@ -39,8 +39,8 @@ a:hover {
   text-decoration: underline;
 }
 
-a.-color-inherit {
-  color: inherit;
+a.-color-unset {
+  color: unset;
   text-decoration: none;
 }
 
@@ -95,24 +95,27 @@ ul ul {
 @media only screen and (min-width: 801px) {
   .outer {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   .outer > *:first-child {
-    flex: 1;
+    width: 15.625rem;
   }
   .outer > *:last-child {
-    width: 15.625rem;
-  }
-  .outer-main {
-    display: flex;
-    flex-direction: row;
-    min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
-  }
-  .outer-main > *:first-child {
-    width: 15.625rem;
-  }
-  .outer-main > *:last-child {
     flex: 1;
+  }
+  .outer.-direction-reverse {
+    flex-direction: row-reverse;
+  }
+  .outer.-direction-reverse > *:first-child {
+    flex: 1;
+    width: unset;
+  }
+  .outer.-direction-reverse > *:last-child {
+    flex: unset;
+    width: 15.625rem;
+  }
+  .outer.-min-height {
+    min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
   }
 }
 
@@ -178,7 +181,7 @@ header p {
 }
 
 .global-menu a {
-  color: inherit;
+  color: unset;
   display: block;
   line-height: 1;
   padding: 1rem 0.625rem;
@@ -310,7 +313,7 @@ hr {
   transform: translateY(-0.5rem) rotate(-45deg) scaleX(0.75);
 }
 
-.menu-button:checked ~ .menu {
+.menu-button:checked ~ .menu-inner {
   transform: none;
 }
 
@@ -350,7 +353,7 @@ hr {
 }
 
 @media only screen and (max-width: 800px) {
-  .menu {
+  .menu-inner {
     border-right: solid 1rem #eee;
     background-color: #fff;
     height: 100vh;

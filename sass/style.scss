@@ -87,8 +87,8 @@ a {
     text-decoration: underline;
   }
 
-  &.-color-inherit {
-    color: inherit;
+  &.-color-unset {
+    color: unset;
     text-decoration: none;
   }
 
@@ -148,21 +148,7 @@ ul {
 
   .outer {
     display: flex;
-    flex-direction: row-reverse;
-
-    > *:first-child {
-      flex: 1;
-    }
-
-    > *:last-child {
-      width: $width-side-menu;
-    }
-  }
-
-  .outer-main {
-    display: flex;
     flex-direction: row;
-    min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
 
     > *:first-child {
       width: $width-side-menu;
@@ -170,6 +156,24 @@ ul {
 
     > *:last-child {
       flex: 1;
+    }
+
+    &.-direction-reverse {
+      flex-direction: row-reverse;
+
+      > *:first-child {
+        flex: 1;
+        width: unset;
+      }
+
+      > *:last-child {
+        flex: unset;
+        width: $width-side-menu;
+      }
+    }
+
+    &.-min-height {
+      min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
     }
   }
 }
@@ -215,7 +219,7 @@ header {
   }
 
   a {
-    color: inherit;
+    color: unset;
     display: block;
     line-height: 1;
     padding: 1rem 0.625rem;
@@ -340,7 +344,7 @@ hr {
     transform: translateY(-0.5rem) rotate(-45deg) scaleX(0.75);
   }
 
-  &:checked ~ .menu {
+  &:checked ~ .menu-inner {
     transform: none;
   }
 
@@ -376,7 +380,7 @@ hr {
   }
 }
 
-.menu {
+.menu-inner {
   @include max-screen($screen-normal) {
     @include border("right");
 
