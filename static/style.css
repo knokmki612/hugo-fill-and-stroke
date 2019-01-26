@@ -199,19 +199,19 @@ header p {
   }
 }
 
-.search {
+.page-search {
   border-top: solid 1rem #eee;
   border-bottom: solid 1rem #eee;
   display: inline-block;
   width: 100%;
 }
 
-.search form {
+.page-search > form {
   display: flex;
 }
 
 @media only screen and (max-width: 800px) {
-  .search {
+  .page-search {
     border-top: none;
   }
 }
@@ -288,7 +288,7 @@ hr {
   line-height: 1;
 }
 
-.menu-button {
+.menu-trigger {
   bottom: 0.625rem;
   cursor: pointer;
   display: inline-block;
@@ -300,25 +300,25 @@ hr {
   z-index: 3;
 }
 
-.menu-button:checked ~ .menu-icon > span:first-child {
+.menu-trigger:checked ~ .menu-icon > span:first-child {
   transform: translateY(0.5rem) rotate(45deg) scaleX(0.75);
 }
 
-.menu-button:checked ~ .menu-icon > span:nth-child(2) {
+.menu-trigger:checked ~ .menu-icon > span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
 
-.menu-button:checked ~ .menu-icon > span:last-child {
+.menu-trigger:checked ~ .menu-icon > span:nth-child(3) {
   transform: translateY(-0.5rem) rotate(-45deg) scaleX(0.75);
 }
 
-.menu-button:checked ~ .menu-inner {
+.menu-trigger:checked ~ .menu-inner {
   transform: none;
 }
 
 @media only screen and (min-width: 801px) {
-  .menu-button {
+  .menu-trigger {
     display: none;
   }
 }
@@ -358,13 +358,18 @@ hr {
     background-color: #fff;
     height: 100vh;
     left: 0;
+    min-width: 50vw;
     overflow-y: scroll;
     padding: 0.625rem;
     position: fixed;
     top: 0;
     transform: translateX(-100%);
-    transition: 0.25s ease;
+    transition: transform 0.25s ease;
     z-index: 1;
+  }
+  .menu-inner > section {
+    margin-left: auto;
+    max-width: 14.375rem;
   }
 }
 

@@ -33,7 +33,7 @@
 <nav class="global-menu">
 {{ partialCached "global-menu.html" . -}}
 </nav>
-<div class="search">
+<div class="page-search">
 <form method="GET" action="https://duckduckgo.com">
   <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
@@ -45,7 +45,7 @@
 </div>
 <div class="outer -min-height">
 <nav class="side-menu">
-<input class="menu-button" type="checkbox">
+<input class="menu-trigger" type="checkbox">
 <div class="menu-icon">
   <span></span>
   <span></span>

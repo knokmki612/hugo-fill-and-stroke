@@ -236,13 +236,13 @@ header {
   }
 }
 
-.search {
+.page-search {
   @include border("top bottom");
 
   display: inline-block;
   width: 100%;
 
-  form {
+  > form {
     display: flex;
   }
 
@@ -320,7 +320,7 @@ hr {
   }
 }
 
-.menu-button {
+.menu-trigger {
   bottom: 0.625rem;
   cursor: pointer;
   display: inline-block;
@@ -340,7 +340,7 @@ hr {
     transform: scaleX(0);
   }
 
-  &:checked ~ .menu-icon > span:last-child {
+  &:checked ~ .menu-icon > span:nth-child(3) {
     transform: translateY(-0.5rem) rotate(-45deg) scaleX(0.75);
   }
 
@@ -387,13 +387,19 @@ hr {
     background-color: $color-base;
     height: 100vh;
     left: 0;
+    min-width: 50vw;
     overflow-y: scroll;
     padding: 0.625rem;
     position: fixed;
     top: 0;
     transform: translateX(-100%);
-    transition: 0.25s ease;
+    transition: transform 0.25s ease;
     z-index: 1;
+
+    > section {
+      margin-left: auto;
+      max-width: $width-side-menu - 1.25rem;
+    }
   }
 }
 
