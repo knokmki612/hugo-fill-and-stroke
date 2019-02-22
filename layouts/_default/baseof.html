@@ -36,7 +36,7 @@
 </nav>
 <div class="page-search">
 <form method="GET" action="https://duckduckgo.com">
-  <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo">
+  <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo" aria-label="type words to search articles">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
   <button class="search-icon" type="submit">
   <span class="icon">search</span>
@@ -46,7 +46,7 @@
 </div>
 <div class="outer -min-height">
 <nav class="side-menu">
-<input class="menu-trigger" type="checkbox">
+<input class="menu-trigger" type="checkbox" aria-label="open/close menu">
 <div class="menu-icon">
   <span></span>
   <span></span>
