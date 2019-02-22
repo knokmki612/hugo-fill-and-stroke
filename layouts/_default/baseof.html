@@ -15,7 +15,7 @@
 {{ partialCached "favicons.html" . -}}
 {{ end -}}
 <link rel="preload" href="{{ "kuno.ttf" | relURL }}" as="font">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" as="style">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
 {{ partial "twitter_cards.html" . -}}
@@ -86,6 +86,7 @@
 </footer>
 <div></div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 <script>
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
   var script = document.createElement("script");
