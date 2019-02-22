@@ -517,7 +517,7 @@ article {
   h3 {
     @include border("bottom", 0.5rem);
 
-    display: inline;
+    display: inline-block;
   }
 
   hr {
