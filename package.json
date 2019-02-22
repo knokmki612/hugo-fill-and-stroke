@@ -4,8 +4,8 @@
   "description": "hugo theme: A simple design made by a line, for blog",
   "main": "sass/style.sass",
   "scripts": {
-    "build": "dart-sass --style expanded --no-source-map sass/:static/",
-    "start": "dart-sass --style expanded --no-source-map --watch sass/:static/"
+    "build": "sass --style expanded --no-source-map sass/:static/",
+    "start": "sass --style expanded --no-source-map --watch sass/:static/"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/knokmki612/hugo-pencil-and-ruler#readme",
   "devDependencies": {
-    "dart-sass": "^1.17.1",
     "normalize.css": "^8.0.0",
+    "sass": "^1.17.1",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1",
