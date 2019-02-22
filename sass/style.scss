@@ -1,5 +1,3 @@
-@import "~sass-mediaqueries/_media-queries";
-
 $color-base: #fff;
 $color-text: #2c2c2c;
 $color-gray: #ccc;
@@ -8,6 +6,18 @@ $screen-normal: 800px;
 $screen-large: 1600px;
 $width-side-menu: 14.375rem + 0.625rem * 2;
 $width-inner: 38rem + 0.625rem * 2;
+
+@mixin max-screen($screen) {
+  @media only screen and (max-width: $screen) {
+    @content;
+  }
+}
+
+@mixin min-screen($screen) {
+  @media only screen and (min-width: $screen + 1px) {
+    @content;
+  }
+}
 
 @mixin border($direction, $width: 1rem) {
   @if str-index($direction, "top") {
@@ -144,7 +154,7 @@ ul {
   font-feature-settings: "liga";
 }
 
-@include min-screen($screen-normal + 1) {
+@include min-screen($screen-normal) {
 
   .outer {
     display: flex;
@@ -348,7 +358,7 @@ hr {
     transform: none;
   }
 
-  @include min-screen($screen-normal + 1px) {
+  @include min-screen($screen-normal) {
     display: none;
   }
 }
@@ -375,7 +385,7 @@ hr {
     }
   }
 
-  @include min-screen($screen-normal + 1px) {
+  @include min-screen($screen-normal) {
     display: none;
   }
 }
