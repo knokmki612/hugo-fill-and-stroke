@@ -165,7 +165,7 @@ ul {
     }
 
     > *:last-child {
-      flex: 1;
+      width: calc(100vw - #{$width-side-menu + 1rem});
     }
 
     &.-direction-reverse {

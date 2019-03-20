@@ -95,7 +95,7 @@ ul ul {
     width: 15.625rem;
   }
   .outer > *:last-child {
-    flex: 1;
+    width: calc(100vw - 16.625rem);
   }
   .outer.-direction-reverse {
     flex-direction: row-reverse;
