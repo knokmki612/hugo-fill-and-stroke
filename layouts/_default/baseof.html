@@ -89,7 +89,7 @@
 <script>
 var setVh = function () {
   document.documentElement
-    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
+    .style.setProperty("--vh", `${window.outerHeight / 100}px`);
 }
 setVh();
 window.addEventListener("resize", setVh);
