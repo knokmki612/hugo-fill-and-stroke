@@ -24,7 +24,7 @@ $width-inner: 38rem + 0.625rem * 2;
     border-top: solid $width $color-light-gray;
   }
 
-  @if str-index($direction,"right") {
+  @if str-index($direction, "right") {
     border-right: solid $width $color-light-gray;
   }
 
