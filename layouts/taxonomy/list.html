@@ -18,5 +18,8 @@
 {{ .Content }}
 </article>
 {{- end }}
+{{- if ne (add $key 1) $paginator.NumberOfElements }}
+<hr>
+{{- end }}
 {{ partial "pagination.html" . }}
 {{- end }}

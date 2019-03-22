@@ -14,7 +14,7 @@
 </aside>
 {{ .Content }}
 </article>
-{{- if ne (add $key 1) $paginator.PageSize }}
+{{- if ne (add $key 1) $paginator.NumberOfElements }}
 <hr>
 {{- end }}
 {{- end }}
