@@ -62,8 +62,6 @@ html {
   background-color: $color-base;
   color: $color-text;
   font-family: sans-serif;
-
-  --vh: 1vh;
 }
 
 h1 {
@@ -545,8 +543,12 @@ article {
 
   img {
     box-sizing: content-box;
-    max-height: calc(var(--vh) * 50);
+    max-height: 400px;
     max-width: 100%;
+
+    @media only screen and (max-height: 400px) {
+      max-height: 200px;
+    }
   }
 }
 

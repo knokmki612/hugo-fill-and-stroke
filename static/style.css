@@ -6,7 +6,6 @@ html {
   background-color: #fff;
   color: #2c2c2c;
   font-family: sans-serif;
-  --vh: 1vh;
 }
 
 h1 {
@@ -473,8 +472,13 @@ article video {
 }
 .image img {
   box-sizing: content-box;
-  max-height: calc(var(--vh) * 50);
+  max-height: 400px;
   max-width: 100%;
+}
+@media only screen and (max-height: 400px) {
+  .image img {
+    max-height: 200px;
+  }
 }
 
 .slide {
