@@ -5,7 +5,7 @@
 {{- $blog := where .Data.Pages "Section" "blog" }}
 {{- $paginator := .Paginate $blog }}
 {{ partial "pagination.html" . }}
-{{- range $paginator.Pages }}
+{{- range $key, $value := $paginator.Pages }}
 <article>
 <h2><a class="-text-decoration-none" href="{{ .Permalink }}">{{ .Title }}</a></h2>
 <aside>
@@ -17,9 +17,9 @@
 </aside>
 {{ .Content }}
 </article>
-{{- end }}
 {{- if ne (add $key 1) $paginator.NumberOfElements }}
 <hr>
+{{- end }}
 {{- end }}
 {{ partial "pagination.html" . }}
 {{- end }}
