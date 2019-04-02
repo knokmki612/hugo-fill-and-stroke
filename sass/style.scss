@@ -168,7 +168,7 @@ ul {
       width: calc(100vw - #{$width-side-menu + 1rem});
     }
 
-    &.-direction-reverse {
+    &.-row-reverse {
       flex-direction: row-reverse;
 
       > *:first-child {
@@ -185,6 +185,14 @@ ul {
     &.-min-height {
       min-height: calc(100vh - 8.625rem - 1.25rem * 4 - 1rem * 2);
     }
+  }
+}
+
+@include max-screen($screen-normal) {
+
+  .outer.-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -267,8 +275,10 @@ header {
   padding: 0.625rem;
 
   @include max-screen($screen-normal) {
-    border: none;
-    padding: 0;
+    @include border("top");
+
+    border-bottom: none;
+    padding: 0.625rem 0 0;
   }
 }
 
@@ -330,110 +340,30 @@ hr {
   }
 }
 
-.menu-trigger {
-  bottom: 0.625rem;
-  cursor: pointer;
-  height: 2.25rem;
-  left: 0.625rem;
-  opacity: 0;
-  position: fixed;
-  width: 7rem;
-  z-index: 3;
-
-  &:checked ~ .menu-icon > span:first-child {
-    transform: translateY(0.5rem) rotate(45deg) scaleX(0.75);
-  }
-
-  &:checked ~ .menu-icon > span:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-
-  &:checked ~ .menu-icon > span:nth-child(3) {
-    transform: translateY(-0.5rem) rotate(-45deg) scaleX(0.75);
-  }
-
-  &:checked ~ .menu-inner {
-    transform: none;
-  }
-
-  @include min-screen($screen-normal) {
-    display: none;
-  }
-}
-
-.menu-icon {
-  background-color: $color-light-gray;
-  bottom: 0.625rem;
-  left: 0.625rem;
-  padding: 0.5rem;
-  position: fixed;
-  z-index: 2;
-
-  span {
-    background-color: $color-text;
-    display: block;
-    height: 0.25rem;
-    transform-origin: center;
-    transition: 0.25s ease;
-    width: 1.5rem;
-
-    & ~ span {
-      margin-top: 0.25rem;
-    }
-  }
-
-  @include min-screen($screen-normal) {
-    display: none;
-  }
-}
-
-.menu-label {
-  align-items: center;
-  background-color: $color-light-gray;
-  bottom: 0.625rem;
-  display: flex;
-  font-weight: bold;
-  height: 2.25rem;
-  justify-content: flex-start;
-  left: 0.625rem + 2.25rem;
-  padding-left: 0.5rem;
-  position: fixed;
-  width: 4.5rem;
-  z-index: 2;
-
-  @include min-screen($screen-normal) {
-    display: none;
-  }
-}
-
 .menu-inner {
   @include max-screen($screen-normal) {
-    @include border("right");
+    @include inner();
 
-    background-color: $color-base;
-    height: 100vh;
-    left: 0;
-    min-width: 50vw;
-    overflow-y: scroll;
-    padding: 0.625rem;
-    position: fixed;
-    top: 0;
-    transform: translateX(-100%);
-    transition: transform 0.25s ease;
-    z-index: 1;
-
-    > section {
-      margin-left: auto;
-      max-width: $width-side-menu - 1.25rem;
-    }
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 section {
+  @include max-screen($screen-normal) {
+    padding-bottom: 0.625rem;
+    padding-right: 0.625rem;
 
-  & ~ & {
-    margin-top: 1rem;
+    &.-width-100pct {
+      width: 100%;
+    }
+  }
+
+  @include min-screen($screen-normal) {
+
+    & ~ & {
+      margin-top: 1rem;
+    }
   }
 
   h2 {
@@ -455,13 +385,6 @@ section {
 
   img {
     max-width: 100%;
-  }
-
-  @include max-screen($screen-normal) {
-
-    &:last-child {
-      padding-bottom: 3.5rem;
-    }
   }
 }
 

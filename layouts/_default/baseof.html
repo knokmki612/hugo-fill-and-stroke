@@ -21,16 +21,16 @@
 {{ partial "twitter_cards.html" . -}}
 </head>
 <body>
-<div class="outer -direction-reverse">
+<div class="outer">
+<div></div>
 <header>
 <div class="inner">
 <h1><a class="-color-unset" href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
 </div>
 </header>
-<div></div>
 </div>
-<div class="outer -direction-reverse">
+<div class="outer -row-reverse">
 <nav class="global-menu">
 {{ partialCached "global-menu.html" . -}}
 </nav>
@@ -44,19 +44,10 @@
 </form>
 </div>
 </div>
-<div class="outer -min-height">
+<div class="outer -min-height -column-reverse">
 <nav class="side-menu">
-<input class="menu-trigger" type="checkbox" aria-label="open/close menu">
-<div class="menu-icon">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-<div class="menu-label">
-  <span>menu</span>
-</div>
 <div class="menu-inner">
-<section>
+<section class="-width-100pct">
 <h2>Feeds</h2>
 <a class="rss-icon -color-unset" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
 </section>
@@ -69,7 +60,7 @@
 {{ partialCached "archives.html" . -}}
 </section>
 {{ if (fileExists "layouts/partials/banners.html") -}}
-<section>
+<section class="-width-100pct">
 <h2>Banners</h2>
 {{ partialCached "banners.html" . -}}
 </section>
@@ -81,13 +72,13 @@
 {{- end }}
 </main>
 </div>
-<div class="outer -direction-reverse">
+<div class="outer">
+<div></div>
 <footer>
 <div class="inner">
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
 </footer>
-<div></div>
 </div>
 <script>
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
