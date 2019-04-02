@@ -333,12 +333,11 @@ hr {
 .menu-trigger {
   bottom: 0.625rem;
   cursor: pointer;
-  display: inline-block;
   height: 2.25rem;
   left: 0.625rem;
   opacity: 0;
   position: fixed;
-  width: 2.5rem;
+  width: 7rem;
   z-index: 3;
 
   &:checked ~ .menu-icon > span:first-child {
@@ -366,7 +365,6 @@ hr {
 .menu-icon {
   background-color: $color-light-gray;
   bottom: 0.625rem;
-  display: inline-block;
   left: 0.625rem;
   padding: 0.5rem;
   position: fixed;
@@ -384,6 +382,25 @@ hr {
       margin-top: 0.25rem;
     }
   }
+
+  @include min-screen($screen-normal) {
+    display: none;
+  }
+}
+
+.menu-label {
+  align-items: center;
+  background-color: $color-light-gray;
+  bottom: 0.625rem;
+  display: flex;
+  font-weight: bold;
+  height: 2.25rem;
+  justify-content: flex-start;
+  left: 0.625rem + 2.25rem;
+  padding-left: 0.5rem;
+  position: fixed;
+  width: 4.5rem;
+  z-index: 2;
 
   @include min-screen($screen-normal) {
     display: none;
