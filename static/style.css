@@ -163,9 +163,24 @@ header p {
   border-left: solid 1rem #eee;
 }
 .global-menu ul {
+  margin: 0 auto;
+  max-width: 39.25rem;
+  padding: 0 0.625rem;
+  transform: none;
+  transition: transform 0.25s ease;
   list-style: none;
-  margin: 0;
   padding: 0;
+}
+@media only screen and (max-width: 800px) {
+  .global-menu ul {
+    max-width: 31.25rem;
+    transition: none;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .global-menu ul {
+    transform: translateX(-7.8125rem);
+  }
 }
 .global-menu li {
   display: inline-block;
@@ -201,6 +216,25 @@ header p {
   .page-search {
     border-top: none;
   }
+  .page-search > form {
+    margin: 0 auto;
+    max-width: 39.25rem;
+    padding: 0 0.625rem;
+    transform: none;
+    transition: transform 0.25s ease;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 800px) and (max-width: 800px) {
+  .page-search > form {
+    max-width: 31.25rem;
+    transition: none;
+  }
+}
+@media only screen and (max-width: 800px) and (min-width: 1601px) {
+  .page-search > form {
+    transform: translateX(-7.8125rem);
+  }
 }
 
 .side-menu {
@@ -211,7 +245,7 @@ header p {
   .side-menu {
     border-top: solid 1rem #eee;
     border-bottom: none;
-    padding: 0.625rem 0 0;
+    padding: 0;
   }
 }
 
@@ -279,6 +313,8 @@ hr {
     transition: transform 0.25s ease;
     display: flex;
     flex-wrap: wrap;
+    padding-right: 0;
+    padding-top: 0.625rem;
   }
 }
 @media only screen and (max-width: 800px) and (max-width: 800px) {
