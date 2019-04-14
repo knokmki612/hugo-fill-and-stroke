@@ -447,7 +447,7 @@ article h2 {
 }
 article h3 {
   border-bottom: solid 0.5rem #eee;
-  display: inline-block;
+  max-width: max-content;
 }
 article hr {
   border: none;

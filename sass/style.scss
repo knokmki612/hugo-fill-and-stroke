@@ -466,7 +466,7 @@ article {
   h3 {
     @include border("bottom", 0.5rem);
 
-    display: inline-block;
+    max-width: max-content;
   }
 
   hr {
