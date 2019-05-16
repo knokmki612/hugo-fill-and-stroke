@@ -366,6 +366,10 @@ section {
     &.-width-100pct {
       width: 100%;
     }
+
+    &.-width-50pct {
+      width: 50%;
+    }
   }
 
   @include min-screen($screen-normal) {
@@ -512,5 +516,15 @@ article {
     position: absolute;
     top: 0;
     width: 100%;
+  }
+}
+
+.taxonomy {
+  column-count: 3;
+  list-style: none;
+  padding-left: 0;
+
+  @include max-screen($screen-normal) {
+    column-count: 2;
   }
 }

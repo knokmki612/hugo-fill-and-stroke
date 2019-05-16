@@ -51,14 +51,14 @@
 <h2>Feeds</h2>
 <a class="rss-icon -color-unset" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
 </section>
-<section>
+<section class="-width-50pct">
 <h2><a href="{{ "tags" | relURL }}/">Tags</a></h2>
 {{ partialCached "tags.html" . -}}
 </section>
 <section>
 <h2><a href="{{ "archives" | relURL }}/">Archives</a></h2>
 {{ partialCached "archives.html" . -}}
-</section>
+</section class="-width-50pct">
 {{ if (fileExists "layouts/partials/banners.html") -}}
 <section class="-width-100pct">
 <h2>Banners</h2>

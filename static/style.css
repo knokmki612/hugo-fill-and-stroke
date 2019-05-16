@@ -337,6 +337,9 @@ hr {
   section.-width-100pct {
     width: 100%;
   }
+  section.-width-50pct {
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 801px) {
   section ~ section {
@@ -487,4 +490,15 @@ article video {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.taxonomy {
+  column-count: 3;
+  list-style: none;
+  padding-left: 0;
+}
+@media only screen and (max-width: 800px) {
+  .taxonomy {
+    column-count: 2;
+  }
 }

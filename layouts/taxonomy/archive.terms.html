@@ -5,7 +5,7 @@
 <article>
 {{- $data := .Data }}
 <h2>All {{ humanize $data.Plural }}</h2>
-<ul>
+<ul class="taxonomy">
   {{- range $key, $value := .Data.Terms.Alphabetical.Reverse }}
   <li><a href="{{ $data.Plural | relURL }}/{{ $value.Name | urlize }}/">{{ $value.Name }}</a> ({{ $value.Count }})</li>
   {{- end }}
