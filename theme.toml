@@ -1,8 +1,8 @@
-name = "Pencil and Ruler"
+name = "Fill and Stroke"
 license = "GPLv3"
-licenselink = "https://github.com/knokmki612/hugo-pencil-and-ruler/blob/master/LICENSE"
-description = "A simple design made by a line, for blog"
-homepage = "https://github.com/knokmki612/hugo-pencil-and-ruler/"
+licenselink = "https://github.com/knokmki612/hugo-fill-and-stroke/blob/master/LICENSE"
+description = "A simple design, for blog"
+homepage = "https://github.com/knokmki612/hugo-fill-and-stroke/"
 tags = ["blog"]
 min_version = "0.37.1"
 
