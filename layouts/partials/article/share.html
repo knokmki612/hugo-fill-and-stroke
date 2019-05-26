@@ -1,5 +1,12 @@
-<div class="social-icon">
-<a class="-color-unset" href="http://twitter.com/share?url={{ $.Permalink }}&text={{ $.Title }}&nbsp;-&nbsp;{{ .Site.Title }}" target="_blank" rel="noopener noreferrer"><span class="icon">twitter</span></a>
-<a class="-color-unset" href="http://www.facebook.com/sharer.php?u={{ $.Permalink }}" target="_blank" rel="noopener noreferrer"><span class="icon">facebook</span></a>
-<a class="-color-unset" href="http://b.hatena.ne.jp/entry/{{ $.Permalink }}" target="_blank" rel="noopener noreferrer"><span class="icon">hatebu</span></a>
+<div class="social-button">
+<a
+  class="button -twitter" href="http://twitter.com/share?url={{ $.Permalink }}&text={{ $.Title }}&nbsp;-&nbsp;{{ .Site.Title }}" target="_blank" rel="noopener noreferrer">
+  <img src="{{ "twitter.svg" | relURL }}" alt="Twitter">Tweet
+</a><a
+  class="button -facebook" href="http://www.facebook.com/sharer.php?u={{ $.Permalink }}" target="_blank" rel="noopener noreferrer">
+  <img src="{{ "facebook.svg" | relURL }}" alt="Facebook">Share
+</a><a
+  class="button -hatenabookmark" href="http://b.hatena.ne.jp/entry/{{ $.Permalink }}" target="_blank" rel="noopener noreferrer">
+  <img src="{{ "hatenabookmark.svg" | relURL }}" alt="はてなブックマーク">ブックマーク
+</a>
 </div>

@@ -77,15 +77,6 @@ ul ul {
   margin: 0;
 }
 
-@font-face {
-  font-family: "kuno";
-  src: url("/kuno.ttf");
-}
-.icon {
-  font-family: "kuno";
-  font-feature-settings: "liga";
-}
-
 @media only screen and (min-width: 801px) {
   .outer {
     display: flex;
@@ -299,9 +290,8 @@ hr {
 .search-icon:hover {
   background-color: #ccc;
 }
-.search-icon span {
-  font-size: 1.125rem;
-  line-height: 1;
+.search-icon img {
+  height: 1.125rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -364,9 +354,8 @@ section img {
   max-width: 100%;
 }
 
-.rss-icon span {
-  font-size: 2.5rem;
-  line-height: 1;
+.rss-icon img {
+  height: 2.5rem;
 }
 
 .pagination {
@@ -393,32 +382,42 @@ section img {
   display: inline-block;
 }
 
-.date {
-  font-size: 0.875rem;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.tags {
+aside {
   font-size: 0.875rem;
   line-height: 1;
 }
-
-.date + .tags {
+aside > * ~ * {
   margin-top: 0.25rem;
 }
+aside .date {
+  font-weight: bold;
+}
 
-.social-icon span {
-  font-size: 2rem;
+.social-button .button {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
   line-height: 1;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+  padding: 0.25rem;
+  text-decoration: none;
 }
-.social-icon span:hover {
-  background: #ccc;
+.social-button .button.-twitter {
+  background-color: #1da1f2;
 }
-
-aside {
-  display: flex;
-  justify-content: space-between;
+.social-button .button.-facebook {
+  background-color: #1877f2;
+}
+.social-button .button.-hatenabookmark {
+  background-color: #00a4de;
+}
+.social-button img {
+  display: inline-block;
+  height: 0.75rem;
+  padding-right: 0.25rem;
+  vertical-align: bottom;
 }
 
 article {

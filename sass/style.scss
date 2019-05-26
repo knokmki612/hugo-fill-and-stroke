@@ -144,16 +144,6 @@ ul {
   }
 }
 
-@font-face {
-  font-family: "kuno";
-  src: url("/kuno.ttf");
-}
-
-.icon {
-  font-family: "kuno";
-  font-feature-settings: "liga";
-}
-
 @include min-screen($screen-normal) {
 
   .outer {
@@ -341,9 +331,8 @@ hr {
     background-color: $color-gray;
   }
 
-  span {
-    font-size: 1.125rem;
-    line-height: 1;
+  img {
+    height: 1.125rem;
   }
 }
 
@@ -403,9 +392,8 @@ section {
 
 .rss-icon {
 
-  span {
-    font-size: 2.5rem;
-    line-height: 1;
+  img {
+    height: 2.5rem;
   }
 }
 
@@ -420,36 +408,51 @@ section {
   }
 }
 
-.date {
-  font-size: 0.875rem;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.tags {
+aside {
   font-size: 0.875rem;
   line-height: 1;
-}
 
-.date + .tags {
-  margin-top: 0.25rem;
-}
+  > * ~ * {
+    margin-top: 0.25rem;
+  }
 
-.social-icon {
-
-  span {
-    font-size: 2rem;
-    line-height: 1;
-
-    &:hover {
-      background: $color-gray;
-    }
+  .date {
+    font-weight: bold;
   }
 }
 
-aside {
-  display: flex;
-  justify-content: space-between;
+.social-button {
+
+  .button {
+    color: #fff;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 0.25rem;
+    text-decoration: none;
+
+    &.-twitter {
+      background-color: #1da1f2;
+    }
+
+    &.-facebook {
+      background-color: #1877f2;
+    }
+
+    &.-hatenabookmark {
+      background-color: #00a4de;
+    }
+  }
+
+  img {
+    display: inline-block;
+    height: 0.75rem;
+    padding-right: 0.25rem;
+    vertical-align: bottom;
+  }
 }
 
 article {

@@ -5,10 +5,8 @@
 <article>
 <h2>{{ .Title }}</h2>
 <aside>
-<div>
 {{ partial "article/date.html" . -}}
 {{ partial "article/tags.html" . -}}
-</div>
 {{ partial "article/share.html" . -}}
 </aside>
 {{ .Content }}

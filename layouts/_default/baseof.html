@@ -14,7 +14,6 @@
 {{ if (fileExists "layouts/partials/favicons.html") -}}
 {{ partialCached "favicons.html" . -}}
 {{ end -}}
-<link rel="preload" href="{{ "kuno.ttf" | relURL }}" as="font">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
@@ -39,7 +38,7 @@
   <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo" aria-label="type words to search articles">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
   <button class="search-icon" type="submit">
-  <span class="icon">search</span>
+  <img src="{{ "search.svg" | relURL }}" alt="Search">
   </button>
 </form>
 </div>
@@ -49,7 +48,7 @@
 <div class="menu-inner">
 <section class="-width-100pct">
 <h2>Feeds</h2>
-<a class="rss-icon -color-unset" href="{{ "blog/index.xml" | relURL }}"><span class="icon">rss</span></a>
+<a class="rss-icon -color-unset" href="{{ "blog/index.xml" | relURL }}"><img src="{{ "rss.svg" | relURL }}" alt="RSS"></a>
 </section>
 <section class="-width-50pct">
 <h2><a href="{{ "tags" | relURL }}/">Tags</a></h2>
