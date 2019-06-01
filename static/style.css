@@ -40,9 +40,6 @@ a.-color-unset {
   color: unset;
   text-decoration: none;
 }
-a.-text-decoration-none {
-  text-decoration: none;
-}
 
 pre {
   border: 1px solid #eee;
