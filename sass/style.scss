@@ -110,6 +110,17 @@ pre {
   word-wrap: normal;
 }
 
+blockquote {
+  @include border("left", 0.5rem);
+
+  overflow: auto;
+  padding: 0 1.5rem;
+}
+
+video {
+  width: 100%;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -147,24 +158,22 @@ ul {
     flex-direction: row;
 
     > *:first-child {
-      width: $width-side-menu;
+      flex: 0 0 $width-side-menu;
     }
 
     > *:last-child {
-      width: calc(100vw - #{$width-side-menu + 1rem});
+      flex: 1 1;
     }
 
     &.-row-reverse {
       flex-direction: row-reverse;
 
       > *:first-child {
-        flex: 1;
-        width: unset;
+        flex: 1 1;
       }
 
       > *:last-child {
-        flex: unset;
-        width: $width-side-menu;
+        flex: 0 0 $width-side-menu;
       }
     }
 
@@ -478,15 +487,12 @@ article {
     @include border("top", 0.5rem);
   }
 
-  blockquote {
-    @include border("left", 0.5rem);
+  @include min-screen($screen-normal) {
 
-    overflow: auto;
-    padding: 0 2.5rem;
-  }
-
-  video {
-    width: 100%;
+    pre,
+    blockquote {
+      max-width: calc(100vw - 19rem);
+    }
   }
 }
 
