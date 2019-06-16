@@ -11,9 +11,9 @@
 <aside>
 {{ partial "article/date.html" . -}}
 {{ partial "article/tags.html" . -}}
-{{ partial "article/share.html" . -}}
 </aside>
-{{ .Content }}
+{{- $sentence := findRE "<(p|h[1-6]).*?>.*?</(p|h[1-6])>" .Content 3 }}
+{{ delimit $sentence "\n" | safeHTML | truncate 200 }}
 </article>
 {{- if ne (add $key 1) $paginator.NumberOfElements }}
 <hr>
