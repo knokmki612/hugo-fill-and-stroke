@@ -5,7 +5,7 @@
 {{- $blog := (where .Data.Pages "Section" "blog").Reverse }}
 {{- $paginator := .Paginate $blog }}
 {{ partial "pagination.html" . }}
-{{- range $paginator.Pages }}
+{{- range $key, $value := $paginator.Pages }}
 <article>
 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 <aside>
