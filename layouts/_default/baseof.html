@@ -54,10 +54,10 @@
 <h2><a href="{{ "tags" | relURL }}/">Tags</a></h2>
 {{ partialCached "tags.html" . -}}
 </section>
-<section>
+<section class="-width-50pct">
 <h2><a href="{{ "archives" | relURL }}/">Archives</a></h2>
 {{ partialCached "archives.html" . -}}
-</section class="-width-50pct">
+</section>
 {{ if (fileExists "layouts/partials/banners.html") -}}
 <section class="-width-100pct">
 <h2>Banners</h2>
