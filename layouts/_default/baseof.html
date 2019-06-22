@@ -35,10 +35,10 @@
 </nav>
 <div class="page-search">
 <form method="GET" action="https://duckduckgo.com">
-  <input class="search-box" type="text" name="q" placeholder="Search on DuckDuckGo" aria-label="type words to search articles">
+  <input class="search-box" type="text" name="q" placeholder="{{ i18n "SearchPlaceholder" }}" aria-label="{{ i18n "SearchAriaLabel" }}">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
   <button class="search-icon" type="submit">
-  <img src="{{ "search.svg" | relURL }}" alt="Search">
+  <img src="{{ "search.svg" | relURL }}" alt="{{ i18n "Search" }}">
   </button>
 </form>
 </div>
@@ -47,20 +47,20 @@
 <nav class="side-menu">
 <div class="menu-inner">
 <section class="-width-100pct">
-<h2>Feeds</h2>
+<h2>{{ i18n "Feed" }}</h2>
 <a class="rss-icon -color-unset" href="{{ "blog/index.xml" | relURL }}"><img src="{{ "rss.svg" | relURL }}" alt="RSS"></a>
 </section>
 <section class="-width-50pct">
-<h2><a href="{{ "tags" | relURL }}/">Tags</a></h2>
+<h2><a href="{{ "tags" | relURL }}/">{{ i18n "Tag" }}</a></h2>
 {{ partialCached "tags.html" . -}}
 </section>
 <section class="-width-50pct">
-<h2><a href="{{ "archives" | relURL }}/">Archives</a></h2>
+<h2><a href="{{ "archives" | relURL }}/">{{ i18n "Archive" }}</a></h2>
 {{ partialCached "archives.html" . -}}
 </section>
 {{ if (fileExists "layouts/partials/banners.html") -}}
 <section class="-width-100pct">
-<h2>Banners</h2>
+<h2>{{ i18n "Banner" }}</h2>
 {{ partialCached "banners.html" . -}}
 </section>
 {{- end }}

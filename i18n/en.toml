@@ -1,0 +1,71 @@
+[Search]
+other = "Search"
+
+[SearchPlaceholder]
+other = "Search on DuckDuckGo"
+
+[SearchAriaLabel]
+other = "Type words to search articles"
+
+[Feed]
+other = "Feed"
+
+[Tag]
+other = "Tag"
+
+[Archive]
+other = "Archive"
+
+[Banner]
+other = "Banner"
+
+[404NotFound]
+other = "404 Not Found"
+
+[404NotFoundDescription]
+other = "Go back to top page"
+
+[First]
+other = "First"
+
+[FirstAriaLabel]
+other = "First page"
+
+[Prev]
+other = "Prev"
+
+[PrevAriaLabel]
+other = "Previous page"
+
+[Next]
+other = "Next"
+
+[NextAriaLabel]
+other = "Next page"
+
+[Last]
+other = "Last"
+
+[LastAriaLabel]
+other = "Last page"
+
+[ArticleDateFormat]
+other = "02/01/2006"
+
+[ArchiveDateFormat]
+other = "01/2006"
+
+[DiaryTag]
+other = "Diary"
+
+[Tweet]
+other = "Tweet"
+
+[Share]
+other = "Share"
+
+[Bookmark]
+other = "Bookmark"
+
+[HatenaBookmark]
+other = "Hatena Bookmark"

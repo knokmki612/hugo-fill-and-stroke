@@ -1,12 +1,12 @@
 <div class="social-button">
 <a
   class="button -twitter" href="http://twitter.com/share?url={{ $.Permalink }}&text={{ $.Title }}&nbsp;-&nbsp;{{ .Site.Title }}" target="_blank" rel="noopener noreferrer">
-  <img src="{{ "twitter.svg" | relURL }}" alt="Twitter">Tweet
+  <img src="{{ "twitter.svg" | relURL }}" alt="Twitter">{{ i18n "Tweet" }}
 </a><a
   class="button -facebook" href="http://www.facebook.com/sharer.php?u={{ $.Permalink }}" target="_blank" rel="noopener noreferrer">
-  <img src="{{ "facebook.svg" | relURL }}" alt="Facebook">Share
+  <img src="{{ "facebook.svg" | relURL }}" alt="Facebook">{{ i18n "Share" }}
 </a><a
   class="button -hatenabookmark" href="http://b.hatena.ne.jp/entry/{{ $.Permalink }}" target="_blank" rel="noopener noreferrer">
-  <img src="{{ "hatenabookmark.svg" | relURL }}" alt="はてなブックマーク">ブックマーク
+  <img src="{{ "hatenabookmark.svg" | relURL }}" alt="{{ i18n "HatenaBookmark" }}">{{ i18n "Bookmark" }}
 </a>
 </div>

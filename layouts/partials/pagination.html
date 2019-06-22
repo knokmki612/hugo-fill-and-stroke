@@ -3,9 +3,9 @@
 <ul class="pagination">
   {{- if $pag.HasPrev }}
   {{- with $pag.First }}
-  <li><a href="{{ .URL }}" aria-label="First"><span aria-hidden="true">First</span></a></li>
+  <li><a href="{{ .URL }}" aria-label="{{ i18n "FirstAriaLabel" }}"><span aria-hidden="true">{{ i18n "First" }}</span></a></li>
   {{ end -}}
-  <li><a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}{{ end }}" aria-label="Previous"><span aria-hidden="true">Prev</span></a></li>
+  <li><a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}{{ end }}" aria-label="{{ i18n "PrevAriaLabel" }}"><span aria-hidden="true">{{ i18n "Prev" }}</span></a></li>
   {{- end -}}
   {{- $.Scratch.Set "__paginator.ellipsed" false }}
   {{- range $pag.Pagers }}
@@ -26,9 +26,9 @@
   {{- end -}}
   {{- end -}}
   {{- if $pag.HasNext }}
-  <li><a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}{{ end }}" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+  <li><a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}{{ end }}" aria-label="{{ i18n "NextAriaLabel" }}"><span aria-hidden="true">{{ i18n "Next" }}</span></a></li>
   {{- with $pag.Last }}
-  <li><a href="{{ .URL }}" aria-label="Last"><span aria-hidden="true">Last</span></a></li>
+  <li><a href="{{ .URL }}" aria-label="{{ i18n "LastAriaLabel" }}"><span aria-hidden="true">{{ i18n "Last" }}</span></a></li>
   {{ end -}}
   {{ end -}}
 </ul>

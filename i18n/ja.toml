@@ -1,0 +1,71 @@
+[Search]
+other = "検索"
+
+[SearchPlaceholder]
+other = "DuckDuckGoで記事検索"
+
+[SearchAriaLabel]
+other = "語句を入力して記事を検索"
+
+[Feed]
+other = "フィード"
+
+[Tag]
+other = "タグ"
+
+[Archive]
+other = "アーカイブ"
+
+[Banner]
+other = "バナー"
+
+[404NotFound]
+other = "404 (ページがないです)"
+
+[404NotFoundDescription]
+other = "トップページに戻る"
+
+[First]
+other = "最初"
+
+[FirstAriaLabel]
+other = "最初のページ"
+
+[Prev]
+other = "前"
+
+[PrevAriaLabel]
+other = "前のページ"
+
+[Next]
+other = "次"
+
+[NextAriaLabel]
+other = "次のページ"
+
+[Last]
+other = "最後"
+
+[LastAriaLabel]
+other = "最後のページ"
+
+[ArticleDateFormat]
+other = "2006/01/02"
+
+[ArchiveDateFormat]
+other = "2006/01"
+
+[DiaryTag]
+other = "日記"
+
+[Tweet]
+other = "ツイート"
+
+[Share]
+other = "シェア"
+
+[Bookmark]
+other = "ブックマーク"
+
+[HatenaBookmark]
+other = "はてなブックマーク"
