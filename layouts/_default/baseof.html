@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
-{{ partial "twitter_cards.html" . -}}
+{{ partial "twitter-cards.html" . -}}
 </head>
 <body>
 <div class="outer">
@@ -31,7 +31,9 @@
 </div>
 <div class="outer -row-reverse">
 <nav class="global-menu">
+{{ if (fileExists "layouts/partials/global-menu.html") -}}
 {{ partialCached "global-menu.html" . -}}
+{{ end -}}
 </nav>
 <div class="page-search">
 <form method="GET" action="https://duckduckgo.com">
@@ -46,24 +48,7 @@
 <div class="outer -min-height -column-reverse">
 <nav class="side-menu">
 <div class="menu-inner">
-<section class="-width-100pct">
-<h2>{{ i18n "Feed" }}</h2>
-<a class="rss-icon -color-unset" href="{{ "blog/index.xml" | relURL }}"><img src="{{ "rss.svg" | relURL }}" alt="RSS"></a>
-</section>
-<section class="-width-50pct">
-<h2><a href="{{ "tags" | relURL }}/">{{ i18n "Tag" }}</a></h2>
-{{ partialCached "tags.html" . -}}
-</section>
-<section class="-width-50pct">
-<h2><a href="{{ "archives" | relURL }}/">{{ i18n "Archive" }}</a></h2>
-{{ partialCached "archives.html" . -}}
-</section>
-{{ if (fileExists "layouts/partials/banners.html") -}}
-<section class="-width-100pct">
-<h2>{{ i18n "Banner" }}</h2>
-{{ partialCached "banners.html" . -}}
-</section>
-{{- end }}
+{{ partialCached "side-menu.html" . -}}
 </div>
 </nav>
 <main>

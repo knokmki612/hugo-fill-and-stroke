@@ -1,0 +1,18 @@
+<section class="-width-100pct">
+<h2>{{ i18n "Feed" }}</h2>
+{{ partial "side-menu/feeds.html" . -}}
+</section>
+<section class="-width-50pct">
+<h2><a href="{{ "tags" | relURL }}/">{{ i18n "Tag" }}</a></h2>
+{{ partial "side-menu/tags.html" . -}}
+</section>
+<section class="-width-50pct">
+<h2><a href="{{ "archives" | relURL }}/">{{ i18n "Archive" }}</a></h2>
+{{ partial "side-menu/archives.html" . -}}
+</section>
+{{ if (fileExists "layouts/partials/side-menu/banners.html") -}}
+<section class="-width-100pct">
+<h2>{{ i18n "Banner" }}</h2>
+{{ partial "side-menu/banners.html" . -}}
+</section>
+{{- end }}
