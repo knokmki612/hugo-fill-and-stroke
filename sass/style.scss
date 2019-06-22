@@ -277,8 +277,6 @@ header {
   padding: 0.625rem;
 
   @include max-screen($screen-normal) {
-    @include border("top");
-
     border-bottom: none;
     padding: 0;
   }
@@ -288,7 +286,6 @@ main {
   @include border("bottom left");
 
   @include max-screen($screen-normal) {
-    border-bottom: none;
     border-left: none;
   }
 }

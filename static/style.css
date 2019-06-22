@@ -239,7 +239,6 @@ header p {
 }
 @media only screen and (max-width: 800px) {
   .side-menu {
-    border-top: solid 1rem #eee;
     border-bottom: none;
     padding: 0;
   }
@@ -251,7 +250,6 @@ main {
 }
 @media only screen and (max-width: 800px) {
   main {
-    border-bottom: none;
     border-left: none;
   }
 }
