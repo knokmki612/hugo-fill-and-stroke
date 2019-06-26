@@ -84,6 +84,11 @@ ul ul {
   margin: 0;
 }
 
+p.-for-text-browser,
+hr.-for-text-browser {
+  display: none;
+}
+
 @media only screen and (min-width: 801px) {
   .outer {
     display: flex;

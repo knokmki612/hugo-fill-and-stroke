@@ -151,6 +151,14 @@ ul {
   }
 }
 
+p,
+hr {
+
+  &.-for-text-browser {
+    display: none;
+  }
+}
+
 @include min-screen($screen-normal) {
 
   .outer {

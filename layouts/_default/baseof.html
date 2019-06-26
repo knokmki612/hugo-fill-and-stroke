@@ -26,6 +26,7 @@
 <div class="inner">
 <h1><a class="-color-unset" href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
+<p class="-for-text-browser"><a href="#main-start">{{ i18n "JumpToMain" }}</a></p>
 </div>
 </header>
 </div>
@@ -52,6 +53,7 @@
 </div>
 </nav>
 <main>
+<hr id="main-start" class="-for-text-browser">
 {{- block "main" . }}
 {{- end }}
 </main>
