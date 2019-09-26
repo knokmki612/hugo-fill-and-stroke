@@ -1,5 +1,5 @@
 {{- define "main" }}
-{{- $blog := where .Data.Pages "Section" "blog" }}
+{{- $blog := where .Site.RegularPages "Section" "blog" }}
 {{- $paginator := .Paginate $blog }}
 {{ partial "pagination.html" . }}
 {{- range $key, $value := $paginator.Pages }}

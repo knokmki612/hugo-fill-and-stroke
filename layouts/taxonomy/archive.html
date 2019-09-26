@@ -2,7 +2,7 @@
   {{ .Title }} - {{ .Site.Title }}
 {{- end }}
 {{- define "main" }}
-{{- $blog := (where .Data.Pages "Section" "blog").Reverse }}
+{{- $blog := (where .Site.RegularPages "Section" "blog").Reverse }}
 {{- $paginator := .Paginate $blog }}
 {{ partial "pagination.html" . }}
 {{- range $key, $value := $paginator.Pages }}
