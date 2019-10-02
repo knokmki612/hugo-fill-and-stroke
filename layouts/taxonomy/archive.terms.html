@@ -1,9 +1,9 @@
 {{ define "title" -}}
-  {{ .Title }} - {{ .Site.Title }}
+  {{ i18n (.Title | singularize) }} - {{ .Site.Title }}
 {{- end }}
 {{- define "main" }}
 <article>
-<h2>{{ .Title }}</h2>
+<h2>{{ i18n (.Title | singularize) }}</h2>
 <ul class="taxonomy">
   {{- $data := .Data }}
   {{- range $key, $value := .Data.Terms.Alphabetical.Reverse }}
