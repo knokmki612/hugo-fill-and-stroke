@@ -2,6 +2,7 @@
   display: grid;
   grid-template-areas: "header-blank header" "search global-menu" "side-menu main" "footer-blank footer";
   grid-template-columns: $width-side-menu 1fr;
+  grid-template-rows: auto;
 
   @include max-screen($screen-normal) {
     grid-template-areas: "header" "global-menu" "search" "main" "side-menu" "footer";
