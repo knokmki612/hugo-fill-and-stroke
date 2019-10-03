@@ -2,9 +2,9 @@
   {{ .Title }} - {{ .Site.Title }}
 {{- end }}
 {{- define "main" }}
-<article>
+<article class="site-article">
 <h2>{{ .Title }}</h2>
-<aside>
+<aside class="article-aside">
 {{ partial "aside.html" . -}}
 </aside>
 {{ .Content }}

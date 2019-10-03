@@ -1,0 +1,33 @@
+.social-button {
+
+  .button {
+    color: #fff;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 0.25rem;
+    text-decoration: none;
+
+    &.-twitter {
+      background-color: #1da1f2;
+    }
+
+    &.-facebook {
+      background-color: #1877f2;
+    }
+
+    &.-hatenabookmark {
+      background-color: #00a4de;
+    }
+  }
+
+  img {
+    display: inline-block;
+    height: 0.75rem;
+    padding-right: 0.25rem;
+    vertical-align: bottom;
+  }
+}

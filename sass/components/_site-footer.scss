@@ -1,0 +1,21 @@
+.site-footer {
+  @include border("left");
+
+  padding: 1.25rem 0;
+
+  .inner {
+    @include inner();
+  }
+
+  p {
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  @include max-screen($screen-normal) {
+    @include border("top");
+
+    border-left: none;
+  }
+}

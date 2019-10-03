@@ -1,0 +1,12 @@
+.article-aside {
+  font-size: 0.875rem;
+  line-height: 1;
+
+  > * ~ * {
+    margin-top: 0.25rem;
+  }
+
+  .date {
+    font-weight: bold;
+  }
+}

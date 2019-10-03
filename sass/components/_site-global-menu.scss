@@ -1,0 +1,32 @@
+.site-global-menu {
+  @include border("top bottom left");
+
+  ul {
+    @include inner();
+
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.125rem;
+  }
+
+  a {
+    color: unset;
+    display: block;
+    line-height: 1;
+    padding: 1rem 0.625rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-gray;
+    }
+  }
+
+  @include max-screen($screen-normal) {
+    border-bottom: none;
+    border-left: none;
+  }
+}
