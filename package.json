@@ -27,7 +27,7 @@
     "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
   },
   "scripts": {
-    "build": "sass --style expanded --no-source-map sass/:static/; postcss static/*.css --use autoprefixer --no-map --dir static/",
+    "build": "sass --style expanded --no-source-map sass/:static/; postcss static/*.css --replace",
     "start": "sass --style expanded --no-source-map --watch sass/:static/"
   }
 }
