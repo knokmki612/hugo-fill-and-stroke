@@ -305,6 +305,9 @@ hr.-for-text-browser {
   }
 }
 
+.site-main {
+  display: block;
+}
 .site-main .pagination {
   margin: 0.625rem auto;
   max-width: 39.25rem;
