@@ -1,5 +1,5 @@
 <ul>
-  {{- range $key, $value := first 10 .Site.Taxonomies.archives.Alphabetical.Reverse }}
-  <li><a href="{{ "archives" | relURL }}/{{ $value.Name }}/">{{ $value.Page.Title }}</a> ({{ $value.Count }})</li>
+  {{- range first 10 .Site.Taxonomies.archives.Alphabetical.Reverse }}
+  <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
   {{- end }}
 </ul>
