@@ -1,0 +1,25 @@
+.site-header {
+  @include border("left");
+
+  padding: 1.25rem 0;
+
+  .inner {
+    @include inner();
+  }
+
+  h1 {
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  @include max-screen($screen-normal) {
+    border-left: none;
+  }
+}

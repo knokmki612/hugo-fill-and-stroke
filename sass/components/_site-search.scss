@@ -1,0 +1,20 @@
+.site-search {
+  @include border("top bottom");
+
+  display: inline-block;
+  width: 100%;
+
+  .inner {
+    display: flex;
+  }
+
+  @include max-screen($screen-normal) {
+    border-top: none;
+
+    .inner {
+      @include inner();
+
+      padding: 0;
+    }
+  }
+}

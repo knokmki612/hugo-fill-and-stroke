@@ -1,0 +1,9 @@
+.taxonomy-list {
+  column-count: 3;
+  list-style: none;
+  padding-left: 0;
+
+  @include max-screen($screen-normal) {
+    column-count: 2;
+  }
+}

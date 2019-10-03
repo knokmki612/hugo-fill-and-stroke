@@ -1,4 +1,4 @@
-<figure class="image">
+<figure class="article-image">
   {{ if (.Get "link") }}<a href="
       {{- $img := .Page.Resources.GetMatch (.Get "link") -}}
       {{- with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "link" }}{{ end -}}"

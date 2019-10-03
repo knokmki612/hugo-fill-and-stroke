@@ -1,0 +1,42 @@
+.menu-section {
+  @include max-screen($screen-normal) {
+    padding-bottom: 0.625rem;
+    padding-right: 0.625rem;
+
+    &.-width-100pct {
+      width: 100%;
+    }
+
+    &.-width-50pct {
+      width: 50%;
+    }
+  }
+
+  @include min-screen($screen-normal) {
+
+    & ~ & {
+      margin-top: 1rem;
+    }
+  }
+
+  h2 {
+    font-size: 0.875rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin: 0.375rem 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

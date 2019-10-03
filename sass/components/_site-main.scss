@@ -1,0 +1,25 @@
+.site-main {
+  @include border("bottom left");
+
+  @include max-screen($screen-normal) {
+    border-left: none;
+  }
+
+  .pagination {
+    @include inner(0.625rem);
+
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  hr {
+    border: none;
+    margin: 0;
+
+    @include border("top");
+  }
+}

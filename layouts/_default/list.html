@@ -3,9 +3,9 @@
 {{- $paginator := .Paginate $blog }}
 {{ partial "pagination.html" . }}
 {{- range $key, $value := $paginator.Pages }}
-<article>
+<article class="site-article">
 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-<aside>
+<aside class="article-aside">
 {{ partial "aside-list.html" . -}}
 </aside>
 {{- $sentence := findRE "<(p|h[1-6]).*?>.*?</(p|h[1-6])>" .Content 3 }}

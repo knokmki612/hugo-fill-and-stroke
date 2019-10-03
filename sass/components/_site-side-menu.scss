@@ -1,0 +1,21 @@
+.site-side-menu {
+  @include border("bottom");
+
+  padding: 0.625rem;
+
+  @include max-screen($screen-normal) {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .inner {
+    @include max-screen($screen-normal) {
+      @include inner();
+
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 0;
+      padding-top: 0.625rem;
+    }
+  }
+}

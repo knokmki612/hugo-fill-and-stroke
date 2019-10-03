@@ -1,0 +1,14 @@
+.search-button {
+  background: none;
+  border: none;
+  line-height: 0;
+  padding: 1rem;
+
+  &:hover {
+    background-color: $color-gray;
+  }
+
+  img {
+    height: 1.125rem;
+  }
+}

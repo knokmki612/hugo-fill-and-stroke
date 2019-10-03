@@ -1,0 +1,67 @@
+.site-article {
+  @include inner(3rem);
+
+  line-height: 1.6;
+
+  > * ~ * {
+    margin: 1.5rem 0;
+  }
+
+  h2 {
+    @include border("top bottom", 0.5rem);
+
+    font-weight: normal;
+  }
+
+  h3 {
+    @include border("bottom", 0.5rem);
+
+    max-width: max-content;
+  }
+
+  hr {
+    border: none;
+
+    @include border("top", 0.5rem);
+  }
+
+  video {
+    width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  thead {
+    background-color: $color-light-gray;
+  }
+
+  th,
+  td {
+    border: 1px solid $color-light-gray;
+    padding: 0.5rem;
+  }
+
+  pre {
+    border: 1px solid $color-light-gray;
+    overflow: auto;
+    padding: 0.5rem;
+    word-wrap: normal;
+  }
+
+  blockquote {
+    @include border("left", 0.5rem);
+
+    overflow: auto;
+    padding: 0 3rem 0 2.5rem;
+  }
+
+  @include min-screen($screen-normal) {
+
+    pre,
+    blockquote {
+      max-width: calc(100vw - 19rem);
+    }
+  }
+}

@@ -21,8 +21,8 @@
 </head>
 <body>
 <div class="outer">
-<div></div>
-<header>
+<div class="site-blank"></div>
+<header class="site-header">
 <div class="inner">
 <h1><a class="-color-unset" href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
@@ -31,36 +31,36 @@
 </header>
 </div>
 <div class="outer -row-reverse">
-<nav class="global-menu">
+<nav class="site-global-menu">
 {{ if (fileExists "layouts/partials/global-menu.html") -}}
 {{ partialCached "global-menu.html" . -}}
 {{ end -}}
 </nav>
-<div class="page-search">
-<form method="GET" action="https://duckduckgo.com">
-  <input class="search-box" type="text" name="q" placeholder="{{ i18n "SearchPlaceholder" }}" aria-label="{{ i18n "SearchAriaLabel" }}">
+<div class="site-search">
+<form class="inner" method="GET" action="https://duckduckgo.com">
+  <input class="search-input" type="search" name="q" placeholder="{{ i18n "SearchPlaceholder" }}" aria-label="{{ i18n "SearchAriaLabel" }}">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
-  <button class="search-icon" type="submit">
+  <button class="search-button" type="submit">
   <img src="{{ "search.svg" | relURL }}" alt="{{ i18n "Search" }}">
   </button>
 </form>
 </div>
 </div>
 <div class="outer -min-height -column-reverse">
-<nav class="side-menu">
-<div class="menu-inner">
+<nav class="site-side-menu">
+<div class="inner">
 {{ partialCached "side-menu.html" . -}}
 </div>
 </nav>
-<main>
+<main class="site-main">
 <hr id="main-start" class="-for-text-browser">
 {{- block "main" . }}
 {{- end }}
 </main>
 </div>
 <div class="outer">
-<div></div>
-<footer>
+<div class="site-blank"></div>
+<footer class="site-footer">
 <div class="inner">
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
