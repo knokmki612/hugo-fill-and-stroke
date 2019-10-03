@@ -1,5 +1,4 @@
 .site-global-menu {
-  @include border("top bottom left");
 
   ul {
     @include inner();
@@ -23,10 +22,5 @@
     &:hover {
       background-color: $color-gray;
     }
-  }
-
-  @include max-screen($screen-normal) {
-    border-bottom: none;
-    border-left: none;
   }
 }
