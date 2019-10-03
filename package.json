@@ -1,25 +1,11 @@
 {
   "name": "hugo-pencil-and-ruler",
-  "version": "0.1.0",
   "description": "hugo theme: A simple design made by a line, for blog",
-  "main": "sass/style.sass",
-  "scripts": {
-    "build": "sass --style expanded --no-source-map sass/:static/; postcss static/*.css --use autoprefixer --no-map --dir static/",
-    "start": "sass --style expanded --no-source-map --watch sass/:static/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
-  },
-  "keywords": [
-    "hugo"
-  ],
+  "version": "0.1.0",
   "author": "knokmki612 <knokmki612@gmail.com>",
-  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/knokmki612/hugo-pencil-and-ruler/issues"
   },
-  "homepage": "https://github.com/knokmki612/hugo-pencil-and-ruler#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "normalize.css": "^8.0.1",
@@ -29,5 +15,19 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^3.1.1",
     "stylelint-scss": "^3.11.1"
+  },
+  "homepage": "https://github.com/knokmki612/hugo-pencil-and-ruler#readme",
+  "keywords": [
+    "hugo"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "sass/style.sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
+  },
+  "scripts": {
+    "build": "sass --style expanded --no-source-map sass/:static/; postcss static/*.css --use autoprefixer --no-map --dir static/",
+    "start": "sass --style expanded --no-source-map --watch sass/:static/"
   }
 }
