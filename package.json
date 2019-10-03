@@ -4,7 +4,7 @@
   "description": "hugo theme: A simple design made by a line, for blog",
   "main": "sass/style.sass",
   "scripts": {
-    "build": "sass --style expanded --no-source-map sass/:static/",
+    "build": "sass --style expanded --no-source-map sass/:static/; postcss static/*.css --use autoprefixer --no-map --dir static/",
     "start": "sass --style expanded --no-source-map --watch sass/:static/"
   },
   "repository": {
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/knokmki612/hugo-pencil-and-ruler#readme",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "normalize.css": "^8.0.1",
+    "postcss-cli": "^6.1.3",
     "sass": "^1.22.9",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.3.0",

@@ -457,6 +457,8 @@ article h2 {
 }
 article h3 {
   border-bottom: solid 0.5rem #eee;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
 }
 article hr {
@@ -498,12 +500,14 @@ article blockquote {
 }
 
 .taxonomy {
-  column-count: 3;
+  -moz-column-count: 3;
+       column-count: 3;
   list-style: none;
   padding-left: 0;
 }
 @media only screen and (max-width: 800px) {
   .taxonomy {
-    column-count: 2;
+    -moz-column-count: 2;
+         column-count: 2;
   }
 }
