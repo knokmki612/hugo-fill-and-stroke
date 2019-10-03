@@ -1,0 +1,46 @@
+@mixin max-screen($screen) {
+  @media only screen and (max-width: $screen) {
+    @content;
+  }
+}
+
+@mixin min-screen($screen) {
+  @media only screen and (min-width: $screen + 1px) {
+    @content;
+  }
+}
+
+@mixin border($direction, $width: 1rem) {
+  @if str-index($direction, "top") {
+    border-top: solid $width $color-light-gray;
+  }
+
+  @if str-index($direction, "right") {
+    border-right: solid $width $color-light-gray;
+  }
+
+  @if str-index($direction, "bottom") {
+    border-bottom: solid $width $color-light-gray;
+  }
+
+  @if str-index($direction, "left") {
+    border-left: solid $width $color-light-gray;
+  }
+}
+
+@mixin inner($vertical-margin: 0) {
+  margin: $vertical-margin auto;
+  max-width: $width-inner;
+  padding: 0 0.625rem;
+  transform: none;
+  transition: transform 0.25s ease;
+
+  @include max-screen($screen-normal) {
+    max-width: $width-inner - 8rem;
+    transition: none;
+  }
+
+  @include min-screen($screen-large) {
+    transform: translateX(-$width-side-menu / 2);
+  }
+}
