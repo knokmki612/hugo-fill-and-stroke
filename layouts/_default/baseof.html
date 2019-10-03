@@ -19,9 +19,8 @@
 {{ partial "opengraph.html" . -}}
 {{ partial "twitter-cards.html" . -}}
 </head>
-<body>
-<div class="outer">
-<div class="site-blank"></div>
+<body class="site-body">
+<div class="site-header-blank"></div>
 <header class="site-header">
 <div class="inner">
 <h1><a class="-color-unset" href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
@@ -29,8 +28,6 @@
 <p class="-for-text-browser"><a href="#main-start">{{ i18n "JumpToMain" }}</a></p>
 </div>
 </header>
-</div>
-<div class="outer -row-reverse">
 <nav class="site-global-menu">
 {{ if (fileExists "layouts/partials/global-menu.html") -}}
 {{ partialCached "global-menu.html" . -}}
@@ -45,8 +42,6 @@
   </button>
 </form>
 </div>
-</div>
-<div class="outer -min-height -column-reverse">
 <nav class="site-side-menu">
 <div class="inner">
 {{ partialCached "side-menu.html" . -}}
@@ -57,15 +52,12 @@
 {{- block "main" . }}
 {{- end }}
 </main>
-</div>
-<div class="outer">
-<div class="site-blank"></div>
+<div class="site-footer-blank"></div>
 <footer class="site-footer">
 <div class="inner">
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
 </footer>
-</div>
 <script>
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
   var script = document.createElement("script");

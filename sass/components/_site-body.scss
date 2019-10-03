@@ -1,0 +1,81 @@
+.site-body {
+  display: grid;
+  grid-template-areas: "header-blank header" "search global-menu" "side-menu main" "footer-blank footer";
+  grid-template-columns: $width-side-menu 1fr;
+
+  @include max-screen($screen-normal) {
+    grid-template-areas: "header" "global-menu" "search" "main" "side-menu" "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .site-header-blank {
+    grid-area: header-blank;
+  }
+
+  .site-header {
+    grid-area: header;
+
+    @include border("left");
+
+    @include max-screen($screen-normal) {
+      border-left: none;
+    }
+  }
+
+  .site-global-menu {
+    grid-area: global-menu;
+
+    @include border("top bottom left");
+
+    @include max-screen($screen-normal) {
+      border-bottom: none;
+      border-left: none;
+    }
+  }
+
+  .site-search {
+    grid-area: search;
+
+    @include border("top bottom");
+
+    @include max-screen($screen-normal) {
+      border-top: none;
+    }
+  }
+
+  .site-side-menu {
+    grid-area: side-menu;
+
+    @include border("bottom");
+
+    @include max-screen($screen-normal) {
+      border-bottom: none;
+    }
+  }
+
+  .site-main {
+    grid-area: main;
+
+    @include border("bottom left");
+
+    @include max-screen($screen-normal) {
+      border-left: none;
+    }
+  }
+
+  .site-footer-blank {
+    grid-area: footer-blank;
+  }
+
+  .site-footer {
+    grid-area: footer;
+
+    @include border("left");
+
+    @include max-screen($screen-normal) {
+      @include border("top");
+
+      border-left: none;
+    }
+  }
+}

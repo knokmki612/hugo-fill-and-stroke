@@ -1,14 +1,8 @@
 .site-side-menu {
-  @include border("bottom");
-
-  padding: 0.625rem;
-
-  @include max-screen($screen-normal) {
-    border-bottom: none;
-    padding: 0;
-  }
 
   .inner {
+    padding: 0.625rem;
+
     @include max-screen($screen-normal) {
       @include inner();
 

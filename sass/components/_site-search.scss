@@ -1,6 +1,4 @@
 .site-search {
-  @include border("top bottom");
-
   display: inline-block;
   width: 100%;
 
@@ -9,7 +7,6 @@
   }
 
   @include max-screen($screen-normal) {
-    border-top: none;
 
     .inner {
       @include inner();

@@ -1,9 +1,4 @@
 .site-main {
-  @include border("bottom left");
-
-  @include max-screen($screen-normal) {
-    border-left: none;
-  }
 
   .pagination {
     @include inner(0.625rem);
