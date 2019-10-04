@@ -47,9 +47,6 @@ a:hover {
   color: #3af;
   text-decoration: underline;
 }
-a.-color-unset {
-  color: unset;
-}
 
 p.-for-text-browser,
 hr.-for-text-browser {
@@ -199,6 +196,10 @@ hr.-for-text-browser {
   font-weight: normal;
   line-height: 1;
   margin: 0;
+}
+.site-header a {
+  color: unset;
+  text-decoration: none;
 }
 .site-header p {
   line-height: 1;
@@ -397,8 +398,19 @@ hr.-for-text-browser {
 .site-article video {
   width: 100%;
 }
+.site-article blockquote {
+  border-left: solid 0.5rem #eee;
+  padding: 0 3rem 0 2.5rem;
+}
+.site-article pre {
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
 .site-article table {
   border-collapse: collapse;
+  display: block;
+  white-space: nowrap;
 }
 .site-article thead {
   background-color: #eee;
@@ -408,21 +420,17 @@ hr.-for-text-browser {
   border: 1px solid #eee;
   padding: 0.5rem;
 }
-.site-article pre {
-  border: 1px solid #eee;
+.site-article blockquote,
+.site-article pre,
+.site-article table {
+  max-width: calc(100vw - 19.125rem);
   overflow: auto;
-  padding: 0.5rem;
-  word-wrap: normal;
 }
-.site-article blockquote {
-  border-left: solid 0.5rem #eee;
-  overflow: auto;
-  padding: 0 3rem 0 2.5rem;
-}
-@media only screen and (min-width: 801px) {
-  .site-article pre,
-.site-article blockquote {
-    max-width: calc(100vw - 19rem);
+@media only screen and (max-width: 800px) {
+  .site-article blockquote,
+.site-article pre,
+.site-article table {
+    max-width: calc(100vw - 2.5rem);
   }
 }
 

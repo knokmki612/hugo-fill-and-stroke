@@ -29,8 +29,22 @@
     width: 100%;
   }
 
+  blockquote {
+    @include border("left", 0.5rem);
+
+    padding: 0 3rem 0 2.5rem;
+  }
+
+  pre {
+    border: 1px solid $color-light-gray;
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+
   table {
     border-collapse: collapse;
+    display: block;
+    white-space: nowrap;
   }
 
   thead {
@@ -43,25 +57,14 @@
     padding: 0.5rem;
   }
 
-  pre {
-    border: 1px solid $color-light-gray;
+  blockquote,
+  pre,
+  table {
+    max-width: calc(100vw - #{$width-side-menu + 1rem + 2.5rem});
     overflow: auto;
-    padding: 0.5rem;
-    word-wrap: normal;
-  }
 
-  blockquote {
-    @include border("left", 0.5rem);
-
-    overflow: auto;
-    padding: 0 3rem 0 2.5rem;
-  }
-
-  @include min-screen($screen-normal) {
-
-    pre,
-    blockquote {
-      max-width: calc(100vw - 19rem);
+    @include max-screen ($screen-normal) {
+      max-width: calc(100vw - 2.5rem);
     }
   }
 }
