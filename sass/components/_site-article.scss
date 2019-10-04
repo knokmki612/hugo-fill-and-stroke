@@ -60,11 +60,11 @@
   blockquote,
   pre,
   table {
-    max-width: calc(100vw - #{$width-side-menu + 1rem + 2.5rem});
+    max-width: calc(100vw - 2.5rem);
     overflow: auto;
 
-    @include max-screen ($screen-normal) {
-      max-width: calc(100vw - 2.5rem);
+    @include min-screen ($screen-normal) {
+      max-width: calc(100vw - #{$width-side-menu + 1rem + 2.5rem});
     }
   }
 }
