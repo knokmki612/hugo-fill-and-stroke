@@ -4,11 +4,8 @@
 
   .inner {
     display: flex;
-  }
 
-  @include max-screen($screen-normal) {
-
-    .inner {
+    @include max-screen($screen-normal) {
       @include inner();
 
       padding: 0;

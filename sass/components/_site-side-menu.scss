@@ -1,8 +1,6 @@
 .site-side-menu {
 
   .inner {
-    padding: 0.625rem;
-
     @include max-screen($screen-normal) {
       @include inner();
 
@@ -10,6 +8,10 @@
       flex-wrap: wrap;
       padding-right: 0;
       padding-top: 0.625rem;
+    }
+
+    @include min-screen($screen-normal) {
+      padding: 0.625rem;
     }
   }
 }

@@ -28,16 +28,15 @@
   }
 }
 
-@mixin inner($vertical-margin: 0) {
-  margin: $vertical-margin auto;
-  max-width: $width-inner;
+@mixin inner($margin-y: 0) {
+  margin: $margin-y auto;
+  max-width: $width-inner - 8rem;
   padding: 0 0.625rem;
-  transform: none;
-  transition: transform 0.25s ease;
 
-  @include max-screen($screen-normal) {
-    max-width: $width-inner - 8rem;
-    transition: none;
+  @include min-screen($screen-normal) {
+    max-width: $width-inner;
+    transform: none;
+    transition: transform 0.25s ease;
   }
 
   @include min-screen($screen-large) {

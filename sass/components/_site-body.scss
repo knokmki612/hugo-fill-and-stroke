@@ -1,41 +1,37 @@
 .site-body {
   display: grid;
-  grid-template-areas: "header-blank header" "search global-menu" "side-menu main" "footer-blank footer";
-  grid-template-columns: $width-side-menu 1fr;
+  grid-template-areas: "header" "global-menu" "search" "main" "side-menu" "footer";
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
 
-  @include max-screen($screen-normal) {
-    grid-template-areas: "header" "global-menu" "search" "main" "side-menu" "footer";
-    grid-template-columns: 1fr;
+  @include min-screen($screen-normal) {
+    grid-template-areas: "header-blank header" "search global-menu" "side-menu main" "footer-blank footer";
+    grid-template-columns: $width-side-menu 1fr;
   }
 
   .site-header-blank {
     grid-area: header-blank;
 
-    @include border("bottom");
-
-    @include max-screen($screen-normal) {
-      border: none;
+    @include min-screen($screen-normal) {
+      @include border("bottom");
     }
   }
 
   .site-header {
     grid-area: header;
 
-    @include border("bottom left");
+    @include border("bottom");
 
-    @include max-screen($screen-normal) {
-      border-left: none;
+    @include min-screen($screen-normal) {
+      @include border("left");
     }
   }
 
   .site-global-menu {
     grid-area: global-menu;
 
-    @include border("bottom left");
-
-    @include max-screen($screen-normal) {
-      border: none;
+    @include min-screen($screen-normal) {
+      @include border("bottom left");
     }
   }
 
@@ -54,20 +50,18 @@
   .site-main {
     grid-area: main;
 
-    @include border("bottom left");
+    @include border("bottom");
 
-    @include max-screen($screen-normal) {
-      border-left: none;
+    @include min-screen($screen-normal) {
+      @include border("left");
     }
   }
 
   .site-footer {
     grid-area: footer;
 
-    @include border("left");
-
-    @include max-screen($screen-normal) {
-      border: none;
+    @include min-screen($screen-normal) {
+      @include border("left");
     }
   }
 
