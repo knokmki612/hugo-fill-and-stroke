@@ -76,11 +76,18 @@ hr.-for-text-browser {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header-blank;
+  border-bottom: solid 1rem #eee;
+}
+@media only screen and (max-width: 800px) {
+  .site-body .site-header-blank {
+    border: none;
+  }
 }
 .site-body .site-header {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: header;
+  border-bottom: solid 1rem #eee;
   border-left: solid 1rem #eee;
 }
 @media only screen and (max-width: 800px) {
@@ -92,38 +99,25 @@ hr.-for-text-browser {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: global-menu;
-  border-top: solid 1rem #eee;
   border-bottom: solid 1rem #eee;
   border-left: solid 1rem #eee;
 }
 @media only screen and (max-width: 800px) {
   .site-body .site-global-menu {
-    border-bottom: none;
-    border-left: none;
+    border: none;
   }
 }
 .site-body .site-search {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: search;
-  border-top: solid 1rem #eee;
   border-bottom: solid 1rem #eee;
-}
-@media only screen and (max-width: 800px) {
-  .site-body .site-search {
-    border-top: none;
-  }
 }
 .site-body .site-side-menu {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: side-menu;
   border-bottom: solid 1rem #eee;
-}
-@media only screen and (max-width: 800px) {
-  .site-body .site-side-menu {
-    border-bottom: none;
-  }
 }
 .site-body .site-main {
   -ms-grid-row: 3;
@@ -137,16 +131,21 @@ hr.-for-text-browser {
     border-left: none;
   }
 }
-.site-body .site-footer-blank {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: footer-blank;
-}
 .site-body .site-footer {
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: footer;
   border-left: solid 1rem #eee;
+}
+@media only screen and (max-width: 800px) {
+  .site-body .site-footer {
+    border: none;
+  }
+}
+.site-body .site-footer-blank {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer-blank;
 }
 @media only screen and (max-width: 800px) {
   .site-body .site-header {
@@ -172,12 +171,6 @@ hr.-for-text-browser {
   .site-body .site-footer {
     -ms-grid-row: 6;
     -ms-grid-column: 1;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .site-body .site-footer {
-    border-top: solid 1rem #eee;
-    border-left: none;
   }
 }
 

@@ -11,12 +11,18 @@
 
   .site-header-blank {
     grid-area: header-blank;
+
+    @include border("bottom");
+
+    @include max-screen($screen-normal) {
+      border: none;
+    }
   }
 
   .site-header {
     grid-area: header;
 
-    @include border("left");
+    @include border("bottom left");
 
     @include max-screen($screen-normal) {
       border-left: none;
@@ -26,32 +32,23 @@
   .site-global-menu {
     grid-area: global-menu;
 
-    @include border("top bottom left");
+    @include border("bottom left");
 
     @include max-screen($screen-normal) {
-      border-bottom: none;
-      border-left: none;
+      border: none;
     }
   }
 
   .site-search {
     grid-area: search;
 
-    @include border("top bottom");
-
-    @include max-screen($screen-normal) {
-      border-top: none;
-    }
+    @include border("bottom");
   }
 
   .site-side-menu {
     grid-area: side-menu;
 
     @include border("bottom");
-
-    @include max-screen($screen-normal) {
-      border-bottom: none;
-    }
   }
 
   .site-main {
@@ -64,19 +61,17 @@
     }
   }
 
-  .site-footer-blank {
-    grid-area: footer-blank;
-  }
-
   .site-footer {
     grid-area: footer;
 
     @include border("left");
 
     @include max-screen($screen-normal) {
-      @include border("top");
-
-      border-left: none;
+      border: none;
     }
+  }
+
+  .site-footer-blank {
+    grid-area: footer-blank;
   }
 }
