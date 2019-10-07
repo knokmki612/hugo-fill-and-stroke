@@ -48,11 +48,6 @@ a:hover {
   text-decoration: underline;
 }
 
-p.-for-text-browser,
-hr.-for-text-browser {
-  display: none;
-}
-
 .site-body {
   display: -ms-grid;
   display: grid;
@@ -351,6 +346,10 @@ hr.-for-text-browser {
   line-height: 1;
   margin: 0;
   text-align: center;
+}
+
+.text-browser-message {
+  display: none;
 }
 
 .search-input {

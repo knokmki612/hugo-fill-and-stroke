@@ -53,11 +53,3 @@ a {
     text-decoration: underline;
   }
 }
-
-p,
-hr {
-
-  &.-for-text-browser {
-    display: none;
-  }
-}

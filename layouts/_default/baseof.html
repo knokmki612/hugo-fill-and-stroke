@@ -25,7 +25,7 @@
 <div class="inner">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
 <p>{{ .Site.Params.Description }}</p>
-<p class="-for-text-browser"><a href="#main-start">{{ i18n "JumpToMain" }}</a></p>
+<p class="text-browser-message"><a href="#main">{{ i18n "JumpToMain" }}</a></p>
 </div>
 </header>
 <nav class="site-global-menu">
@@ -48,7 +48,7 @@
 </div>
 </nav>
 <main class="site-main">
-<hr id="main-start" class="-for-text-browser">
+<hr id="main" class="text-browser-message">
 {{- block "main" . }}
 {{- end }}
 </main>
