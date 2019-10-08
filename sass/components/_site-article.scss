@@ -58,7 +58,8 @@
 
   blockquote,
   pre,
-  table {
+  table,
+  .article-tab {
     max-width: calc(100vw - 2.5rem);
     overflow: auto;
 

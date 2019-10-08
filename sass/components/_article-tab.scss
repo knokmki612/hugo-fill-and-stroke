@@ -1,0 +1,24 @@
+.article-tab {
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  li {
+    border-bottom: 1px solid $color-light-gray;
+    border-top: 1px solid $color-light-gray;
+    padding: 0.5rem;
+
+    &:first-child {
+      border-left: 1px solid $color-light-gray;
+    }
+
+    &:last-child {
+      border-right: 1px solid $color-light-gray;
+    }
+  }
+}

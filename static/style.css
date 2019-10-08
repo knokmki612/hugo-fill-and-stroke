@@ -474,14 +474,16 @@ a:hover {
 }
 .site-article blockquote,
 .site-article pre,
-.site-article table {
+.site-article table,
+.site-article .article-tab {
   max-width: calc(100vw - 2.5rem);
   overflow: auto;
 }
 @media only screen and (min-width: 801px) {
   .site-article blockquote,
 .site-article pre,
-.site-article table {
+.site-article table,
+.site-article .article-tab {
     max-width: calc(100vw - 19.125rem);
   }
 }
@@ -533,6 +535,25 @@ a:hover {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.article-tab ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.article-tab li {
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: 0.5rem;
+}
+.article-tab li:first-child {
+  border-left: 1px solid #eee;
+}
+.article-tab li:last-child {
+  border-right: 1px solid #eee;
 }
 
 .social-button .button {
