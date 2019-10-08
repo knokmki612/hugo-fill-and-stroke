@@ -458,7 +458,6 @@ a:hover {
 .site-article pre {
   border: 1px solid #eee;
   padding: 0.5rem;
-  white-space: nowrap;
 }
 .site-article table {
   border-collapse: collapse;
