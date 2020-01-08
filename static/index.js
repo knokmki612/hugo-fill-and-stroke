@@ -1,4 +1,4 @@
-quicklink.listen();
+barba.init();
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
   var script = document.createElement("script");
   script.async = true;

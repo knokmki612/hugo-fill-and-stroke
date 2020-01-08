@@ -19,7 +19,7 @@
 {{ partial "opengraph.html" . -}}
 {{ partial "twitter-cards.html" . -}}
 </head>
-<body class="site-body">
+<body class="site-body" data-barba="wrapper">
 <header class="site-header">
 <div class="inner">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
@@ -42,7 +42,7 @@
   </button>
 </form>
 </div>
-<main class="site-main">
+<main class="site-main" data-barba="container">
 <hr id="main" class="text-browser-message">
 {{- block "main" . }}
 {{- end }}
@@ -58,7 +58,7 @@
 </div>
 </footer>
 <div class="site-footer-blank"></div>
-<script src="https://unpkg.com/quicklink/dist/quicklink.umd.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
 <script src="{{ "index.js" | relURL }}"></script>
 </body>
 </html>
