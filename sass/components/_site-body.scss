@@ -10,14 +10,6 @@
     grid-template-columns: $width-side-menu 1fr;
   }
 
-  .site-header-blank {
-    grid-area: header-blank;
-
-    @include min-screen($screen-normal) {
-      @include border("bottom");
-    }
-  }
-
   .site-header {
     grid-area: header;
 
@@ -25,6 +17,14 @@
 
     @include min-screen($screen-normal) {
       @include border("left");
+    }
+  }
+
+  .site-header-blank {
+    grid-area: header-blank;
+
+    @include min-screen($screen-normal) {
+      @include border("bottom");
     }
   }
 
@@ -42,12 +42,6 @@
     @include border("bottom");
   }
 
-  .site-side-menu {
-    grid-area: side-menu;
-
-    @include border("bottom");
-  }
-
   .site-main {
     grid-area: main;
 
@@ -56,6 +50,12 @@
     @include min-screen($screen-normal) {
       @include border("left");
     }
+  }
+
+  .site-side-menu {
+    grid-area: side-menu;
+
+    @include border("bottom");
   }
 
   .site-footer {

@@ -20,7 +20,6 @@
 {{ partial "twitter-cards.html" . -}}
 </head>
 <body class="site-body">
-<div class="site-header-blank"></div>
 <header class="site-header">
 <div class="inner">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
@@ -28,6 +27,7 @@
 <p class="text-browser-message"><a href="#main">{{ i18n "JumpToMain" }}</a></p>
 </div>
 </header>
+<div class="site-header-blank"></div>
 <nav class="site-global-menu">
 {{ if (fileExists "layouts/partials/global-menu.html") -}}
 {{ partialCached "global-menu.html" . -}}
@@ -42,16 +42,16 @@
   </button>
 </form>
 </div>
-<nav class="site-side-menu">
-<div class="inner">
-{{ partialCached "side-menu.html" . -}}
-</div>
-</nav>
 <main class="site-main">
 <hr id="main" class="text-browser-message">
 {{- block "main" . }}
 {{- end }}
 </main>
+<nav class="site-side-menu">
+<div class="inner">
+{{ partialCached "side-menu.html" . -}}
+</div>
+</nav>
 <footer class="site-footer">
 <div class="inner">
 <p>&copy; {{ .Site.Copyright }}</p>

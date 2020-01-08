@@ -65,14 +65,6 @@ a:hover {
     grid-template-columns: 15.625rem 1fr;
   }
 }
-.site-body .site-header-blank {
-  grid-area: header-blank;
-}
-@media only screen and (min-width: 801px) {
-  .site-body .site-header-blank {
-    border-bottom: solid 1rem #eee;
-  }
-}
 .site-body .site-header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -82,6 +74,14 @@ a:hover {
 @media only screen and (min-width: 801px) {
   .site-body .site-header {
     border-left: solid 1rem #eee;
+  }
+}
+.site-body .site-header-blank {
+  grid-area: header-blank;
+}
+@media only screen and (min-width: 801px) {
+  .site-body .site-header-blank {
+    border-bottom: solid 1rem #eee;
   }
 }
 .site-body .site-global-menu {
@@ -101,12 +101,6 @@ a:hover {
   grid-area: search;
   border-bottom: solid 1rem #eee;
 }
-.site-body .site-side-menu {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: side-menu;
-  border-bottom: solid 1rem #eee;
-}
 .site-body .site-main {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -117,6 +111,12 @@ a:hover {
   .site-body .site-main {
     border-left: solid 1rem #eee;
   }
+}
+.site-body .site-side-menu {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: side-menu;
+  border-bottom: solid 1rem #eee;
 }
 .site-body .site-footer {
   -ms-grid-row: 6;
@@ -132,13 +132,13 @@ a:hover {
   grid-area: footer-blank;
 }
 @media only screen and (min-width: 801px) {
-  .site-body .site-header-blank {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
   .site-body .site-header {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
+  }
+  .site-body .site-header-blank {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
   .site-body .site-global-menu {
     -ms-grid-row: 2;
@@ -148,13 +148,13 @@ a:hover {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  .site-body .site-side-menu {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
   .site-body .site-main {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
+  }
+  .site-body .site-side-menu {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
   }
   .site-body .site-footer {
     -ms-grid-row: 4;
