@@ -59,14 +59,6 @@
 </footer>
 <div class="site-footer-blank"></div>
 <script src="https://unpkg.com/quicklink/dist/quicklink.umd.js"></script>
-<script>
-quicklink.listen();
-if(document.getElementsByClassName("twitter-tweet").length > 0) {
-  var script = document.createElement("script");
-  script.async = true;
-  script.src = "https://platform.twitter.com/widgets.js";
-  document.body.appendChild(script);
-}
-</script>
+<script src="{{ "index.js" | relURL }}"></script>
 </body>
 </html>
