@@ -596,3 +596,8 @@ a:hover {
          column-count: 3;
   }
 }
+
+.twitter-tweet {
+  min-width: unset !important;
+  width: unset !important;
+}
