@@ -3,7 +3,8 @@ barba.init({
     beforeEnter({ trigger }) {
       if (trigger !== 'back') window.scrollTo(0, 0);
     }
-  }]
+  }],
+  prevent: ({ href }) => !/(\/|html)$/.test(href)
 });
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
   var script = document.createElement("script");
