@@ -36,7 +36,8 @@
   }
 
   pre {
-    border: 1px solid $color-light-gray;
+    @include border("all", 1px);
+
     padding: 0.5rem;
   }
 
@@ -47,12 +48,13 @@
   }
 
   thead {
-    background-color: $color-light-gray;
+    background-color: $color-line-gray;
   }
 
   th,
   td {
-    border: 1px solid $color-light-gray;
+    @include border("all", 1px);
+
     padding: 0.5rem;
   }
 

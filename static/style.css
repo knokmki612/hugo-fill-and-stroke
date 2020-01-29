@@ -457,7 +457,7 @@ a:hover {
   padding: 0 3rem 0 2.5rem;
 }
 .site-article pre {
-  border: 1px solid #eee;
+  border: solid 1px #eee;
   padding: 0.5rem;
 }
 .site-article table {
@@ -470,7 +470,7 @@ a:hover {
 }
 .site-article th,
 .site-article td {
-  border: 1px solid #eee;
+  border: solid 1px #eee;
   padding: 0.5rem;
 }
 .site-article blockquote,
@@ -546,15 +546,15 @@ a:hover {
   white-space: nowrap;
 }
 .article-tab li {
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
   padding: 0.5rem;
 }
 .article-tab li:first-child {
-  border-left: 1px solid #eee;
+  border-left: solid 1px #eee;
 }
 .article-tab li:last-child {
-  border-right: 1px solid #eee;
+  border-right: solid 1px #eee;
 }
 
 .social-button .button {

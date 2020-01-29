@@ -9,16 +9,16 @@
   }
 
   li {
-    border-bottom: 1px solid $color-light-gray;
-    border-top: 1px solid $color-light-gray;
+    @include border("top bottom", 1px);
+
     padding: 0.5rem;
 
     &:first-child {
-      border-left: 1px solid $color-light-gray;
+      @include border("left", 1px);
     }
 
     &:last-child {
-      border-right: 1px solid $color-light-gray;
+      @include border("right", 1px);
     }
   }
 }

@@ -11,20 +11,24 @@
 }
 
 @mixin border($direction, $width: 1rem) {
+  @if str-index($direction, "all") {
+    border: solid $width $color-line-gray;
+  }
+
   @if str-index($direction, "top") {
-    border-top: solid $width $color-light-gray;
+    border-top: solid $width $color-line-gray;
   }
 
   @if str-index($direction, "right") {
-    border-right: solid $width $color-light-gray;
+    border-right: solid $width $color-line-gray;
   }
 
   @if str-index($direction, "bottom") {
-    border-bottom: solid $width $color-light-gray;
+    border-bottom: solid $width $color-line-gray;
   }
 
   @if str-index($direction, "left") {
-    border-left: solid $width $color-light-gray;
+    border-left: solid $width $color-line-gray;
   }
 }
 
