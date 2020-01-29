@@ -21,13 +21,13 @@
     "hugo"
   ],
   "license": "GPL-3.0-or-later",
-  "main": "sass/style.sass",
+  "main": "static/style.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
   },
   "scripts": {
-    "build": "sass --style expanded --no-source-map sass/:static/; postcss static/*.css --replace",
-    "start": "sass --style expanded --no-source-map --watch sass/:static/"
+    "build": "sass --style expanded --no-source-map style/:static/; postcss static/*.css --replace",
+    "start": "sass --style expanded --no-source-map --watch style/:static/"
   }
 }
