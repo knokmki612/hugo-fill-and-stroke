@@ -105,12 +105,12 @@ a:hover {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: main;
-  min-height: calc(100vh - 15.625rem);
   border-bottom: solid 1rem #eee;
 }
 @media only screen and (min-width: 801px) {
   .site-body .site-main {
     border-left: solid 1rem #eee;
+    min-height: calc(100vh - 15.625rem);
   }
 }
 .site-body .site-side-menu {
@@ -293,7 +293,7 @@ a:hover {
   display: block;
 }
 .site-main .pagination-list {
-  margin: 3rem auto;
+  margin: 1.5rem auto;
   max-width: 31.25rem;
   padding: 0 0.625rem;
   padding: 0;
@@ -308,6 +308,9 @@ a:hover {
   .site-main .pagination-list {
     transform: translateX(-7.8125rem);
   }
+}
+.site-main .pagination-list + .site-article {
+  margin-top: 1.5rem;
 }
 .site-main hr {
   border: none;

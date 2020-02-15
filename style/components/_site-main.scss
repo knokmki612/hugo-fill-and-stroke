@@ -2,9 +2,13 @@
   display: block; // for IE 11 support
 
   .pagination-list {
-    @include inner(3rem);
+    @include inner(1.5rem);
 
     padding: 0;
+
+    & + .site-article {
+      margin-top: 1.5rem;
+    }
   }
 
   hr {
