@@ -1,24 +1,21 @@
 .article-tab {
 
   ul {
-    display: flex;
+    @include border("all", 1px);
+
+    display: inline-flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
   }
 
   li {
-    @include border("top bottom", 1px);
-
     padding: 0.5rem;
+  }
 
-    &:first-child {
-      @include border("left", 1px);
-    }
-
-    &:last-child {
-      @include border("right", 1px);
-    }
+  a {
+    display: block;
+    margin: -0.5rem;
+    padding: 0.5rem;
   }
 }

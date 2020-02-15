@@ -40,7 +40,6 @@
   @include min-screen($screen-normal) {
     max-width: $width-inner;
     transform: none;
-    transition: transform 0.25s ease;
   }
 
   @include min-screen($screen-large) {

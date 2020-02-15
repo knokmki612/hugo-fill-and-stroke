@@ -44,6 +44,7 @@
 
   .site-main {
     grid-area: main;
+    min-height: calc(100vh - #{1rem * 7 + 1.125rem + 1.25rem * 4 + 2.5rem});
 
     @include border("bottom");
 

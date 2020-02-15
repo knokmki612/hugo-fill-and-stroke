@@ -1,7 +1,7 @@
 {{- define "main" }}
 {{- $blog := where .Site.RegularPages "Section" "blog" }}
 {{- $paginator := .Paginate $blog }}
-{{ partial "pagination.html" . }}
+{{ partial "pagination-list.html" . }}
 {{- range $key, $value := $paginator.Pages }}
 <article class="site-article">
 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -15,5 +15,5 @@
 <hr>
 {{- end }}
 {{- end }}
-{{ partial "pagination.html" . }}
+{{ partial "pagination-list.html" . }}
 {{- end }}

@@ -1,15 +1,10 @@
 .site-main {
   display: block; // for IE 11 support
 
-  .pagination {
-    @include inner(0.625rem);
+  .pagination-list {
+    @include inner(3rem);
 
     padding: 0;
-    text-align: center;
-
-    li {
-      display: inline-block;
-    }
   }
 
   hr {
