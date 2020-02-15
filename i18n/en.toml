@@ -28,12 +28,6 @@ other = "404 Not Found"
 [404NotFoundDescription]
 other = "Go back to top page"
 
-[First]
-other = "First"
-
-[FirstAriaLabel]
-other = "First page"
-
 [Prev]
 other = "Prev"
 
@@ -45,12 +39,6 @@ other = "Next"
 
 [NextAriaLabel]
 other = "Next page"
-
-[Last]
-other = "Last"
-
-[LastAriaLabel]
-other = "Last page"
 
 [ArticleDateFormat]
 other = "02/01/2006"

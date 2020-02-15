@@ -28,12 +28,6 @@ other = "404 (ページがないです)"
 [404NotFoundDescription]
 other = "トップページに戻る"
 
-[First]
-other = "最初"
-
-[FirstAriaLabel]
-other = "最初のページ"
-
 [Prev]
 other = "前"
 
@@ -45,12 +39,6 @@ other = "次"
 
 [NextAriaLabel]
 other = "次のページ"
-
-[Last]
-other = "最後"
-
-[LastAriaLabel]
-other = "最後のページ"
 
 [ArticleDateFormat]
 other = "2006/01/02"
