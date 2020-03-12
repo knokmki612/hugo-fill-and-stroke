@@ -1,6 +1,4 @@
 .site-article {
-  @include inner(3rem);
-
   line-height: 1.6;
 
   > * ~ * {

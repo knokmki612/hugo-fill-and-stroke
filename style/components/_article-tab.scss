@@ -1,16 +1,25 @@
 .article-tab {
 
   ul {
-    @include border("all", 1px);
-
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   li {
+    @include border("top bottom", 1px);
+
     padding: 0.5rem;
+
+    &:first-child {
+      @include border("left", 1px);
+    }
+
+    &:last-child {
+      @include border("right", 1px);
+    }
   }
 
   a {
