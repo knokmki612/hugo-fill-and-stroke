@@ -6,9 +6,10 @@
   }
 
   h2 {
-    @include border("top bottom", 0.5rem);
+    @include border("all", 0.5rem);
 
     font-weight: normal;
+    padding: 0.5rem;
   }
 
   h3 {

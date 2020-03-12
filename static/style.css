@@ -458,9 +458,9 @@ a:hover {
   margin: 1.5rem 0;
 }
 .site-article h2 {
-  border-top: solid 0.5rem #eee;
-  border-bottom: solid 0.5rem #eee;
+  border: solid 0.5rem #eee;
   font-weight: normal;
+  padding: 0.5rem;
 }
 .site-article h3 {
   border-bottom: solid 0.5rem #eee;
@@ -510,6 +510,19 @@ a:hover {
 .site-article .article-tab {
     max-width: calc(100vw - 19.125rem);
   }
+}
+
+.article-header {
+  border: solid 0.5rem #eee;
+  padding: 0.5rem;
+}
+.article-header > * ~ * {
+  margin-top: 0.5rem;
+}
+.article-header h2 {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .article-aside {

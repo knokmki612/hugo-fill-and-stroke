@@ -1,0 +1,15 @@
+.article-header {
+  @include border("all", 0.5rem);
+
+  padding: 0.5rem;
+
+  > * ~ * {
+    margin-top: 0.5rem;
+  }
+
+  h2 {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -3,10 +3,12 @@
 {{- end }}
 {{- define "main" }}
 <article class="site-article">
+<header class="article-header">
 <h2>{{ .Title }}</h2>
 <aside class="article-aside">
 {{ partial "aside.html" . -}}
 </aside>
+</header>
 {{ .Content }}
 </article>
 {{- end }}
