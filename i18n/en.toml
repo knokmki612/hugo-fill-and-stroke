@@ -40,6 +40,9 @@ other = "Next"
 [NextAriaLabel]
 other = "Next page"
 
+[PublishedDateLabel]
+other = "Published date"
+
 [ArticleDateFormat]
 other = "02/01/2006"
 

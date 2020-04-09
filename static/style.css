@@ -529,11 +529,8 @@ a:hover {
   font-size: 0.875rem;
   line-height: 1;
 }
-.article-aside > * ~ * {
-  margin-top: 0.25rem;
-}
-.article-aside .date {
-  font-weight: bold;
+.article-aside > :last-child {
+  margin-bottom: -0.25rem;
 }
 
 .article-image {
@@ -596,6 +593,24 @@ a:hover {
   display: block;
   margin: -0.5rem;
   padding: 0.5rem;
+}
+
+.aside-row .aside-column {
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.aside-column {
+  display: inline-block;
+}
+.aside-column > :first-child {
+  background-color: #eee;
+  display: inline-block;
+  padding: 0.25rem;
+}
+.aside-column > :last-child {
+  display: block;
+  padding: 0.25rem;
 }
 
 .social-button .button {

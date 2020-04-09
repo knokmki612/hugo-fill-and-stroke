@@ -40,6 +40,9 @@ other = "次"
 [NextAriaLabel]
 other = "次のページ"
 
+[PublishedDateLabel]
+other = "公開した日"
+
 [ArticleDateFormat]
 other = "2006/01/02"
 

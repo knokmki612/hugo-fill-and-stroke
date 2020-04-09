@@ -1,0 +1,14 @@
+.aside-column {
+  display: inline-block;
+
+  > :first-child {
+    background-color: $color-line-gray;
+    display: inline-block;
+    padding: 0.25rem;
+  }
+
+  > :last-child {
+    display: block;
+    padding: 0.25rem;
+  }
+}
