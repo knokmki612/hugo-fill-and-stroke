@@ -1,6 +1,6 @@
 barba.init({
   transitions: [{
-    leave({ trigger }) {
+    enter({ trigger }) {
       if (trigger !== 'back') document.scrollingElement.scrollTo(0, 0);
     }
   }],
