@@ -1,7 +1,7 @@
 barba.init({
   transitions: [{
-    beforeEnter({ trigger }) {
-      if (trigger !== 'back') window.scrollTo(0, 0);
+    leave({ trigger }) {
+      if (trigger !== 'back') document.scrollingElement.scrollTo(0, 0);
     }
   }],
   prevent: ({ href }) => !/(\/|html)$/.test(href)
