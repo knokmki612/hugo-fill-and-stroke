@@ -1,5 +1,4 @@
 .site-side-menu {
-
   .inner {
     @include max-screen($screen-normal) {
       @include inner();

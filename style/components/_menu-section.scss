@@ -13,7 +13,6 @@
   }
 
   @include min-screen($screen-normal) {
-
     & ~ & {
       margin-top: 1rem;
     }
