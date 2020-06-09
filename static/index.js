@@ -1,3 +1,4 @@
+quicklink.listen();
 const swup = new Swup({
   plugins: [
     new SwupScrollPlugin({
