@@ -1,10 +1,9 @@
-barba.init({
-  transitions: [{
-    enter({ trigger }) {
-      if (trigger !== 'back') document.scrollingElement.scrollTo(0, 0);
-    }
-  }],
-  prevent: ({ href }) => !/(\/|html)$/.test(href)
+const swup = new Swup({
+  plugins: [
+    new SwupScrollPlugin({
+      animateScroll: false
+    })
+  ]
 });
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
   var script = document.createElement("script");
