@@ -1,9 +1,9 @@
-quicklink.listen();
 const swup = new Swup({
   plugins: [
     new SwupScrollPlugin({
       animateScroll: false
-    })
+    }),
+    new SwupPreloadPlugin()
   ]
 });
 if(document.getElementsByClassName("twitter-tweet").length > 0) {
