@@ -43,6 +43,9 @@ other = "Next page"
 [PublishedDateLabel]
 other = "Published date"
 
+[HappenDateLabel]
+other = "Happen date"
+
 [ArticleDateFormat]
 other = "02/01/2006"
 
