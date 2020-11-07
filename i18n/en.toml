@@ -40,8 +40,8 @@ other = "Next"
 [NextAriaLabel]
 other = "Next page"
 
-[PublishedDateLabel]
-other = "Published date"
+[PublishDateLabel]
+other = "Publish date"
 
 [HappenDateLabel]
 other = "Happen date"

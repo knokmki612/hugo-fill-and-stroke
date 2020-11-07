@@ -40,8 +40,8 @@ other = "次"
 [NextAriaLabel]
 other = "次のページ"
 
-[PublishedDateLabel]
-other = "公開した日"
+[PublishDateLabel]
+other = "公開日"
 
 [HappenDateLabel]
 other = "発生日"
