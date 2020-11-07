@@ -2,7 +2,7 @@
 <div class="aside-column">
   <span>{{ i18n "Tag" }}</span>
   <span>
-    {{ range $key, $value := $.Params.tags -}}
+    {{ range $key, $value := .Params.tags -}}
     {{ if $key }}, {{ end }}<a href="{{ "tags" | relURL }}/{{ . | urlize }}/">{{ . }}</a>
     {{- end }}
   </span>

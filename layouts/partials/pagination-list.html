@@ -1,4 +1,4 @@
-{{- $pag := $.Paginator }}
+{{- $pag := .Paginator }}
 {{- if gt $pag.TotalPages 1 -}}
 <ul class="pagination-list">
   {{- if $pag.HasPrev }}

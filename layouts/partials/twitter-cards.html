@@ -1,14 +1,14 @@
-{{- with $.Params.images -}}
+{{- with .Params.images -}}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
 {{ else -}}
-{{- $images := $.Resources.ByType "image" -}}
+{{- $images := .Resources.ByType "image" -}}
 {{- $thumb := $images.GetMatch "*-s.*" -}}
 {{- with $thumb -}}
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:image" content="{{ $thumb.Permalink }}"/>
 {{- else -}}
-{{- with $.Site.Params.images -}}
+{{- with .Site.Params.images -}}
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
 {{ else -}}

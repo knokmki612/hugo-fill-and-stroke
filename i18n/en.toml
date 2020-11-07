@@ -40,14 +40,14 @@ other = "Next"
 [NextAriaLabel]
 other = "Next page"
 
-[PublishedDateLabel]
-other = "Published date"
+[PublishDateLabel]
+other = "Publish date"
+
+[HappenDateLabel]
+other = "Happen date"
 
 [ArticleDateFormat]
 other = "02/01/2006"
-
-[ArchiveDateFormat]
-other = "01/2006"
 
 [DiaryTag]
 other = "Diary"
