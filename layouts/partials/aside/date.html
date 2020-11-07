@@ -1,7 +1,7 @@
 <div class="aside-row">
 <div class="aside-column">
   <span>{{ i18n "PublishDateLabel" }}</span>
-  <time datetime="{{ $.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format (i18n "ArticleDateFormat") }}</time>
+  <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format (i18n "ArticleDateFormat") }}</time>
 </div>
 {{- if .Params.happenDate }}
 <div class="aside-column">
