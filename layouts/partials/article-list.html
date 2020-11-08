@@ -1,0 +1,11 @@
+<article class="site-article">
+<header class="article-header">
+<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<aside class="article-aside">
+{{ partial "aside-list.html" . -}}
+</aside>
+</header>
+{{- $sentence := findRE "<(p|h[1-6]).*?>.*?</(p|h[1-6])>" .Content 3 }}
+{{ delimit $sentence "\n" | safeHTML | truncate 200 }}
+<p><a href="{{ .Permalink }}">{{ i18n "ArticleReadMore" }}</a></p>
+</article>
