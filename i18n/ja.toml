@@ -23,7 +23,7 @@ other = "アーカイブ"
 other = "バナー"
 
 [404NotFound]
-other = "404 (ページがないです)"
+other = "404 (ページがありません)"
 
 [404NotFoundDescription]
 other = "トップページに戻る"
