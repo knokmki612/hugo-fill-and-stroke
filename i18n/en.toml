@@ -49,6 +49,9 @@ other = "Happen date"
 [ArticleDateFormat]
 other = "02/01/2006"
 
+[ArticleReadMore]
+other = "Read more"
+
 [DiaryTag]
 other = "Diary"
 
