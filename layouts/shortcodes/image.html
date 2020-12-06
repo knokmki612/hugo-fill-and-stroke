@@ -9,7 +9,7 @@
   {{- end }}
   {{- end }}
   {{- if .Site.Params.Cloudinary.enable }}
-  {{ with .Site.Params.Cloudinary }}<img src="{{ path.Join "https://res.cloudinary.com" .cloudName "image/upload" .transformations.thumbnail .folder ($.Get "src") }}" alt="{{ $.Get "alt" }}" />{{ end }}
+  {{ with .Site.Params.Cloudinary }}<img src="{{ path.Join "https://res.cloudinary.com" .cloudName "image/upload" .transformations.article .folder ($.Get "src") }}" alt="{{ $.Get "alt" }}" />{{ end }}
   {{- else }}
   {{- $img := .Page.Resources.GetMatch ( .Get "src" ) -}}
   <img src="{{ with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" alt="{{ .Get "alt" }}" />
