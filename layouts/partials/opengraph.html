@@ -4,7 +4,7 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- with .Params.images }}
 {{- range first 6 . }}
-<meta property="og:image" content="{{ . | absURL }}" />
+<meta property="og:image" content="{{ if $.Site.Params.Cloudinary.enable }}{{ $cloudinary := $.Site.Params.Cloudinary }}{{ path.Join "https://res.cloudinary.com" $cloudinary.cloudName "image/upload" $cloudinary.transformations.ogp $cloudinary.folder . }}{{ else }}{{ . | absURL }}{{ end }}" />
 {{ end -}}{{/* range first 6 . */}}
 {{- else }}
 {{- $thumb := .Resources.Match "*-s.*" }}
