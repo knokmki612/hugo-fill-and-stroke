@@ -5,11 +5,11 @@
     {{- with .Get "target" }} target="{{ . }}"{{ end -}}
     {{- with .Get "rel" }} rel="{{ . }}"{{ end -}}>
   {{- else if .Site.Params.Cloudinary.enable }}
-  {{ with .Site.Params.Cloudinary }}<a href="{{ path.Join "https://res.cloudinary.com" .cloudName "image/upload" .folder ($.Get "src") }}">
+  {{ with .Site.Params.Cloudinary }}<a href="https://{{ path.Join "res.cloudinary.com" .cloudName "image/upload" .folder ($.Get "src") }}">
   {{- end }}
   {{- end }}
   {{- if .Site.Params.Cloudinary.enable }}
-  {{ with .Site.Params.Cloudinary }}<img src="{{ path.Join "https://res.cloudinary.com" .cloudName "image/upload" .transformations.article .folder ($.Get "src") }}" alt="{{ $.Get "alt" }}" />{{ end }}
+  {{ with .Site.Params.Cloudinary }}<img src="https://{{ path.Join "res.cloudinary.com" .cloudName "image/upload" .transformations.article .folder ($.Get "src") }}" alt="{{ $.Get "alt" }}" />{{ end }}
   {{- else }}
   {{- $img := .Page.Resources.GetMatch ( .Get "src" ) -}}
   <img src="{{ with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" alt="{{ .Get "alt" }}" />

@@ -1,6 +1,6 @@
 <video controls>
   {{- if .Site.Params.Cloudinary.enable }}
-  {{ with .Site.Params.Cloudinary }}<source src="{{ path.Join "https://res.cloudinary.com" .cloudName "video/upload" .folder ($.Get "src") }}">{{ end }}
+  {{ with .Site.Params.Cloudinary }}<source src="https://{{ path.Join "res.cloudinary.com" .cloudName "video/upload" .folder ($.Get "src") }}">{{ end }}
   {{- else }}
   {{- $videos := .Page.Resources.Match (.Get "src") }}
   {{- range $video := $videos }}
