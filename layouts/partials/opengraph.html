@@ -7,7 +7,6 @@
 <meta property="og:image" content="{{ . | absURL }}" />
 {{ end -}}{{/* range first 6 . */}}
 {{- else }}
-{{- $images := .Resources.ByType "image" }}
 {{- $thumb := .Resources.Match "*-s.*" }}
 {{- range first 6 $thumb }}
 <meta property="og:image" content="{{ .Permalink }}" />
