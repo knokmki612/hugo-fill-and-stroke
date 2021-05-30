@@ -2,7 +2,7 @@
   display: inline-block;
 
   > :first-child {
-    background-color: $color-line-gray;
+    background-color: var(--color-line-gray);
     display: inline-block;
     padding: 0.25rem;
   }

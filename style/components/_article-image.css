@@ -4,7 +4,6 @@
   img {
     box-sizing: content-box;
     max-height: 400px;
-    max-width: 100%;
 
     @media only screen and (max-height: 400px) {
       max-height: 200px;

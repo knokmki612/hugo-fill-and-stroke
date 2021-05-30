@@ -8,16 +8,16 @@
   }
 
   li {
-    @include border("top bottom", 1px);
-
+    border-bottom: solid 1px var(--color-line-gray);
+    border-top: solid 1px var(--color-line-gray);
     padding: 0.5rem;
 
     &:first-child {
-      @include border("left", 1px);
+      border-left: solid 1px var(--color-line-gray);
     }
 
     &:last-child {
-      @include border("right", 1px);
+      border-right: solid 1px var(--color-line-gray);
     }
   }
 

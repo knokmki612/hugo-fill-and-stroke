@@ -1,6 +1,9 @@
 module.exports = () => ({
   map: false,
   plugins: {
-    autoprefixer: { grid: 'autoplace' }
+    'postcss-import': {},
+    'postcss-nested': {},
+    autoprefixer: {},
+    'postcss-csso': {},
   }
 })

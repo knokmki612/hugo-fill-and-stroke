@@ -1,0 +1,10 @@
+.site-side-menu {
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: var(--size-container);
+    padding-left: 0.625rem;
+    padding-top: 0.625rem;
+  }
+}

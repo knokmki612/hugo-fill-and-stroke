@@ -1,0 +1,10 @@
+.taxonomy-list {
+  columns: 12rem auto;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    max-width: 12rem;
+    word-wrap: break-word;
+  }
+}

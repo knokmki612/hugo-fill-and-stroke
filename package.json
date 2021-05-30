@@ -7,13 +7,17 @@
     "url": "https://github.com/knokmki612/hugo-pencil-and-ruler/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.2",
-    "sass": "^1.29.0",
-    "stylelint": "^13.7.2",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-order": "^3.1.1",
-    "stylelint-scss": "^3.18.0"
+    "autoprefixer": "^10.2.6",
+    "modern-normalize": "^1.1.0",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-csso": "^5.0.1",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.5",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0"
   },
   "homepage": "https://github.com/knokmki612/hugo-pencil-and-ruler#readme",
   "keywords": [
@@ -26,7 +30,7 @@
     "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
   },
   "scripts": {
-    "build": "sass --style expanded --no-source-map style/:static/; postcss static/*.css --replace",
-    "start": "sass --style expanded --no-source-map --watch style/:static/"
+    "build": "postcss 'style/**/[^_]*' --dir static",
+    "start": "postcss 'style/**/[^_]*' --dir static --watch"
   }
 }

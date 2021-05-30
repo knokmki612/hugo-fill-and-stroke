@@ -1,6 +1,5 @@
 .article-header {
-  @include border("all", 0.5rem);
-
+  border: solid 0.5rem var(--color-line-gray);
   padding: 0.5rem;
 
   > * ~ * {

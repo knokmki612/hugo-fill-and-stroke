@@ -1,11 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: $color-base;
-  color: $color-text;
+body {
+  background-color: var(--color-base);
+  color: var(--color-text);
   font-family: sans-serif;
+  letter-spacing: 0.0125rem;
 }
 
 h1 {

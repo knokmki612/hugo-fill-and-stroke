@@ -1,21 +1,13 @@
 .menu-section {
-  @include max-screen($screen-normal) {
-    padding-bottom: 0.625rem;
-    padding-right: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-right: 0.625rem;
 
-    &.-width-100pct {
-      width: 100%;
-    }
-
-    &.-width-50pct {
-      width: 50%;
-    }
+  &.is-width-100pct {
+    width: 100%;
   }
 
-  @include min-screen($screen-normal) {
-    & ~ & {
-      margin-top: 1rem;
-    }
+  &.is-width-50pct {
+    width: 50%;
   }
 
   h2 {

@@ -14,7 +14,6 @@
 {{ if (fileExists "layouts/partials/favicons.html") -}}
 {{ partialCached "favicons.html" . -}}
 {{ end -}}
-<link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
 <link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
 {{ partial "twitter-cards.html" . -}}
@@ -27,7 +26,6 @@
 <p class="text-browser-message"><a href="#main">{{ i18n "JumpToMain" }}</a></p>
 </div>
 </header>
-<div class="site-header-blank"></div>
 <nav class="site-global-menu">
 {{ if (fileExists "layouts/partials/global-menu.html") -}}
 {{ partialCached "global-menu.html" . -}}
@@ -57,7 +55,6 @@
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
 </footer>
-<div class="site-footer-blank"></div>
 <script src="https://unpkg.com/swup/dist/swup.min.js"></script>
 <script src="https://unpkg.com/@swup/scroll-plugin/dist/SwupScrollPlugin.min.js"></script>
 <script src="https://unpkg.com/@swup/preload-plugin/dist/SwupPreloadPlugin.min.js"></script>

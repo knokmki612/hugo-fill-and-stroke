@@ -4,11 +4,8 @@
 
   .inner {
     display: flex;
-
-    @include max-screen($screen-normal) {
-      @include inner();
-
-      padding: 0;
-    }
+    margin: 0 auto;
+    max-width: var(--size-container);
+    padding: 0;
   }
 }

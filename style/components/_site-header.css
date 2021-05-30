@@ -2,7 +2,9 @@
   padding: 1.25rem 0;
 
   .inner {
-    @include inner();
+    margin: 0 auto;
+    max-width: var(--size-container);
+    padding: 0 0.625rem;
   }
 
   h1 {

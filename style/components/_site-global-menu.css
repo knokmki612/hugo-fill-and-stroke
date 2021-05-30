@@ -1,8 +1,8 @@
 .site-global-menu {
   ul {
-    @include inner();
-
     list-style: none;
+    margin: 0 auto;
+    max-width: var(--size-container);
     padding: 0;
   }
 
@@ -19,7 +19,7 @@
     text-decoration: none;
 
     &:hover {
-      background-color: $color-hover-gray;
+      background-color: var(--color-hover-gray);
     }
   }
 }

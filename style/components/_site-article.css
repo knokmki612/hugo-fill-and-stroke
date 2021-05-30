@@ -1,27 +1,28 @@
 .site-article {
-  line-height: 1.6;
+  line-height: 1.75;
 
   > * ~ * {
     margin: 1.5rem 0;
   }
 
   h2 {
-    @include border("all", 0.5rem);
-
+    border: solid 0.5rem var(--color-line-gray);
     font-weight: normal;
     padding: 0.5rem;
   }
 
   h3 {
-    @include border("bottom", 0.5rem);
-
+    border-bottom: solid 0.5rem var(--color-line-gray);
     max-width: max-content;
   }
 
   hr {
     border: none;
+    border-bottom: solid 0.5rem var(--color-line-gray);
+  }
 
-    @include border("top", 0.5rem);
+  img {
+    max-width: 100%;
   }
 
   video {
@@ -29,14 +30,12 @@
   }
 
   blockquote {
-    @include border("left", 0.5rem);
-
+    border-left: solid 0.5rem var(--color-line-gray);
     padding: 0 3rem 0 2.5rem;
   }
 
   pre {
-    @include border("all", 1px);
-
+    border: solid 1px var(--color-line-gray);
     padding: 0.5rem;
   }
 
@@ -47,13 +46,12 @@
   }
 
   thead {
-    background-color: $color-line-gray;
+    background-color: var(--color-line-gray);
   }
 
   th,
   td {
-    @include border("all", 1px);
-
+    border: solid 1px var(--color-line-gray);
     padding: 0.5rem;
   }
 
@@ -63,9 +61,5 @@
   .article-tab {
     max-width: calc(100vw - 2.5rem);
     overflow: auto;
-
-    @include min-screen ($screen-normal) {
-      max-width: calc(100vw - #{$width-side-menu + 1rem + 2.5rem});
-    }
   }
 }

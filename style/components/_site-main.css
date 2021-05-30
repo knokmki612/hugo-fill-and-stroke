@@ -1,0 +1,29 @@
+.site-main {
+  display: block; /* for IE 11 support */
+
+  .pagination-list {
+    margin: 1.5rem auto;
+    max-width: var(--size-container);
+    padding: 0;
+  }
+
+  .site-article {
+    margin: 3rem auto;
+    max-width: var(--size-container);
+    padding: 0 0.625rem;
+
+    &:first-of-type {
+      margin-top: 1.5rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: solid 1rem var(--color-line-gray);
+    margin: 0;
+  }
+}

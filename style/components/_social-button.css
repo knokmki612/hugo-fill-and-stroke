@@ -10,15 +10,15 @@
     padding: 0.25rem;
     text-decoration: none;
 
-    &.-twitter {
+    &.is-twitter {
       background-color: #1da1f2;
     }
 
-    &.-facebook {
+    &.is-facebook {
       background-color: #1877f2;
     }
 
-    &.-hatenabookmark {
+    &.is-hatenabookmark {
       background-color: #00a4de;
     }
   }
