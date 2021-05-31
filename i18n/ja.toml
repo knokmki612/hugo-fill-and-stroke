@@ -28,6 +28,9 @@ other = "404 (ページがありません)"
 [404NotFoundDescription]
 other = "トップページに戻る"
 
+[Begin]
+other = "先頭"
+
 [Prev]
 other = "前"
 
@@ -36,6 +39,9 @@ other = "前のページ"
 
 [Next]
 other = "次"
+
+[End]
+other = "末尾"
 
 [NextAriaLabel]
 other = "次のページ"

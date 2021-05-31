@@ -28,6 +28,9 @@ other = "404 Not Found"
 [404NotFoundDescription]
 other = "Go back to top page"
 
+[Begin]
+other = "Begin"
+
 [Prev]
 other = "Prev"
 
@@ -36,6 +39,9 @@ other = "Previous page"
 
 [Next]
 other = "Next"
+
+[End]
+other = "End"
 
 [NextAriaLabel]
 other = "Next page"
