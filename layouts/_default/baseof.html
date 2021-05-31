@@ -19,6 +19,10 @@
 {{ partial "twitter-cards.html" . -}}
 </head>
 <body class="site-body">
+<script src="https://unpkg.com/swup/dist/swup.min.js" defer></script>
+<script src="https://unpkg.com/@swup/scroll-plugin/dist/SwupScrollPlugin.min.js" defer></script>
+<script src="https://unpkg.com/@swup/preload-plugin/dist/SwupPreloadPlugin.min.js" defer></script>
+<script src="{{ "index.js" | relURL }}" defer></script>
 <header class="site-header">
 <div class="inner">
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
@@ -55,9 +59,5 @@
 <p>&copy; {{ .Site.Copyright }}</p>
 </div>
 </footer>
-<script src="https://unpkg.com/swup/dist/swup.min.js"></script>
-<script src="https://unpkg.com/@swup/scroll-plugin/dist/SwupScrollPlugin.min.js"></script>
-<script src="https://unpkg.com/@swup/preload-plugin/dist/SwupPreloadPlugin.min.js"></script>
-<script src="{{ "index.js" | relURL }}"></script>
 </body>
 </html>
