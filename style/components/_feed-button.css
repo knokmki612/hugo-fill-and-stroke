@@ -1,5 +1,7 @@
 .feed-button {
+  display: inline-block;
+
   img {
-    height: 2.5rem;
+    height: 3rem;
   }
 }

@@ -4,7 +4,7 @@
   .pagination-list {
     margin: 1.5rem auto;
     max-width: var(--size-container);
-    padding: 0;
+    padding: 0 0.625rem;
   }
 
   .site-article {
