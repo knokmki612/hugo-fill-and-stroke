@@ -17,7 +17,6 @@
   }
 
   hr {
-    border: none;
     border-bottom: solid 0.5rem var(--color-line-gray);
   }
 
@@ -37,6 +36,11 @@
   pre {
     border: solid 1px var(--color-line-gray);
     padding: 0.5rem;
+  }
+
+  p > code {
+    background-color: var(--color-line-gray);
+    font-size: 0.875rem;
   }
 
   table {
