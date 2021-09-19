@@ -1,10 +1,10 @@
 {
-  "name": "hugo-pencil-and-ruler",
-  "description": "hugo theme: A simple design made by a line, for blog",
-  "version": "0.1.0",
+  "name": "hugo-fill-and-stroke",
+  "description": "hugo theme: A simple design, for blog",
+  "version": "0.4.0",
   "author": "knokmki612 <knokmki612@gmail.com>",
   "bugs": {
-    "url": "https://github.com/knokmki612/hugo-pencil-and-ruler/issues"
+    "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
