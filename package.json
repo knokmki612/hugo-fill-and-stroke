@@ -7,7 +7,7 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "autoprefixer": "10.3.4",
+    "autoprefixer": "10.3.5",
     "modern-normalize": "1.1.0",
     "postcss": "8.3.7",
     "postcss-cli": "8.3.1",
