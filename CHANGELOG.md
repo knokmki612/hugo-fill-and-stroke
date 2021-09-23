@@ -1,6 +1,11 @@
 # [2.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v1.0.0...v2.0.0) (2021-09-23)
 
 
+### BREAKING CHANGE
+
+* use PostCSS pipe & use assets instead of static ([b904384](https://github.com/knokmki612/hugo-fill-and-stroke/commit/b904384dd32ae2b89d61c77cb89d2b95f363a0a2))
+  * Must move favicon file from `static/favicon.ico` to `assets/favicion.ico`
+  * Install npm modules before build now required as like `hugo mod npm pack && npm install`
 
 # [1.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v0.4.0...v1.0.0) (2021-09-23)
 
