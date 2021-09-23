@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v1.0.0...v2.0.1) (2021-09-23)
+
+
+### Bug Fixes
+
+* ship.js config ([#36](https://github.com/knokmki612/hugo-fill-and-stroke/issues/36)) ([2e217c6](https://github.com/knokmki612/hugo-fill-and-stroke/commit/2e217c688d255177f4100abf7460ba37b47b0bee))
+
+
+
 # [2.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v1.0.0...v2.0.0) (2021-09-23)
 
 
