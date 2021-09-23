@@ -1,0 +1,3 @@
+[submodule "themes/fill-and-stroke"]
+	path = themes/fill-and-stroke
+	url = https://github.com/knokmki612/hugo-fill-and-stroke.git
