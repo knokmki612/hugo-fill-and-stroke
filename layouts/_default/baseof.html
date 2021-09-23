@@ -10,15 +10,14 @@
   {{- end -}}
 </title>
 <meta name="description" content="{{ .Site.Params.Description }}">
-<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+<link rel="icon" type="image/x-icon" href="{{ (resources.Get "favicon.ico").RelPermalink }}">
 {{ if (fileExists "layouts/partials/favicons.html") -}}
 {{ partialCached "favicons.html" . -}}
 {{ end -}}
-<link rel="stylesheet" href="{{ "style.css" | relURL }}?d={{ now.Format "20060102150405" }}">
+<link rel="stylesheet" href="{{ (resources.Get "style/style.css" | resources.PostCSS).RelPermalink }}?d={{ now.Format "20060102150405" }}">
 {{ partial "opengraph.html" . -}}
 {{ partial "twitter-cards.html" . -}}
-{{ $js := resources.Get "index.ts" | js.Build (dict "minify" true) -}}
-<script src="{{ $js.Permalink }}" defer></script>
+<script src="{{ (resources.Get "script/index.ts" | js.Build (dict "minify" true)).RelPermalink }}" defer></script>
 </head>
 <body class="site-body">
 <header class="site-header">
@@ -38,7 +37,7 @@
   <input class="search-input" type="search" name="q" placeholder="{{ i18n "SearchPlaceholder" }}" aria-label="{{ i18n "SearchAriaLabel" }}">
   <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
   <button class="search-button" type="submit">
-  <img src="{{ "search.svg" | relURL }}" alt="{{ i18n "Search" }}">
+  <img src="{{ (resources.Get "image/search.svg").RelPermalink }}" alt="{{ i18n "Search" }}">
   </button>
 </form>
 </div>

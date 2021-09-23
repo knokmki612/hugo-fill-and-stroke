@@ -7,13 +7,6 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "autoprefixer": "10.3.5",
-    "modern-normalize": "1.1.0",
-    "postcss": "8.3.7",
-    "postcss-cli": "8.3.1",
-    "postcss-csso": "5.0.1",
-    "postcss-import": "14.0.2",
-    "postcss-nested": "5.0.6",
     "shipjs": "0.24.0",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
@@ -31,8 +24,6 @@
     "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
   },
   "scripts": {
-    "build": "postcss 'style/**/[^_]*' --dir static",
-    "release": "shipjs prepare",
-    "start": "postcss 'style/**/[^_]*' --dir static --watch"
+    "release": "shipjs prepare"
   }
 }
