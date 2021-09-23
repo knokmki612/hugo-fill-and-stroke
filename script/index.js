@@ -1,0 +1,1 @@
+(()=>{(()=>{if(document.getElementsByClassName("twitter-tweet").length!==0)if(window.twttr)window.twttr.widgets.load();else{let t=document.createElement("script");t.defer=!0,t.src="https://platform.twitter.com/widgets.js",document.body.appendChild(t)}})();})();
