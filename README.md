@@ -2,6 +2,11 @@
 
 A simple design, for blog
 
+
+## Example
+
+https://knokmki612.github.io/hugo-fill-and-stroke/
+
 ## Supported features
 
 - Configurable Partial Templates
