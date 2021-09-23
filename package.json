@@ -14,6 +14,7 @@
     "postcss-csso": "^5.0.1",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
+    "shipjs": "0.24.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
@@ -31,6 +32,7 @@
   },
   "scripts": {
     "build": "postcss 'style/**/[^_]*' --dir static",
+    "release": "shipjs prepare",
     "start": "postcss 'style/**/[^_]*' --dir static --watch"
   }
 }
