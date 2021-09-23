@@ -28,7 +28,7 @@
   "main": "static/style.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/knokmki612/hugo-pencil-and-ruler.git"
+    "url": "git+https://github.com/knokmki612/hugo-fill-and-stroke.git"
   },
   "scripts": {
     "build": "postcss 'style/**/[^_]*' --dir static",
