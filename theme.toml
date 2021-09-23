@@ -4,7 +4,7 @@ licenselink = "https://github.com/knokmki612/hugo-fill-and-stroke/blob/master/LI
 description = "A simple design, for blog"
 homepage = "https://github.com/knokmki612/hugo-fill-and-stroke/"
 tags = ["blog"]
-min_version = "0.37.1"
+min_version = "0.78.1"
 
 [author]
   name = "knokmki612"
