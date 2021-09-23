@@ -1,6 +1,13 @@
 ## [2.0.2](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.0.1...v2.0.2) (2021-09-23)
 
 
+### Misc.
+
+* **gitignore:**  add resources/_gen ([#38](https://github.com/knokmki612/hugo-fill-and-stroke/pull/38)) ([4a9acae](https://github.com/knokmki612/hugo-fill-and-stroke/commit/da74a9acae4d99ac86406bd36e89c714f5456733))
+* add images ([b68a697](https://github.com/knokmki612/hugo-fill-and-stroke/commit/b68a697ccc5b907734bb4c9881fa545264939f5a))
+  * preparation of publish to https://themes.gohugo.io/
+
+
 
 ## [2.0.1](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v1.0.0...v2.0.1) (2021-09-23)
 
@@ -19,6 +26,8 @@
 * use PostCSS pipe & use assets instead of static ([b904384](https://github.com/knokmki612/hugo-fill-and-stroke/commit/b904384dd32ae2b89d61c77cb89d2b95f363a0a2))
   * Must move favicon file from `static/favicon.ico` to `assets/favicion.ico`
   * Install npm modules before build now required as like `hugo mod npm pack && npm install`
+
+
 
 # [1.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v0.4.0...v1.0.0) (2021-09-23)
 
