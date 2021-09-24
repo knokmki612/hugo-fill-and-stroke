@@ -17,6 +17,10 @@
     margin-bottom: 0.5rem;
   }
 
+  a > :first-child {
+    margin-right: 0.25rem;
+  }
+
   ul {
     line-height: 2;
     list-style: none;

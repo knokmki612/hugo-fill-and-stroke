@@ -1,13 +1,13 @@
 <section class="menu-section is-width-100pct">
-<h2>{{ i18n "Feed" }}</h2>
+<h2><a href="{{ "index.xml" | relURL }}"><img src="{{ (resources.Get "image/rss.svg").RelPermalink }}" alt="{{ i18n "Feed" }}" width="14" height="14">{{ i18n "Feed" }}</a></h2>
 {{ partial "side-menu/feeds.html" . -}}
 </section>
 <section class="menu-section is-width-50pct">
-<h2><a href="{{ "tags" | relURL }}/">{{ i18n "Tag" }}</a></h2>
+<h2><a href="{{ "tags" | relURL }}/"><img src={{ (resources.Get "image/tag.svg").RelPermalink }} alt="{{ i18n "Tag" }}" width="14" height="14">{{ i18n "Tag" }}</a></h2>
 {{ partial "side-menu/tags.html" . -}}
 </section>
 <section class="menu-section is-width-50pct">
-<h2><a href="{{ "archives" | relURL }}/">{{ i18n "Archive" }}</a></h2>
+<h2><a href="{{ "archives" | relURL }}/"><img src={{ (resources.Get "image/archive.svg").RelPermalink }} alt="{{ i18n "Archive" }}" width="14" height="14">{{ i18n "Archive" }}</a></h2>
 {{ partial "side-menu/archives.html" . -}}
 </section>
 {{ if (fileExists "layouts/partials/side-menu/banners.html") -}}
