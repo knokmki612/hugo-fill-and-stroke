@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.0.2...v2.1.0) (2021-09-24)
+
+
+### Features
+
+* **layouts:** remove "read more" link ([d1cc3e7](https://github.com/knokmki612/hugo-fill-and-stroke/commit/d1cc3e7d2c495e87cb6048ab00db8415f8ec62db))
+* **layouts:** specify size to img ([f3d8ba4](https://github.com/knokmki612/hugo-fill-and-stroke/commit/f3d8ba4b7f67a2f4a754520a33725bb96153c762))
+* **layouts:** use icon to each side menu header ([6c6eb24](https://github.com/knokmki612/hugo-fill-and-stroke/commit/6c6eb24d2bf91c1cea4b8ac7f63686d340ed76b1))
+* **style:** adjust spacing for tap targets ([03aab95](https://github.com/knokmki612/hugo-fill-and-stroke/commit/03aab95ae3c61a899d7e216e36e9d8a2c2e493f0))
+
+
+
 ## [2.0.2](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.0.1...v2.0.2) (2021-09-23)
 
 
