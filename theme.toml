@@ -5,6 +5,7 @@ description = "A simple design, for blog"
 homepage = "https://github.com/knokmki612/hugo-fill-and-stroke/"
 tags = ["blog"]
 min_version = "0.78.1"
+demosite = "https://knokmki612.github.io/hugo-fill-and-stroke/"
 
 [author]
   name = "knokmki612"
