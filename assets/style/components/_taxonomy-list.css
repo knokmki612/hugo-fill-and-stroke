@@ -1,5 +1,6 @@
 .taxonomy-list {
   columns: 12rem auto;
+  line-height: 2;
   list-style: none;
   padding-left: 0;
 
