@@ -1,1 +1,5 @@
-<a class="feed-button" href="{{ "blog/index.xml" | relURL }}"><img src="{{ (resources.Get "image/rss.svg").RelPermalink }}" alt="{{ i18n "Feed" }}" width="48" height="48"></a>
+<ul>
+  <li><a href="{{ "blog/index.xml" | relURL }}">{{ i18n "Blog" }}</a></li>
+  <li><a href="{{ "tags/index.xml" | relURL }}">{{ i18n "Tag" }}</a></li>
+  <li><a href="{{ "archives/index.xml" | relURL }}">{{ i18n "Archive" }}</a></li>
+</ul>
