@@ -1,12 +1,12 @@
 <div class="social-button">
 <a
   class="button is-twitter" href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}&nbsp;-&nbsp;{{ .Site.Title }}" target="_blank" rel="noopener noreferrer">
-  <img src="{{ (resources.Get "image/twitter.svg").RelPermalink }}" alt="Twitter">{{ i18n "Tweet" }}
+  <img src="{{ (resources.Get "image/twitter.svg").RelPermalink }}" alt="Twitter" width="16" height="12">{{ i18n "Tweet" }}
 </a><a
   class="button is-facebook" href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer">
-  <img src="{{ (resources.Get "image/facebook.svg").RelPermalink }}" alt="Facebook">{{ i18n "Share" }}
+  <img src="{{ (resources.Get "image/facebook.svg").RelPermalink }}" alt="Facebook" width="16" height="12">{{ i18n "Share" }}
 </a><a
   class="button is-hatenabookmark" href="http://b.hatena.ne.jp/entry/{{ .Permalink }}" target="_blank" rel="noopener noreferrer">
-  <img src="{{ (resources.Get "image/hatenabookmark.svg").RelPermalink }}" alt="{{ i18n "HatenaBookmark" }}">{{ i18n "Bookmark" }}
+  <img src="{{ (resources.Get "image/hatenabookmark.svg").RelPermalink }}" alt="{{ i18n "HatenaBookmark" }}" width="16" height="12">{{ i18n "Bookmark" }}
 </a>
 </div>
