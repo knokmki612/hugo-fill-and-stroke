@@ -1,3 +1,12 @@
+## [2.2.2](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.1...v2.2.2) (2021-09-25)
+
+
+### Bug Fixes
+
+* missing close tag ([#58](https://github.com/knokmki612/hugo-fill-and-stroke/issues/58)) ([0a5c247](https://github.com/knokmki612/hugo-fill-and-stroke/commit/0a5c247fa57025948988619f9ace3e989850bd61))
+
+
+
 ## [2.2.1](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.0...v2.2.1) (2021-09-25)
 
 
