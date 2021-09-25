@@ -7,6 +7,16 @@ A simple design, for blog
 
 https://knokmki612.github.io/hugo-fill-and-stroke/
 
+## Lighthouse Scores
+
+### Mobile
+
+![Performance 94, Other Scores 100](images/lighthouse-mobile.png)
+
+### Desktop
+
+![All Scores 100](images/lighthouse-desktop.png)
+
 ## Supported features
 
 - Configurable Partial Templates
