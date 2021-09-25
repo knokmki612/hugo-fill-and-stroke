@@ -1,15 +1,15 @@
-{{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
-{{ end }}
-{{ define "main" }}
-  {{ $blog := where .Data.Pages "Section" "blog" }}
-  {{ $paginator := .Paginate $blog }}
-  {{ partial "pagination-list.html" . }}
-  {{ range $key, $value := $paginator.Pages }}
-    {{ partial "article-list.html" . }}
-    {{ if ne (add $key 1) $paginator.NumberOfElements }}
+{{ define "title" -}}
+  {{ .Title }} - {{ .Site.Title -}}
+{{ end -}}
+{{ define "main" -}}
+  {{ $blog := where .Data.Pages "Section" "blog" -}}
+  {{ $paginator := .Paginate $blog -}}
+  {{ partial "pagination-list.html" . -}}
+  {{ range $key, $value := $paginator.Pages -}}
+    {{ partial "article-list.html" . -}}
+    {{ if ne (add $key 1) $paginator.NumberOfElements -}}
       <hr>
-    {{ end }}
-  {{ end }}
-  {{ partial "pagination-list.html" . }}
-{{ end }}
+    {{ end -}}
+  {{ end -}}
+  {{ partial "pagination-list.html" . -}}
+{{ end -}}
