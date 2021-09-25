@@ -1,3 +1,7 @@
+## [2.2.1](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.0...v2.2.1) (2021-09-25)
+
+
+
 # [2.2.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.1.0...v2.2.0) (2021-09-25)
 
 
