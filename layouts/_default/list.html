@@ -1,12 +1,12 @@
-{{- define "main" }}
-{{- $blog := where .Site.RegularPages "Section" "blog" }}
-{{- $paginator := .Paginate $blog }}
-{{ partial "pagination-list.html" . }}
-{{- range $key, $value := $paginator.Pages }}
-{{ partial "article-list.html" . -}}
-{{- if ne (add $key 1) $paginator.NumberOfElements }}
-<hr>
-{{- end }}
-{{- end }}
-{{ partial "pagination-list.html" . }}
-{{- end }}
+{{ define "main" }}
+  {{ $blog := where .Site.RegularPages "Section" "blog" }}
+  {{ $paginator := .Paginate $blog }}
+  {{ partial "pagination-list.html" . }}
+  {{ range $key, $value := $paginator.Pages }}
+    {{ partial "article-list.html" . -}}
+    {{ if ne (add $key 1) $paginator.NumberOfElements }}
+      <hr>
+    {{ end }}
+  {{ end }}
+  {{ partial "pagination-list.html" . }}
+{{ end }}

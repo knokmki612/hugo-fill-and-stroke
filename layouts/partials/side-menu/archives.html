@@ -1,5 +1,5 @@
 <ul>
-  {{- range first 10 .Site.Taxonomies.archives.Alphabetical.Reverse }}
-  <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
-  {{- end }}
+  {{ range first 10 .Site.Taxonomies.archives.Alphabetical.Reverse }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+  {{ end }}
 </ul>
