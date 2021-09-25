@@ -34,13 +34,22 @@ ul {
 p {
   > a {
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 a {
+  color: var(--color-anchor);
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &:visited {
+    color: var(--color-anchor-visited);
   }
 }
