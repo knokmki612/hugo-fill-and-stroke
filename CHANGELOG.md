@@ -1,3 +1,12 @@
+## [2.2.4](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.3...v2.2.4) (2021-09-25)
+
+
+### Bug Fixes
+
+* unexpected parse of go template ([#62](https://github.com/knokmki612/hugo-fill-and-stroke/issues/62)) ([35b226b](https://github.com/knokmki612/hugo-fill-and-stroke/commit/35b226bc0d134e8a7bb6de8ace911646245dd99b))
+
+
+
 ## [2.2.3](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.2...v2.2.3) (2021-09-25)
 
 
