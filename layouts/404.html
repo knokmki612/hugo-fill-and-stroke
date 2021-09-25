@@ -1,9 +1,9 @@
-{{ define "title" -}}
+{{ define "title" }}
   {{ i18n "404NotFound" }} - {{ .Site.Title }}
-{{- end }}
-{{- define "main" }}
-<article class="site-article">
-<h2>{{ i18n "404NotFound" }}</h2>
-<p><a href="{{ "/" | relURL }}">{{ i18n "404NotFoundDescription" }}</a></p>
-</article>
-{{- end }}
+{{ end }}
+{{ define "main" }}
+  <article class="site-article">
+    <h2>{{ i18n "404NotFound" }}</h2>
+    <p><a href="{{ "/" | relURL }}">{{ i18n "404NotFoundDescription" }}</a></p>
+  </article>
+{{ end }}

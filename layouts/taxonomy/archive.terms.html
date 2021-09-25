@@ -1,14 +1,14 @@
-{{ define "title" -}}
+{{ define "title" }}
   {{ i18n (.Title | singularize) }} - {{ .Site.Title }}
-{{- end }}
-{{- define "main" }}
-<article class="site-article">
-<h2>{{ i18n (.Title | singularize) }}</h2>
-<ul class="taxonomy-list">
-  {{- $data := .Data }}
-  {{- range $key, $value := .Data.Terms.Alphabetical.Reverse }}
-  <li><a href="{{ $data.Plural | relURL }}/{{ $value.Name | urlize }}/">{{ $value.Name }}</a> ({{ $value.Count }})</li>
-  {{- end }}
-</ul>
-</article>
-{{- end }}
+{{ end }}
+{{ define "main" }}
+  <article class="site-article">
+    <h2>{{ i18n (.Title | singularize) }}</h2>
+    <ul class="taxonomy-list">
+      {{ $data := .Data }}
+      {{ range $key, $value := .Data.Terms.Alphabetical.Reverse }}
+        <li><a href="{{ $data.Plural | relURL }}/{{ $value.Name | urlize }}/">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+      {{ end }}
+    </ul>
+  </article>
+{{ end }}

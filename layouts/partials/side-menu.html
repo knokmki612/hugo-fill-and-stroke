@@ -1,18 +1,24 @@
 <section class="menu-section is-width-100pct">
-<h2><a href="{{ "index.xml" | relURL }}"><svg aria-hidden="true" viewBox="0 0 100 100" width="14" height="14"><use href="{{ (resources.Get "image/rss.svg").RelPermalink }}#rss" /></svg>{{ i18n "Feed" }}</a></h2>
-{{ partial "side-menu/feeds.html" . -}}
+  <h2><a href="{{ "index.xml" | relURL }}"><svg aria-hidden="true" viewBox="0 0 100 100" width="14" height="14">
+    <use href="{{ (resources.Get "image/rss.svg").RelPermalink }}#rss" />
+  </svg>{{ i18n "Feed" }}</a></h2>
+  {{ partial "side-menu/feeds.html" . }}
 </section>
 <section class="menu-section is-width-50pct">
-<h2><a href="{{ "tags" | relURL }}/"><svg aria-hidden="true" viewBox="0 0 100 100" width="14" height="14"><use href="{{ (resources.Get "image/tag.svg").RelPermalink }}#tag" /></svg>{{ i18n "Tag" }}</a></h2>
-{{ partial "side-menu/tags.html" . -}}
+  <h2><a href="{{ "tags" | relURL }}/"><svg aria-hidden="true" viewBox="0 0 100 100" width="14" height="14">
+    <use href="{{ (resources.Get "image/tag.svg").RelPermalink }}#tag" />
+  </svg>{{ i18n "Tag" }}</a></h2>
+  {{ partial "side-menu/tags.html" . }}
 </section>
 <section class="menu-section is-width-50pct">
-<h2><a href="{{ "archives" | relURL }}/"><svg aria-hidden="true" viewBox="0 0 100 100" width="14" height="14"><use href="{{ (resources.Get "image/archive.svg").RelPermalink }}#archive" /></svg>{{ i18n "Archive" }}</a></h2>
-{{ partial "side-menu/archives.html" . -}}
+  <h2><a href="{{ "archives" | relURL }}/"><svg aria-hidden="true" viewBox="0 0 100 100" width="14" height="14">
+    <use href="{{ (resources.Get "image/archive.svg").RelPermalink }}#archive" />
+  </svg>{{ i18n "Archive" }}</a></h2>
+  {{ partial "side-menu/archives.html" . }}
 </section>
-{{ if (fileExists "layouts/partials/side-menu/banners.html") -}}
-<section class="menu-section is-width-100pct">
-<h2>{{ i18n "Banner" }}</h2>
-{{ partial "side-menu/banners.html" . -}}
-</section>
-{{- end }}
+{{ if (fileExists "layouts/partials/side-menu/banners.html") }}
+  <section class="menu-section is-width-100pct">
+    <h2>{{ i18n "Banner" }}</h2>
+    {{ partial "side-menu/banners.html" . }}
+  </section>
+{{ end }}
