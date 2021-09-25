@@ -38,15 +38,9 @@ p {
 }
 
 a {
-  color: #25a;
   text-decoration: none;
 
-  &:visited {
-    color: #438;
-  }
-
   &:hover {
-    color: #3af;
     text-decoration: underline;
   }
 }
