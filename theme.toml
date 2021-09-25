@@ -3,7 +3,7 @@ license = "GPLv3"
 licenselink = "https://github.com/knokmki612/hugo-fill-and-stroke/blob/master/LICENSE"
 description = "A simple design, for blog"
 homepage = "https://github.com/knokmki612/hugo-fill-and-stroke/"
-tags = ["blog"]
+tags = ["blog", "dark", "responsive", "multilingual"]
 min_version = "0.78.1"
 demosite = "https://knokmki612.github.io/hugo-fill-and-stroke/"
 

@@ -32,6 +32,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
   - Image
   - Video
 - Cloudinary
+- Dark Mode
 
 
 ## Installation
