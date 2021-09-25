@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <polygon points="0,10 100,10 100,30 90,30 90,90 10,90 10,30 0,30" fill="black" />
-  <line x1="30" y1="40" x2="70" y2="40" stroke="white" stroke-width="10" stroke-linecap="round" />
+  <defs>
+    <symbol id="archive">
+      <polygon points="0,10 100,10 100,30 90,30 90,90 10,90 10,30 0,30" fill="var(--color-text)" />
+      <line x1="30" y1="40" x2="70" y2="40" stroke="var(--color-base)" stroke-width="10" stroke-linecap="round" />
+    </symbol>
+  </defs>
 </svg>

@@ -1,7 +1,20 @@
 :root {
+  --color-anchor: #02b;
+  --color-anchor-visited: #609;
   --color-base: #fff;
   --color-text: #2c2c2c;
   --color-hover-gray: #ccc;
   --color-line-gray: #eee;
   --size-container: calc(50rem * 1.0125 + 0.625rem * 2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-anchor: #bef;
+    --color-anchor-visited: #dcf;
+    --color-base: #2c2c2c;
+    --color-text: #fff;
+    --color-hover-gray: #999;
+    --color-line-gray: #555;
+  }
 }
