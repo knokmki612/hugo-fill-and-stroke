@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <g stroke="black" fill="none" stroke-width="8">
-    <circle cx="38" cy="38" r="34" />
-    <line x1="60" y1="60" x2="96" y2="96" />
-  </g>
+  <defs>
+    <symbol id="search" fill="none" stroke="var(--color-text)" stroke-width="8">
+      <circle cx="38" cy="38" r="34" />
+      <line x1="60" y1="60" x2="96" y2="96" />
+    </symbol>
+  </defs>
 </svg>
