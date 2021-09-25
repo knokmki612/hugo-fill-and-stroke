@@ -1,3 +1,16 @@
+# [2.2.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.1.0...v2.2.0) (2021-09-25)
+
+
+### Features
+
+* adjust font size ([7ba9670](https://github.com/knokmki612/hugo-fill-and-stroke/commit/7ba9670f777450467dd6328af4965efa52bc492c))
+* **style:** add dark mode ([c3b23b8](https://github.com/knokmki612/hugo-fill-and-stroke/commit/c3b23b8bc656f38b09f440d838c38498ea36685c))
+* **style:** update search input focus spacing ([9e2fbfa](https://github.com/knokmki612/hugo-fill-and-stroke/commit/9e2fbfa64a8e6b9a4b4af3e991c7c7b798875773))
+* use css var in svg icon ([8f34871](https://github.com/knokmki612/hugo-fill-and-stroke/commit/8f348718233c2c98ea229e35be2fb7a219a11a1d))
+* use default color to anchor ([8cad0ef](https://github.com/knokmki612/hugo-fill-and-stroke/commit/8cad0ef7b26ee8989723e98014c63d3632b0faef))
+
+
+
 # [2.1.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.0.2...v2.1.0) (2021-09-24)
 
 
