@@ -1,14 +1,14 @@
-{{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
-{{ end }}
-{{ define "main" }}
+{{ define "title" -}}
+  {{ .Title }} - {{ .Site.Title -}}
+{{ end -}}
+{{ define "main" -}}
   <article class="site-article">
     <header class="article-header">
       <h2>{{ .Title }}</h2>
       <aside class="article-aside">
-        {{ partial "aside.html" . }}
+        {{ partial "aside.html" . -}}
       </aside>
     </header>
-    {{ .Content }}
+    {{ .Content -}}
   </article>
-{{ end }}
+{{ end -}}

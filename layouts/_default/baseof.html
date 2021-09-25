@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    {{ hugo.Generator }}
+    {{ hugo.Generator -}}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      {{ block "title" . }}
-        {{ .Site.Title }}
-      {{ end }}
+      {{ block "title" . -}}
+        {{ .Site.Title -}}
+      {{ end -}}
     </title>
     <meta name="description" content="{{ .Site.Params.Description }}">
     <link rel="icon" type="image/x-icon" href="{{ (resources.Get "favicon.ico").RelPermalink }}">
-    {{ if (fileExists "layouts/partials/favicons.html") }}
+    {{ if (fileExists "layouts/partials/favicons.html") -}}
       {{ partialCached "favicons.html" . -}}
-    {{ end }}
+    {{ end -}}
     <link rel="stylesheet" href="{{ (resources.Get "style/style.css" | resources.PostCSS).RelPermalink }}?d={{ now.Format "20060102150405" }}">
-    {{ partial "opengraph.html" . }}
-    {{ partial "twitter-cards.html" . }}
+    {{ partial "opengraph.html" . -}}
+    {{ partial "twitter-cards.html" . -}}
     <script src="{{ (resources.Get "script/index.ts" | js.Build (dict "minify" true)).RelPermalink }}" defer></script>
   </head>
   <body class="site-body">
@@ -28,9 +28,9 @@
       </div>
     </header>
     <nav class="site-global-menu">
-      {{ if (fileExists "layouts/partials/global-menu.html") }}
-        {{ partialCached "global-menu.html" . }}
-      {{ end }}
+      {{ if (fileExists "layouts/partials/global-menu.html") -}}
+        {{ partialCached "global-menu.html" . -}}
+      {{ end -}}
     </nav>
     <div class="site-search">
       <form class="inner" method="GET" action="https://duckduckgo.com">
@@ -45,12 +45,12 @@
     </div>
     <main class="site-main">
       <hr id="main" class="text-browser-message">
-      {{ block "main" . }}
-      {{ end }}
+      {{ block "main" . -}}
+      {{ end -}}
     </main>
     <nav class="site-side-menu">
       <div class="inner">
-        {{ partialCached "side-menu.html" . }}
+        {{ partialCached "side-menu.html" . -}}
       </div>
     </nav>
     <footer class="site-footer">

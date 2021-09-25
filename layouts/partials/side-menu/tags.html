@@ -1,5 +1,5 @@
 <ul>
-  {{ range .Site.Taxonomies.tags.ByCount }}
+  {{ range .Site.Taxonomies.tags.ByCount -}}
     <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
-  {{ end }}
+  {{ end -}}
 </ul>

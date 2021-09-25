@@ -1,48 +1,48 @@
 <figure class="article-image">
-  {{ if (.Get "link") }}
-    <a href="{{ $img := .Page.Resources.GetMatch (.Get "link") }}{{ with $img }}
-      {{ .RelPermalink }}
-    {{ else }}
-      {{ .Get "link" }}
-    {{ end }}" {{ with .Get "target" }}
+  {{ if (.Get "link") -}}
+    <a href="{{ $img := .Page.Resources.GetMatch (.Get "link") }}{{ with $img -}}
+      {{ .RelPermalink -}}
+    {{ else -}}
+      {{ .Get "link" -}}
+    {{ end }}" {{ with .Get "target" -}}
       target="{{ . }}"
-    {{ end }}
-    {{ with .Get "rel" }}
+    {{ end -}}
+    {{ with .Get "rel" -}}
       rel="{{ . }}"
     {{ end }}>
-  {{ else if .Site.Params.Cloudinary.enable }}
-    {{ with .Site.Params.Cloudinary }}
+  {{ else if .Site.Params.Cloudinary.enable -}}
+    {{ with .Site.Params.Cloudinary -}}
       <a href="https://{{ path.Join "res.cloudinary.com" .cloudName "image/upload" .folder ($.Get "src") }}">
-    {{ end }}
-  {{ end }}
-  {{ if .Site.Params.Cloudinary.enable }}
-    {{ with .Site.Params.Cloudinary }}
+    {{ end -}}
+  {{ end -}}
+  {{ if .Site.Params.Cloudinary.enable -}}
+    {{ with .Site.Params.Cloudinary -}}
       <img src="https://{{ path.Join "res.cloudinary.com" .cloudName "image/upload" .transformations.article .folder ($.Get "src") }}" alt="{{ $.Get "alt" }}" />
-    {{ end }}
-  {{ else }}
-    {{ $img := .Page.Resources.GetMatch ( .Get "src" ) }}
+    {{ end -}}
+  {{ else -}}
+    {{ $img := .Page.Resources.GetMatch ( .Get "src" ) -}}
     <img src="{{ with $img }}{{ .RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" alt="{{ .Get "alt" }}" />
-  {{ end }}
-  {{ if or (.Get "link") (.Site.Params.Cloudinary.enable) }}
+  {{ end -}}
+  {{ if or (.Get "link") (.Site.Params.Cloudinary.enable) -}}
     </a>
-  {{ end }}
-  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
+  {{ end -}}
+  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
     <figcaption>
-    {{ if isset .Params "title" }}
+    {{ if isset .Params "title" -}}
       <h4>{{ .Get "title" }}</h4>
-    {{ end }}
-    {{ if or (.Get "caption") (.Get "attr") }}
+    {{ end -}}
+    {{ if or (.Get "caption") (.Get "attr") -}}
       <p>
-      {{ .Get "caption" }}
-      {{ with .Get "attrlink" }}
-        <a href="{{.}}">
-      {{ end }}
-      {{ .Get "attr" }}
-      {{ if .Get "attrlink" }}
+      {{ .Get "caption" -}}
+      {{ with .Get "attrlink" -}}
+        <a href="{{ . }}">
+      {{ end -}}
+      {{ .Get "attr" -}}
+      {{ if .Get "attrlink" -}}
         </a>
-      {{ end }}
+      {{ end -}}
     </p>
-    {{ end }}
+    {{ end -}}
     </figcaption>
-  {{ end }}
+  {{ end -}}
 </figure>
