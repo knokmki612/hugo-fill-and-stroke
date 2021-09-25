@@ -1,7 +1,6 @@
 .search-input {
   border: none;
-  height: 1.875rem;
-  margin: 0.625rem;
-  padding: 0;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
   width: calc(100% - 4.375rem);
 }
