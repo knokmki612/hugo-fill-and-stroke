@@ -11,7 +11,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 
 ### Mobile
 
-![Performance 94, Other Scores 100](images/lighthouse-mobile.png)
+![All Scores 100](images/lighthouse-mobile.png)
 
 ### Desktop
 
