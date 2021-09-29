@@ -5,23 +5,26 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img src="{{ (resources.Get "image/twitter.svg").RelPermalink }}"
-    alt="Twitter" width="16" height="12">{{ i18n "Tweet" }}</a
+    <svg role="img" aria-label="Twitter" width="16" height="12">
+      {{ (resources.Get "image/twitter.svg").Content | safeHTML -}}
+    </svg>{{ i18n "Tweet" }}</a
   ><a
     class="button is-facebook"
     href="http://www.facebook.com/sharer.php?u={{ .Permalink }}"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img src="{{ (resources.Get "image/facebook.svg").RelPermalink }}"
-    alt="Facebook" width="16" height="12">{{ i18n "Share" }}</a
+    <svg role="img" aria-label="Facebook" width="16" height="12">
+      {{ (resources.Get "image/facebook.svg").Content | safeHTML -}}
+    </svg>{{ i18n "Share" }}</a
   ><a
     class="button is-hatenabookmark"
     href="http://b.hatena.ne.jp/entry/{{ .Permalink }}"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img src="{{ (resources.Get "image/hatenabookmark.svg").RelPermalink }}"
-    alt="{{ i18n "HatenaBookmark" }}" width="16" height="12">{{ i18n "Bookmark" }}</a
+    <svg role="img" aria-label="{{ i18n "HatenaBookmark" }}" width="16" height="12">
+      {{ (resources.Get "image/hatenabookmark.svg").Content | safeHTML -}}
+    </svg>{{ i18n "Bookmark" }}</a
   >
 </div>

@@ -1,14 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <symbol id="rss">
-      <circle cx="15" cy="85" r="15" fill="var(--color-text)" stroke="none" stroke-width="0" />
-      <g fill="none" stroke="var(--color-text)" stroke-width="20" clip-path="url(#clip-rect)">
-        <circle cx="0" cy="100" r="57.5" />
-        <circle cx="0" cy="100" r="90" />
-      </g>
-    </symbol>
     <clipPath id="clip-rect">
       <rect x="0" y="0" width="100" height="100" />
     </clipPath>
   </defs>
+  <circle cx="15" cy="85" r="15" fill="var(--color-text, #2c2c2c)" stroke="none" stroke-width="0" />
+  <g fill="none" stroke="var(--color-text, #2c2c2c)" stroke-width="20" clip-path="url(#clip-rect)">
+    <circle cx="0" cy="100" r="57.5" />
+    <circle cx="0" cy="100" r="90" />
+  </g>
 </svg>
