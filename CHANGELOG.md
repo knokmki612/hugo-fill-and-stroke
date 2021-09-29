@@ -1,3 +1,12 @@
+# [2.3.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.4...v2.3.0) (2021-09-29)
+
+
+### Features
+
+* use inline svg & fallback css var ([#64](https://github.com/knokmki612/hugo-fill-and-stroke/issues/64)) ([83bdd95](https://github.com/knokmki612/hugo-fill-and-stroke/commit/83bdd9531cdb26cb423d8c7a0745a67808548fbf))
+
+
+
 ## [2.2.4](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.3...v2.2.4) (2021-09-25)
 
 
