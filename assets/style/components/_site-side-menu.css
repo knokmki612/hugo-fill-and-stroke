@@ -1,10 +1,10 @@
 .site-side-menu {
   .inner {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 0.625rem;
+    grid: auto-flow dense / repeat(auto-fit, minmax(12rem, 1fr));
     margin: 0 auto;
     max-width: var(--size-container);
-    padding-left: 0.625rem;
-    padding-top: 0.625rem;
+    padding: 0.625rem;
   }
 }

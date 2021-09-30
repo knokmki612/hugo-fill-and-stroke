@@ -1,23 +1,23 @@
-<section class="menu-section is-width-100pct">
-  <h2><a href="{{ "index.xml" | relURL }}"><svg aria-hidden="true" width="14" height="14">
-    {{ (resources.Get "image/rss.svg").Content | safeHTML -}}
-  </svg>{{ i18n "Feed" }}</a></h2>
-  {{ partial "side-menu/feeds.html" . -}}
-</section>
-<section class="menu-section is-width-50pct">
+<section class="menu-section">
   <h2><a href="{{ "tags" | relURL }}/"><svg aria-hidden="true" width="14" height="14">
     {{ (resources.Get "image/tag.svg").Content | safeHTML -}}
   </svg>{{ i18n "Tag" }}</a></h2>
   {{ partial "side-menu/tags.html" . -}}
 </section>
-<section class="menu-section is-width-50pct">
+<section class="menu-section">
   <h2><a href="{{ "archives" | relURL }}/"><svg aria-hidden="true" width="14" height="14">
     {{ (resources.Get "image/archive.svg").Content | safeHTML -}}
   </svg>{{ i18n "Archive" }}</a></h2>
   {{ partial "side-menu/archives.html" . -}}
 </section>
+<section class="menu-section">
+  <h2><a href="{{ "index.xml" | relURL }}"><svg aria-hidden="true" width="14" height="14">
+    {{ (resources.Get "image/rss.svg").Content | safeHTML -}}
+  </svg>{{ i18n "Feed" }}</a></h2>
+  {{ partial "side-menu/feeds.html" . -}}
+</section>
 {{ if (fileExists "layouts/partials/side-menu/banners.html") -}}
-  <section class="menu-section is-width-100pct">
+  <section class="menu-section">
     <h2>{{ i18n "Banner" }}</h2>
     {{ partial "side-menu/banners.html" . -}}
   </section>

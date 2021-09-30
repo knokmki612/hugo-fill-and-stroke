@@ -1,15 +1,4 @@
 .menu-section {
-  padding-bottom: 0.625rem;
-  padding-right: 0.625rem;
-
-  &.is-width-100pct {
-    width: 100%;
-  }
-
-  &.is-width-50pct {
-    width: 50%;
-  }
-
   h2 {
     font-size: 0.875rem;
     line-height: 2;
