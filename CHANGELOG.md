@@ -1,3 +1,12 @@
+# [2.4.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.3.0...v2.4.0) (2021-09-30)
+
+
+### Features
+
+* use grid to site-side-menu ([#67](https://github.com/knokmki612/hugo-fill-and-stroke/issues/67)) ([98b1649](https://github.com/knokmki612/hugo-fill-and-stroke/commit/98b164927d81af56bfa65ce8d94b24bac4fd42b2))
+
+
+
 # [2.3.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.2.4...v2.3.0) (2021-09-29)
 
 
