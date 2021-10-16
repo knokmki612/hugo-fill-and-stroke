@@ -1,8 +1,8 @@
 .site-body {
   .site-header,
-  .site-global-menu,
+  .site-header-menu,
   .site-main,
-  .site-side-menu {
+  .site-footer-menu {
     border-bottom: solid 1rem var(--color-line-gray);
   }
 }
