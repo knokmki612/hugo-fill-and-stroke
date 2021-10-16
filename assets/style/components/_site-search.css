@@ -3,9 +3,8 @@
   width: 100%;
 
   & > .inner {
-    display: flex;
     margin: 0 auto;
     max-width: var(--size-container);
-    padding: 0;
+    padding: 0.625rem 0.125rem;
   }
 }

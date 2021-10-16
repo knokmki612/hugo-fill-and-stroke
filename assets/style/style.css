@@ -9,8 +9,7 @@
 @import "components/_site-main";
 @import "components/_site-footer";
 @import "components/_text-browser-message";
-@import "components/_search-input";
-@import "components/_search-button";
+@import "components/_search-form";
 @import "components/_menu-section";
 @import "components/_pagination-list";
 @import "components/_site-article";

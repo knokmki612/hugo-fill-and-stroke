@@ -4,14 +4,11 @@ other = "ブログ"
 [JumpToMain]
 other = "本文に移動"
 
-[Search]
-other = "検索"
+[SearchInDuckDuckGo]
+other = "検索 (DuckDuckGo)"
 
 [SearchPlaceholder]
-other = "DuckDuckGoで記事検索"
-
-[SearchAriaLabel]
-other = "語句を入力して記事を検索"
+other = "タイトル、本文、etc."
 
 [Feed]
 other = "フィード"

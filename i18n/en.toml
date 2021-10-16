@@ -4,14 +4,11 @@ other = "Blog"
 [JumpToMain]
 other = "Jump to main content of this page"
 
-[Search]
-other = "Search"
+[SearchInDuckDuckGo]
+other = "Search (DuckDuckGo)"
 
 [SearchPlaceholder]
-other = "Search on DuckDuckGo"
-
-[SearchAriaLabel]
-other = "Type words to search articles"
+other = "Title, Text, etc."
 
 [Feed]
 other = "Feed"
