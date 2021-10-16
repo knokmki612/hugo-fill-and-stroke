@@ -27,9 +27,9 @@
         <p class="text-browser-message"><a href="#main">{{ i18n "JumpToMain" }}</a></p>
       </div>
     </header>
-    <nav class="site-global-menu">
+    <nav class="site-header-menu">
       {{ if (fileExists "layouts/partials/global-menu.html") -}}
-        {{ partialCached "global-menu.html" . -}}
+        {{ partialCached "header-menu.html" . -}}
       {{ end -}}
     </nav>
     <main class="site-main">
@@ -48,7 +48,7 @@
           <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
       </form>
     </div>
-    <nav class="site-side-menu">
+    <nav class="site-footer-menu">
       <div class="inner">
         {{ partialCached "side-menu.html" . -}}
       </div>
