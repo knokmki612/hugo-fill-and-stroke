@@ -1,6 +1,6 @@
 .site-body {
   .site-header,
-  .site-search,
+  .site-global-menu,
   .site-main,
   .site-side-menu {
     border-bottom: solid 1rem var(--color-line-gray);

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <g fill="none" stroke="var(--color-text, #2c2c2c)" stroke-width="8">
-    <circle cx="38" cy="38" r="34" />
-    <line x1="60" y1="60" x2="96" y2="96" />
+  <g fill="none" stroke="var(--color-text, #2c2c2c)" stroke-width="20">
+    <line x1="10" y1="90" x2="40" y2="60" />
+    <circle cx="60" cy="40" r="30" />
   </g>
 </svg>

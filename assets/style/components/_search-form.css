@@ -1,0 +1,27 @@
+.search-form {
+  label {
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 2;
+    padding: 0 0.5rem;
+
+    & > :first-child {
+      margin-right: 0.25rem;
+    }
+  }
+
+  input {
+    background-color: var(--color-base);
+    border: none;
+    color: var(--color-text);
+    display: block;
+    flex: 1;
+    line-height: 2;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+
+    &::placeholder {
+      color: var(--color-text);
+    }
+  }
+}
