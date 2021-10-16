@@ -1,5 +1,5 @@
 .site-side-menu {
-  .inner {
+  & > .inner {
     display: grid;
     gap: 0.625rem;
     grid: auto-flow dense / repeat(auto-fit, minmax(12rem, 1fr));
