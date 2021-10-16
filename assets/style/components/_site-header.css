@@ -1,7 +1,7 @@
 .site-header {
   padding: 1.25rem 0;
 
-  .inner {
+  & > .inner {
     margin: 0 auto;
     max-width: var(--size-container);
     padding: 0 0.625rem;
