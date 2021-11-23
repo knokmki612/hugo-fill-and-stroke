@@ -1,3 +1,22 @@
+# [3.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.4.0...v3.0.0) (2021-11-23)
+
+
+* refactor!: menu name (#72) ([68ed5d7](https://github.com/knokmki612/hugo-fill-and-stroke/commit/68ed5d734632d50e5f4ce99d3d561a98e942fd60)), closes [#72](https://github.com/knokmki612/hugo-fill-and-stroke/issues/72)
+
+
+### Features
+
+* accessible accordion ([6ebea51](https://github.com/knokmki612/hugo-fill-and-stroke/commit/6ebea51d520404cd4cbf1451dcd277c8b701f394))
+* support menu template with accordion ([3cfbfb3](https://github.com/knokmki612/hugo-fill-and-stroke/commit/3cfbfb34c9a3d9953936be6f3fae15660b4bd548))
+* update search design ([#71](https://github.com/knokmki612/hugo-fill-and-stroke/issues/71)) ([f975912](https://github.com/knokmki612/hugo-fill-and-stroke/commit/f975912d8bd2dbc69d4c973857cc148dc6c4a3f7))
+
+
+### BREAKING CHANGES
+
+* should rename layouts/partials/{global,header}-menu.html
+
+
+
 # [2.4.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.3.0...v2.4.0) (2021-09-30)
 
 
