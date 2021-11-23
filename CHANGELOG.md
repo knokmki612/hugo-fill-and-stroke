@@ -1,9 +1,6 @@
 # [3.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.4.0...v3.0.0) (2021-11-23)
 
 
-* refactor!: menu name (#72) ([68ed5d7](https://github.com/knokmki612/hugo-fill-and-stroke/commit/68ed5d734632d50e5f4ce99d3d561a98e942fd60)), closes [#72](https://github.com/knokmki612/hugo-fill-and-stroke/issues/72)
-
-
 ### Features
 
 * accessible accordion ([6ebea51](https://github.com/knokmki612/hugo-fill-and-stroke/commit/6ebea51d520404cd4cbf1451dcd277c8b701f394))
@@ -13,7 +10,7 @@
 
 ### BREAKING CHANGES
 
-* should rename layouts/partials/{global,header}-menu.html
+* No longer need `layouts/partials/global-menu.html`. Insteadly please create menu entries in site config or front-matter. See [official docs](https://gohugo.io/templates/menu-templates/)
 
 
 
