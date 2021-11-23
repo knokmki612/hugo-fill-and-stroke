@@ -10,7 +10,7 @@
     "shipjs": "0.24.0",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
-    "stylelint-order": "4.1.0",
+    "stylelint-order": "5.0.0",
     "stylelint-scss": "3.21.0"
   },
   "homepage": "https://github.com/knokmki612/hugo-fill-and-stroke#readme",
