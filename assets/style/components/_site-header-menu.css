@@ -1,25 +1,25 @@
 .site-header-menu {
+  overflow-x: auto;
+
   ul {
+    align-items: flex-start;
+    display: flex;
     list-style: none;
     margin: 0 auto;
     max-width: var(--size-container);
     padding: 0;
+
+    ul {
+      margin-bottom: -1rem;
+      margin-left: 0.625rem;
+    }
   }
 
   li {
     display: inline-block;
+    flex-shrink: 0;
     font-size: 1.125rem;
-  }
-
-  a {
-    color: unset;
-    display: block;
     line-height: 1;
     padding: 1rem 0.625rem;
-    text-decoration: none;
-
-    &:hover {
-      background-color: var(--color-hover-gray);
-    }
   }
 }

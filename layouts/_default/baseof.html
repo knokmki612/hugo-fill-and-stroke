@@ -28,9 +28,7 @@
       </div>
     </header>
     <nav class="site-header-menu">
-      {{ if (fileExists "layouts/partials/global-menu.html") -}}
-        {{ partialCached "header-menu.html" . -}}
-      {{ end -}}
+      {{ partial "header-menu.html" . -}}
     </nav>
     <main class="site-main">
       <hr id="main" class="text-browser-message">
@@ -40,7 +38,7 @@
     <div class="site-search">
       <form class="inner search-form" method="GET" action="https://duckduckgo.com">
           <label for="search">
-            <svg role="img" aria-hidden="true" width="14" height="14">
+            <svg aria-hidden="true" width="14" height="14">
               {{ (resources.Get "image/search.svg").Content | safeHTML -}}
             </svg>{{ i18n "SearchInDuckDuckGo" }}
           </label>

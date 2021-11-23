@@ -1,0 +1,18 @@
+{{ $page := .page -}}
+<ul>
+  {{ range .children -}}
+    <li>
+      {{ $current := $page.IsMenuCurrent .Menu . -}}
+      {{ if not .HasChildren -}}
+        {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
+      {{ else -}}
+        <details>
+          <summary>
+            {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
+          </summary>
+          {{ partial "header-menu/children.html" (dict "page" $page "children" .Children) -}}
+        </details>
+      {{ end -}}
+    </li>
+  {{ end -}}
+</ul>
