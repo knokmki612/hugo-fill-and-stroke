@@ -1,3 +1,19 @@
+# [3.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.4.0...v3.0.0) (2021-11-23)
+
+
+### Features
+
+* accessible accordion ([6ebea51](https://github.com/knokmki612/hugo-fill-and-stroke/commit/6ebea51d520404cd4cbf1451dcd277c8b701f394))
+* support menu template with accordion ([3cfbfb3](https://github.com/knokmki612/hugo-fill-and-stroke/commit/3cfbfb34c9a3d9953936be6f3fae15660b4bd548))
+* update search design ([#71](https://github.com/knokmki612/hugo-fill-and-stroke/issues/71)) ([f975912](https://github.com/knokmki612/hugo-fill-and-stroke/commit/f975912d8bd2dbc69d4c973857cc148dc6c4a3f7))
+
+
+### BREAKING CHANGES
+
+* No longer need `layouts/partials/global-menu.html`. Insteadly please create menu entries in site config or front-matter. See [official docs](https://gohugo.io/templates/menu-templates/)
+
+
+
 # [2.4.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.3.0...v2.4.0) (2021-09-30)
 
 
