@@ -1,0 +1,22 @@
+{{ $page := .page -}}
+<ul>
+  {{ range .children -}}
+    <li>
+      {{ $current := $page.IsMenuCurrent .Menu . -}}
+      {{ if not .HasChildren -}}
+        {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
+      {{ else -}}
+        <input id="menu-{{ .Identifier }}" type="checkbox" aria-hidden="true">
+        <span>
+          {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
+          <label for="menu-{{ .Identifier }}" tabindex="0">
+            <svg aria-hidden="true" width="24" height="24">
+              {{ (resources.Get "image/chevron.svg").Content | safeHTML -}}
+            </svg>
+          </label>
+        </span>
+        {{ partial "header-menu/children.html" (dict "page" $page "children" .Children) -}}
+      {{ end -}}
+    </li>
+  {{ end -}}
+</ul>

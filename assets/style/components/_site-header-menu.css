@@ -1,25 +1,63 @@
 .site-header-menu {
+  overflow: auto hidden;
+
   ul {
+    align-items: flex-start;
+    display: flex;
     list-style: none;
     margin: 0 auto;
     max-width: var(--size-container);
     padding: 0;
+
+    ul {
+      margin: 0 -0.625rem -1rem;
+    }
   }
 
   li {
     display: inline-block;
+    flex-shrink: 0;
     font-size: 1.125rem;
+    line-height: 1;
+    padding: 1rem 0.625rem;
   }
 
   a {
-    color: unset;
     display: block;
-    line-height: 1;
+    margin: -1rem -0.625rem;
     padding: 1rem 0.625rem;
-    text-decoration: none;
+  }
 
-    &:hover {
-      background-color: var(--color-hover-gray);
+  span {
+    display: inline-block;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    margin: 0 -0.625rem;
+    padding-top: 0.5rem;
+  }
+
+  svg {
+    transition: transform 0.25s ease;
+  }
+
+  input {
+    display: none;
+
+    &:not(:checked) ~ ul {
+      height: 0;
+
+      & > li {
+        display: none;
+      }
+    }
+
+    &:checked ~ span > label > svg {
+      transform: rotate(180deg);
     }
   }
 }
