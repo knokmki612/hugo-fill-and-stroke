@@ -20,7 +20,6 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 ## Supported features
 
 - Configurable Partial Templates
-  - `global-menu.html`
   - `favicons.html`
   - `side-menu/bannars.html` (Optional)
 - Preset Content Types
@@ -41,6 +40,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 - Page Resources
   - Image
   - Video
+- Menu Templates with nesting
 - Cloudinary
 - Dark Mode
 
@@ -86,4 +86,10 @@ ogp = "t_blog_thumb"
 [taxonomies]
 tag = "tags"
 archive = "archives"
+
+[[menu.main]]
+identifier = "example"
+title = "Example"
+url = "/example/"
+weight = 1
 ```
