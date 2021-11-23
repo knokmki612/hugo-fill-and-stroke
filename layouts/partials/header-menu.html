@@ -8,16 +8,12 @@
         {{ if not .HasChildren -}}
           {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
         {{ else -}}
-          <input id="menu-{{ .Identifier }}" type="checkbox" aria-hidden="true">
-          <span>
-            {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
-            <label role="treeitem" aria-label="展開・縮小" for="menu-{{ .Identifier }}" tabindex="0">
-              <svg aria-hidden="true" width="24" height="24">
-                {{ (resources.Get "image/chevron.svg").Content | safeHTML -}}
-              </svg>
-            </label>
-          </span>
-          {{ partial "header-menu/children.html" (dict "page" $page "children" .Children) -}}
+          <details>
+            <summary>
+              {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
+            </summary>
+            {{ partial "header-menu/children.html" (dict "page" $page "children" .Children) -}}
+          </details>
         {{ end -}}
       </li>
     {{- end }}{{/* NOTE: Trim a line break between li tag to prevent white space injection */ -}}
