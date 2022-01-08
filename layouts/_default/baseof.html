@@ -24,14 +24,12 @@
       <div class="inner">
         <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
         <p>{{ .Site.Params.Description }}</p>
-        <p class="text-browser-message"><a href="#main">{{ i18n "JumpToMain" }}</a></p>
       </div>
     </header>
     <nav class="site-header-menu">
       {{ partial "header-menu.html" . -}}
     </nav>
     <main class="site-main">
-      <hr id="main" class="text-browser-message">
       {{ block "main" . -}}
       {{ end -}}
     </main>
