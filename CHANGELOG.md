@@ -1,3 +1,13 @@
+# [3.1.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.0.0...v3.1.0) (2022-01-09)
+
+
+### Features
+
+* impove menu clickable area ([#88](https://github.com/knokmki612/hugo-fill-and-stroke/issues/88)) ([d7eb45e](https://github.com/knokmki612/hugo-fill-and-stroke/commit/d7eb45e13e9fd08e912b70ae05b5e412c8c86662))
+* remove text-browser-message ([#89](https://github.com/knokmki612/hugo-fill-and-stroke/issues/89)) ([530016b](https://github.com/knokmki612/hugo-fill-and-stroke/commit/530016b741eb6b80e4ec9aaef306d183dc9e3089))
+
+
+
 # [3.0.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v2.4.0...v3.0.0) (2021-11-23)
 
 
