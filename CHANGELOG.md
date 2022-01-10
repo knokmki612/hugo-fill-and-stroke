@@ -1,3 +1,12 @@
+## [3.1.1](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.1.0...v3.1.1) (2022-01-10)
+
+
+### Bug Fixes
+
+* unintentional narrow padding at current menu entry ([#92](https://github.com/knokmki612/hugo-fill-and-stroke/issues/92)) ([3fe42be](https://github.com/knokmki612/hugo-fill-and-stroke/commit/3fe42bedce238801bb01ec4fd9f125396ae81947))
+
+
+
 # [3.1.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.0.0...v3.1.0) (2022-01-09)
 
 
