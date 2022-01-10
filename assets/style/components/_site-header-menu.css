@@ -20,6 +20,7 @@
     display: inline-flex;
     flex-shrink: 0;
 
+    > span,
     > a,
     > details > summary {
       padding: 0.5rem;
