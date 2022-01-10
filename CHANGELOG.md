@@ -1,3 +1,12 @@
+## [3.1.2](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.1.1...v3.1.2) (2022-01-10)
+
+
+### Bug Fixes
+
+* twitter card doesn't support cloudinary ([#94](https://github.com/knokmki612/hugo-fill-and-stroke/issues/94)) ([111803c](https://github.com/knokmki612/hugo-fill-and-stroke/commit/111803c84776baa5f06a7c1d9fc08c0dfba921d9))
+
+
+
 ## [3.1.1](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.1.0...v3.1.1) (2022-01-10)
 
 
