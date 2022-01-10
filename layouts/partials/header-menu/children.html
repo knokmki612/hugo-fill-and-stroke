@@ -4,7 +4,9 @@
     <li>
       {{ $current := $page.IsMenuCurrent .Menu . -}}
       {{ if not .HasChildren -}}
-        {{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
+        {{ if not $current }}<a href="{{ .URL }}">{{ else }}<span>{{ end -}}
+          {{ .Title -}}
+        {{ if not $current }}</a>{{ else }}</span>{{ end -}}
       {{ else -}}
         <details>
           <summary>{{ if not $current }}<a href="{{ .URL }}">{{ end }}{{ .Title }}{{ if not $current }}</a>{{ end }}
