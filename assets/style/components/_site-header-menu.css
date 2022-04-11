@@ -23,7 +23,7 @@
     > span,
     > a,
     > details > summary {
-      padding: 0.5rem;
+      margin: 0.5rem;
     }
   }
 
