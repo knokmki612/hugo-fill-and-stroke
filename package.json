@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "npm-force-resolutions": "0.0.10",
-    "shipjs": "0.24.3",
+    "shipjs": "0.24.4",
     "stylelint": "14.6.1",
     "stylelint-config-standard": "25.0.0",
     "stylelint-order": "5.0.0",
