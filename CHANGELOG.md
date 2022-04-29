@@ -1,3 +1,18 @@
+# [3.2.0](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.1.3...v3.2.0) (2022-04-29)
+
+
+### Bug Fixes
+
+* shell-quote@1.7.2 has CVE-2021-42740 ([1665f62](https://github.com/knokmki612/hugo-fill-and-stroke/commit/1665f6225d09001460f866ff02819c8fbf2c7ccc))
+
+
+### Features
+
+* focus ring style ([4bcad41](https://github.com/knokmki612/hugo-fill-and-stroke/commit/4bcad419810651b814404c4844cde491b6329d87))
+* focus style ([1e649ad](https://github.com/knokmki612/hugo-fill-and-stroke/commit/1e649adadca6ce24da74a48865dfa12531e16b41))
+
+
+
 ## [3.1.3](https://github.com/knokmki612/hugo-fill-and-stroke/compare/v3.1.2...v3.1.3) (2022-03-14)
 
 
