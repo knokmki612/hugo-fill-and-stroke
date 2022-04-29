@@ -1,4 +1,7 @@
 .article-tab {
+  margin: -2px;
+  padding: 2px;
+
   ul {
     display: flex;
     justify-content: center;

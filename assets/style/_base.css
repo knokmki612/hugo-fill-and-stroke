@@ -6,7 +6,7 @@
   letter-spacing: 0.0125rem;
 }
 
-:focus {
+:focus-visible {
   outline: 2px solid var(--color-anchor);
   outline-offset: 1px;
 }
@@ -56,5 +56,9 @@ a {
 
   &:visited {
     color: var(--color-anchor-visited);
+  }
+
+  &:has(> img) {
+    display: inline-flex;
   }
 }

@@ -7,6 +7,7 @@ module.exports = () => ({
       path: [join(__dirname, "assets", "style")]
     },
     'postcss-nested': {},
+    'css-has-pseudo': {},
     autoprefixer: {},
     'postcss-csso': {},
   }
