@@ -7,7 +7,6 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "npm-force-resolutions": "0.0.10",
     "shipjs": "0.24.4",
     "stylelint": "14.6.1",
     "stylelint-config-standard": "25.0.0",
@@ -24,11 +23,10 @@
     "type": "git",
     "url": "git+https://github.com/knokmki612/hugo-fill-and-stroke.git"
   },
-  "resolutions": {
+  "overrides": {
     "shell-quote": "1.7.3"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "release": "shipjs prepare"
   }
 }
