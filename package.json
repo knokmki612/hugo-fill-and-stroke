@@ -2,6 +2,7 @@
   "comments": {
     "dependencies": {
       "autoprefixer": "fill-and-stroke",
+      "css-has-pseudo": "fill-and-stroke",
       "modern-normalize": "fill-and-stroke",
       "postcss": "fill-and-stroke",
       "postcss-cli": "fill-and-stroke",
@@ -12,12 +13,13 @@
     "devDependencies": {}
   },
   "dependencies": {
-    "autoprefixer": "10.4.0",
+    "autoprefixer": "10.4.5",
+    "css-has-pseudo": "3.0.4",
     "modern-normalize": "1.1.0",
-    "postcss": "8.3.11",
-    "postcss-cli": "9.0.2",
-    "postcss-csso": "5.0.1",
-    "postcss-import": "14.0.2",
+    "postcss": "8.4.12",
+    "postcss-cli": "9.1.0",
+    "postcss-csso": "6.0.0",
+    "postcss-import": "14.1.0",
     "postcss-nested": "5.0.6"
   },
   "devDependencies": {},
