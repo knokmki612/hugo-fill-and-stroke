@@ -1,8 +1,10 @@
 {
   "extends": ["config:base"],
+  "npm": {
+    "fileMatch": ["package(\\.hugo)?\\.json"]
+  },
   "packageRules": [
     {
-      "matchPaths": ["+(package.json|package.hugo.json)"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     }
