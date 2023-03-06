@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
   "npm": {
-    "fileMatch": ["package(\.hugo)?\.json"]
+    "fileMatch": ["package(\\.hugo)?\\.json"]
   },
   "packageRules": [
     {
