@@ -24,7 +24,7 @@
     "url": "git+https://github.com/knokmki612/hugo-fill-and-stroke.git"
   },
   "overrides": {
-    "shell-quote": "1.7.3"
+    "shell-quote": "1.8.0"
   },
   "scripts": {
     "release": "shipjs prepare"
