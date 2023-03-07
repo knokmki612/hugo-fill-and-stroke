@@ -7,7 +7,7 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "shipjs": "0.24.4",
+    "shipjs": "0.25.1",
     "stylelint": "14.16.1",
     "stylelint-config-standard": "25.0.0",
     "stylelint-order": "5.0.0",
