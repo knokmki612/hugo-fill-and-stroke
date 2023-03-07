@@ -4,7 +4,7 @@
   "author": "knokmki612 <knokmki612@gmail.com>",
   "dependencies": {
     "autoprefixer": "10.4.13",
-    "css-has-pseudo": "3.0.4",
+    "css-has-pseudo": "5.0.2",
     "modern-normalize": "1.1.0",
     "postcss": "8.4.21",
     "postcss-cli": "9.1.0",
