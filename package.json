@@ -9,7 +9,7 @@
   "devDependencies": {
     "shipjs": "0.25.1",
     "stylelint": "14.16.1",
-    "stylelint-config-standard": "25.0.0",
+    "stylelint-config-standard": "30.0.1",
     "stylelint-order": "5.0.0",
     "stylelint-scss": "4.4.0"
   },
