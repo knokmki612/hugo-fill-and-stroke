@@ -1,4 +1,5 @@
 !.env.example
+*.log
 .env
 /resources/_gen
 node_modules

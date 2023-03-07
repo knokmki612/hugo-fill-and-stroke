@@ -7,7 +7,7 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "shipjs": "0.25.1",
+    "@lerna-lite/cli": "^1.16.0",
     "stylelint": "15.2.0",
     "stylelint-config-standard": "30.0.1",
     "stylelint-order": "6.0.3",
@@ -27,6 +27,6 @@
     "shell-quote": "1.8.0"
   },
   "scripts": {
-    "release": "shipjs prepare"
+    "versionup": "lerna version --no-git-tag-version"
   }
 }
