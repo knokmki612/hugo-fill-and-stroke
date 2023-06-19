@@ -5,7 +5,7 @@
   "dependencies": {
     "autoprefixer": "10.4.13",
     "css-has-pseudo": "5.0.2",
-    "modern-normalize": "1.1.0",
+    "modern-normalize": "2.0.0",
     "postcss": "8.4.21",
     "postcss-cli": "10.1.0",
     "postcss-csso": "6.0.1",
