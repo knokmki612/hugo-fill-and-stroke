@@ -6,7 +6,7 @@
     "autoprefixer": "10.4.13",
     "css-has-pseudo": "5.0.2",
     "modern-normalize": "1.1.0",
-    "postcss": "8.4.31",
+    "postcss": "8.4.49",
     "postcss-cli": "10.1.0",
     "postcss-csso": "6.0.1",
     "postcss-import": "15.1.0",
