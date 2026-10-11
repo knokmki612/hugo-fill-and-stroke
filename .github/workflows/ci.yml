@@ -11,18 +11,7 @@ permissions:
 
 jobs:
   build:
-    name: Hugo build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3
-        with:
-          hugo-version: "0.167.0"
-      - name: Build the example site
-        run: hugo --source exampleSite --minify --panicOnWarning
-
-  lint:
-    name: Lint
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -31,4 +20,22 @@ jobs:
           node-version-file: package.json
           cache: npm
       - run: npm ci
-      - run: npm run lint
+      - uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3
+        with:
+          hugo-version: "0.167.0"
+      - name: Build the example site
+        run: hugo --source exampleSite --minify --panicOnWarning
+      - name: Lint markup
+        run: npm run lint:markup
+
+  lint:
+    name: Lint CSS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:style

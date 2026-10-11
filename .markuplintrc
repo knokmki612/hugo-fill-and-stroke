@@ -1,0 +1,7 @@
+{
+  "extends": ["markuplint:recommended"],
+  "excludeFiles": ["./**/page/1/index.html"],
+  "rules": {
+    "performance/head-element-order": false
+  }
+}
