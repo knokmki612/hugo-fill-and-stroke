@@ -60,7 +60,7 @@ $ npm install
 
 ```toml
 baseUrl = "https://example.com/"
-languageCode = "en-US"
+locale = "en-US"
 title = "Example Site"
 copyright = "2021 example"
 theme = ["fill-and-stroke"]
