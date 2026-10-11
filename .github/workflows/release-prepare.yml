@@ -1,4 +1,4 @@
-name: Release
+name: Release prepare
 
 on:
   workflow_dispatch:
@@ -18,9 +18,10 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
-  release:
+  prepare:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -30,30 +31,31 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version-file: package.json
-      - name: Bump version and push tag
+      - name: Bump version
         shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ "${{ inputs.prerelease }}" = "true" ]; then
             # Continue the current alpha line, or start one from the next ${{ inputs.bump }}.
             if [[ "$(node -p "require('./package.json').version")" == *-* ]]; then
-              npm version prerelease --preid alpha
+              npm version prerelease --preid alpha --no-git-tag-version
             else
-              npm version "pre${{ inputs.bump }}" --preid alpha
+              npm version "pre${{ inputs.bump }}" --preid alpha --no-git-tag-version
             fi
           else
-            npm version "${{ inputs.bump }}"
+            npm version "${{ inputs.bump }}" --no-git-tag-version
           fi
-          git push --follow-tags
-      - name: Create GitHub release
+      - name: Open release pull request
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          version="v$(node -p "require('./package.json').version")"
-          if [ "${{ inputs.prerelease }}" = "true" ]; then
-            gh release create "$version" --generate-notes --prerelease
-          else
-            gh release create "$version" --generate-notes
-          fi
+          version="$(node -p "require('./package.json').version")"
+          branch="releases/v$version"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "chore: release v$version"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" \
+            --title "chore: release v$version" \
+            --body "Release v$version."
