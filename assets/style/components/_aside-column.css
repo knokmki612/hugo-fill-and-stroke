@@ -2,9 +2,9 @@
   display: inline-block;
 
   > :first-child {
-    background-color: var(--color-line-gray);
     display: inline-block;
     padding: 0.25rem;
+    background-color: var(--color-line-gray);
   }
 
   > :last-child {

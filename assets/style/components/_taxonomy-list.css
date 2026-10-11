@@ -1,8 +1,8 @@
 .taxonomy-list {
   columns: 12rem auto;
+  padding-left: 0;
   line-height: 2;
   list-style: none;
-  padding-left: 0;
 
   li {
     max-width: 12rem;

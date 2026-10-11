@@ -1,14 +1,14 @@
 .article-header {
-  border: solid 0.5rem var(--color-line-gray);
   padding: 0.5rem;
+  border: solid 0.5rem var(--color-line-gray);
 
   > * ~ * {
     margin-top: 0.5rem;
   }
 
   h2 {
-    border: none;
     margin: 0;
     padding: 0;
+    border: none;
   }
 }

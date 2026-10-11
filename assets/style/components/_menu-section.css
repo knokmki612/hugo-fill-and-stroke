@@ -1,9 +1,9 @@
 .menu-section {
   h2 {
-    font-size: 0.875rem;
-    line-height: 2;
     margin: 0;
     margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 2;
   }
 
   a > :first-child {
@@ -11,10 +11,10 @@
   }
 
   ul {
-    line-height: 2;
-    list-style: none;
     margin: 0.5rem 0;
     padding-left: 0;
+    line-height: 2;
+    list-style: none;
   }
 
   img {

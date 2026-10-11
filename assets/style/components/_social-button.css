@@ -1,13 +1,15 @@
 .social-button {
   .button {
-    color: #fff;
     display: inline-block;
+
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem;
+
     font-size: 0.75rem;
     font-weight: bold;
     line-height: 1;
-    margin-bottom: 0.25rem;
-    margin-right: 0.25rem;
-    padding: 0.25rem;
+    color: #fff;
     text-decoration: none;
 
     &.is-twitter {
