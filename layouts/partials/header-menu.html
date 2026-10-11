@@ -5,12 +5,20 @@
     {{ range $section -}}
       <li>
         {{ $current := $page.IsMenuCurrent .Menu . -}}
+        {{ $id := printf "menu-submenu-%s" (urlize (default (substr (sha256 .URL) 0 8) .Identifier)) -}}
+        {{ if .HasChildren -}}
+          <button
+            type="button"
+            aria-label="{{ i18n "ToggleSubmenu" }}"
+            aria-expanded="false"
+            aria-controls="{{ $id }}"
+          ></button>
+        {{ end -}}
         {{ if not $current }}<a href="{{ .URL }}">{{ else }}<span>{{ end }}{{ .Title }}{{ if not $current }}</a>{{ else }}</span>{{ end }}
         {{ if .HasChildren -}}
-          <details>
-            <summary aria-label="{{ i18n "ToggleSubmenu" }}"></summary>
+          <ul id="{{ $id }}">
             {{ partial "header-menu/children.html" (dict "page" $page "children" .Children) -}}
-          </details>
+          </ul>
         {{ end -}}
       </li>
     {{- end }}{{/* NOTE: Trim a line break between li tag to prevent white space injection */ -}}
