@@ -49,8 +49,8 @@ other = "次のページ"
 [PublishDateLabel]
 other = "公開日"
 
-[HappenDateLabel]
-other = "発生日"
+[EventDateLabel]
+other = "できごとの日"
 
 [ArticleDateFormat]
 other = "2006/01/02"
