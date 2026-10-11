@@ -7,11 +7,11 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "shipjs": "0.25.1",
-    "stylelint": "15.2.0",
-    "stylelint-config-standard": "30.0.1",
-    "stylelint-order": "6.0.3",
-    "stylelint-scss": "4.4.0"
+    "shipjs": "0.28.4",
+    "stylelint": "17.16.0",
+    "stylelint-config-standard": "40.0.0",
+    "stylelint-order": "8.1.1",
+    "stylelint-scss": "7.3.0"
   },
   "homepage": "https://github.com/knokmki612/hugo-fill-and-stroke#readme",
   "keywords": [
@@ -24,7 +24,7 @@
     "url": "git+https://github.com/knokmki612/hugo-fill-and-stroke.git"
   },
   "overrides": {
-    "shell-quote": "1.11.0"
+    "shell-quote": "1.12.0"
   },
   "scripts": {
     "release": "shipjs prepare"
