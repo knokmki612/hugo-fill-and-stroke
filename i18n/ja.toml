@@ -69,3 +69,15 @@ other = "ブックマーク"
 
 [HatenaBookmark]
 other = "はてなブックマーク"
+
+[MainMenu]
+other = "メインメニュー"
+
+[FooterMenu]
+other = "フッターメニュー"
+
+[ToggleSubmenu]
+other = "サブメニューの開閉"
+
+[ArticleMetadata]
+other = "記事のメタ情報"

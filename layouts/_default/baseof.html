@@ -30,7 +30,7 @@
         <p>{{ .Site.Params.Description }}</p>
       </div>
     </header>
-    <nav class="site-header-menu">
+    <nav class="site-header-menu" aria-label="{{ i18n "MainMenu" }}">
       {{ partial "header-menu.html" . -}}
     </nav>
     <main class="site-main">
@@ -48,7 +48,7 @@
           <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
       </form>
     </div>
-    <nav class="site-footer-menu">
+    <nav class="site-footer-menu" aria-label="{{ i18n "FooterMenu" }}">
       <div class="inner">
         {{ partialCached "footer-menu.html" . -}}
       </div>

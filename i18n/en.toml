@@ -69,3 +69,15 @@ other = "Bookmark"
 
 [HatenaBookmark]
 other = "Hatena Bookmark"
+
+[MainMenu]
+other = "Main menu"
+
+[FooterMenu]
+other = "Footer menu"
+
+[ToggleSubmenu]
+other = "Toggle submenu"
+
+[ArticleMetadata]
+other = "Article metadata"
