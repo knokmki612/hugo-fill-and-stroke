@@ -2,7 +2,5 @@
   "name": "hugo-fill-and-stroke",
   "version": "3.2.0",
   "author": "knokmki612 <knokmki612@gmail.com>",
-  "dependencies": {
-    "modern-normalize": "3.0.1"
-  }
+  "dependencies": {}
 }

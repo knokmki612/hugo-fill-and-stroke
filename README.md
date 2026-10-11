@@ -52,8 +52,6 @@ $ hugo new site hugo-site
 $ cd hugo-site
 $ git init
 $ git submodule add git@github.com:knokmki612/hugo-fill-and-stroke.git themes/fill-and-stroke
-$ hugo mod npm pack
-$ npm install
 ```
 
 ## Configuration

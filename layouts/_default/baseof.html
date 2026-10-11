@@ -14,7 +14,11 @@
     {{ if (fileExists "layouts/partials/favicons.html") -}}
       {{ partialCached "favicons.html" . -}}
     {{ end -}}
-    <link rel="stylesheet" href="{{ (resources.Get "style/style.css" | css.Build (dict "minify" true)).RelPermalink }}?d={{ now.Format "20060102150405" }}">
+    {{ $opts := dict "minify" true }}
+    {{ $normalize := resources.GetRemote "https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.css" | css.Build $opts }}
+    {{ $style := resources.Get "style/style.css" | css.Build $opts }}
+    {{ $css := slice $normalize $style | resources.Concat "style/style.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}?d={{ now.Format "20060102150405" }}">
     {{ partial "opengraph.html" . -}}
     {{ partial "twitter-cards.html" . -}}
     <script src="{{ (resources.Get "script/index.ts" | js.Build (dict "minify" true)).RelPermalink }}" defer></script>
