@@ -1,7 +1,7 @@
 ---
 title: "Blog Content 2"
 date: 2021-11-23T17:25:03+09:00
-happenDate: 2021-11-23
+eventDate: 2021-11-23
 tags:
   - Diary
 archives:

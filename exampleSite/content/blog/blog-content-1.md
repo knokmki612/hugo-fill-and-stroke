@@ -1,7 +1,7 @@
 ---
 title: Blog Content 1
 date: 2021-09-24T00:35:14+09:00
-happenDate: 2021-09-24
+eventDate: 2021-09-24
 tags:
   - Diary
 archives:
