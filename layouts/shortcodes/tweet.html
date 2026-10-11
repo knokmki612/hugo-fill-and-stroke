@@ -1,1 +1,10 @@
-{{ (getJSON "https://api.twitter.com/1/statuses/oembed.json?omit_script=true&id=" (index .Params 0)).html | safeHTML }}
+{{ $url := printf "https://api.twitter.com/1/statuses/oembed.json?omit_script=true&id=%v" (index .Params 0) }}
+{{ with try (resources.GetRemote $url) }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else with .Value }}
+    {{ (transform.Unmarshal .Content).html | safeHTML }}
+  {{ else }}
+    {{ errorf "Unable to get remote resource %q" $url }}
+  {{ end }}
+{{ end }}
