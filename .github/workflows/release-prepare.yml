@@ -56,6 +56,12 @@ jobs:
           git switch -c "$branch"
           git commit -am "chore: release v$version"
           git push -u origin "$branch"
+          # Compare against the previous stable (non pre-release) tag.
+          prev="$(git tag --list 'v*' --sort=-v:refname | grep -v -- '-' | head -n1)"
+          body="$(printf 'Release v%s.' "$version")"
+          if [ -n "$prev" ]; then
+            body="$(printf '%s\n\nCompare: %s/%s/compare/%s...%s' "$body" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$prev" "$branch")"
+          fi
           gh pr create --base main --head "$branch" \
             --title "chore: release v$version" \
-            --body "Release v$version."
+            --body "$body"
