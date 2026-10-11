@@ -1,7 +1,3 @@
-import cssHasPseudo from "css-has-pseudo/browser";
-
-cssHasPseudo(document);
-
 (() => {
   if (document.getElementsByClassName("twitter-tweet").length === 0) return;
   if (!window.twttr) {
