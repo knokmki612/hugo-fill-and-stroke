@@ -5,7 +5,7 @@
     box-sizing: content-box;
     max-height: 400px;
 
-    @media only screen and (max-height: 400px) {
+    @media only screen and (height <= 400px) {
       max-height: 200px;
     }
   }
