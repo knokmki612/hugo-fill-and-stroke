@@ -4,7 +4,6 @@
     "stylelint-config-clean-order/error"
   ],
   "rules": {
-    "import-notation": null,
     "no-descending-specificity": null
   }
 }
