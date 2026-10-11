@@ -6,14 +6,14 @@
   }
 
   h2 {
+    padding: 0.5rem;
     border: solid 0.5rem var(--color-line-gray);
     font-weight: normal;
-    padding: 0.5rem;
   }
 
   h3 {
-    border-bottom: solid 0.5rem var(--color-line-gray);
     max-width: max-content;
+    border-bottom: solid 0.5rem var(--color-line-gray);
   }
 
   hr {
@@ -29,23 +29,23 @@
   }
 
   blockquote {
-    border-left: solid 0.5rem var(--color-line-gray);
     padding: 0 3rem 0 2.5rem;
+    border-left: solid 0.5rem var(--color-line-gray);
   }
 
   pre {
-    border: solid 1px var(--color-line-gray);
     padding: 0.5rem;
+    border: solid 1px var(--color-line-gray);
   }
 
   p > code {
-    background-color: var(--color-line-gray);
     font-size: 0.875rem;
+    background-color: var(--color-line-gray);
   }
 
   table {
-    border-collapse: collapse;
     display: block;
+    border-collapse: collapse;
     white-space: nowrap;
   }
 
@@ -55,15 +55,15 @@
 
   th,
   td {
-    border: solid 1px var(--color-line-gray);
     padding: 0.5rem;
+    border: solid 1px var(--color-line-gray);
   }
 
   blockquote,
   pre,
   table,
   .article-tab {
-    max-width: calc(100vw - 2.5rem);
     overflow: auto;
+    max-width: calc(100vw - 2.5rem);
   }
 }

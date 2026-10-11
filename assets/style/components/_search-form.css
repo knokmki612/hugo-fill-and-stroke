@@ -1,9 +1,9 @@
 .search-form {
   label {
+    padding: 0 0.5rem;
     font-size: 0.875rem;
     font-weight: bold;
     line-height: 2;
-    padding: 0 0.5rem;
 
     & > :first-child {
       margin-right: 0.25rem;
@@ -11,14 +11,17 @@
   }
 
   input {
-    background-color: var(--color-base);
-    border: none;
-    color: var(--color-text);
     display: block;
     flex: 1;
-    line-height: 2;
-    padding: 0.25rem 0.5rem;
+
     width: 100%;
+    padding: 0.25rem 0.5rem;
+    border: none;
+
+    line-height: 2;
+    color: var(--color-text);
+
+    background-color: var(--color-base);
 
     &::placeholder {
       color: var(--color-text);

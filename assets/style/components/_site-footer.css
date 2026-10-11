@@ -2,14 +2,14 @@
   padding: 1.25rem 0;
 
   & > .inner {
-    margin: 0 auto;
     max-width: var(--size-container);
+    margin: 0 auto;
     padding: 0 0.625rem;
   }
 
   p {
-    line-height: 1;
     margin: 0;
+    line-height: 1;
     text-align: center;
   }
 }

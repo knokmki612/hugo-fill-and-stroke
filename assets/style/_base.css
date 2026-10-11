@@ -1,9 +1,10 @@
 :root {
-  background-color: var(--color-base);
-  color: var(--color-text);
   font-family: sans-serif;
   font-size: 110%;
+  color: var(--color-text);
   letter-spacing: 0.0125rem;
+
+  background-color: var(--color-base);
 }
 
 :focus-visible {
@@ -28,8 +29,8 @@ h4 {
 }
 
 ul {
-  list-style-type: disc;
   margin: 1rem 0;
+  list-style-type: disc;
 
   ul {
     margin: 0;

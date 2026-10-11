@@ -1,26 +1,29 @@
 .pagination-list {
   display: flex;
   justify-content: space-between;
-  line-height: 2;
-  list-style: none;
+
   margin: 0;
   padding: 0;
 
+  line-height: 2;
+  list-style: none;
+
   li {
-    border-bottom: solid 1px var(--color-line-gray);
-    border-top: solid 1px var(--color-line-gray);
     min-width: 2rem;
     padding: 0.5rem;
+    border-top: solid 1px var(--color-line-gray);
+    border-bottom: solid 1px var(--color-line-gray);
+
     text-align: center;
 
     &:first-child {
-      border-left: solid 1px var(--color-line-gray);
       flex: 1;
+      border-left: solid 1px var(--color-line-gray);
     }
 
     &:last-child {
-      border-right: solid 1px var(--color-line-gray);
       flex: 1;
+      border-right: solid 1px var(--color-line-gray);
     }
   }
 
