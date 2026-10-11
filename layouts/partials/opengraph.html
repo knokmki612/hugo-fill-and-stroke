@@ -72,22 +72,22 @@
   {{ end -}}{{/* range $name := . */}}
 {{ end -}}{{/* with .Params.series */}}
 {{ if .IsPage -}}
-  {{ range .Site.Authors -}}
+  {{ range .Site.Params.Authors -}}
     {{ with .Social.facebook -}}
       <meta property="article:author" content="https://www.facebook.com/{{ . }}" />
     {{ end -}}{{/* with .Social.facebook */}}
-    {{ with .Site.Social.facebook -}}
+    {{ with .Site.Params.Social.facebook -}}
       <meta property="article:publisher" content="https://www.facebook.com/{{ . }}" />
-    {{ end -}}{{/* .Site.Social.facebook */}}
+    {{ end -}}{{/* .Site.Params.Social.facebook */}}
     <meta property="article:section" content="{{ .Section }}" />
     {{ with .Params.tags -}}
       {{ range first 6 . -}}
         <meta property="article:tag" content="{{ . }}" />
       {{ end -}}{{/* range first 6. */}}
     {{ end -}}{{/* with .Params.tags */}}
-  {{ end -}}{{/* range .Site.Authors */}}
+  {{ end -}}{{/* range .Site.Params.Authors */}}
 {{ end -}}{{/* if .IsPage */}}
 <!-- Facebook Page Admin ID for Domain Insights -->
-{{ with .Site.Social.facebook_admin -}}
+{{ with .Site.Params.Social.facebook_admin -}}
   <meta property="fb:admins" content="{{ . }}" />
-{{ end -}}{{/* with .Site.Social.facebook_admin */}}
+{{ end -}}{{/* with .Site.Params.Social.facebook_admin */}}
