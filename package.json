@@ -13,6 +13,9 @@
     "stylelint-order": "8.1.1",
     "stylelint-scss": "7.3.0"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "homepage": "https://github.com/knokmki612/hugo-fill-and-stroke#readme",
   "keywords": [
     "hugo"
