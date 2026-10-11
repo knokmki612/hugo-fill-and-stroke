@@ -19,6 +19,9 @@
     {{ $style := resources.Get "style/style.css" | css.Build $opts }}
     {{ $css := slice $normalize $style | resources.Concat "style/style.css" }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}?d={{ now.Format "20060102150405" }}">
+    <noscript>
+      <style>.site-header-menu li > ul { display: flex; }</style>
+    </noscript>
     {{ partial "opengraph.html" . -}}
     {{ partial "twitter-cards.html" . -}}
     <script src="{{ (resources.Get "script/index.ts" | js.Build (dict "minify" true)).RelPermalink }}" defer></script>
@@ -30,7 +33,7 @@
         <p>{{ .Site.Params.Description }}</p>
       </div>
     </header>
-    <nav class="site-header-menu">
+    <nav class="site-header-menu" aria-label="{{ i18n "MainMenu" }}">
       {{ partial "header-menu.html" . -}}
     </nav>
     <main class="site-main">
@@ -48,7 +51,7 @@
           <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
       </form>
     </div>
-    <nav class="site-footer-menu">
+    <nav class="site-footer-menu" aria-label="{{ i18n "FooterMenu" }}">
       <div class="inner">
         {{ partialCached "footer-menu.html" . -}}
       </div>

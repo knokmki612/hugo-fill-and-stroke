@@ -19,17 +19,55 @@
   }
 
   li {
-    display: inline-flex;
+    display: inline-block;
     flex-shrink: 0;
+  }
 
-    > span,
-    > a,
-    > details > summary {
-      margin: 0.5rem;
+  li > a,
+  li > span {
+    display: inline-block;
+    margin: 0.5rem;
+    vertical-align: middle;
+  }
+
+  li > button {
+    cursor: pointer;
+
+    display: inline-block;
+
+    padding: 0.5rem;
+    border: 0;
+
+    color: inherit;
+    vertical-align: middle;
+
+    background: none;
+
+    &::before {
+      content: "";
+
+      transform: rotate(-45deg);
+
+      display: block;
+
+      width: 0.4em;
+      height: 0.4em;
+      border-right: 2px solid;
+      border-bottom: 2px solid;
+
+      transition: transform 0.2s;
+    }
+
+    &[aria-expanded="true"]::before {
+      transform: rotate(45deg);
     }
   }
 
-  a {
-    display: inline-flex;
+  li > ul {
+    display: none;
+  }
+
+  li > button[aria-expanded="true"] ~ ul {
+    display: flex;
   }
 }
