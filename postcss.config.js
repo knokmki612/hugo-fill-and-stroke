@@ -9,6 +9,6 @@ module.exports = () => ({
     'postcss-nested': {},
     'css-has-pseudo': {},
     autoprefixer: {},
-    'postcss-csso': {},
+    cssnano: {},
   }
 })
