@@ -3,6 +3,8 @@
   "extends": ["config:best-practices", "config:semverAllMonthly"],
   "labels": ["dependencies"],
   "npm": {
-    "fileMatch": ["package\\.hugo\\.json"]
+    "managerFilePatterns": [
+      "/package\\.hugo\\.json/"
+    ]
   }
 }
