@@ -1,4 +1,6 @@
-!.env.example
 .env
+.hugo_build.lock
 /resources/_gen
+/exampleSite/public
+/exampleSite/resources/_gen
 node_modules

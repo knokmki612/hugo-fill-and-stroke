@@ -1,0 +1,67 @@
+name: Release prepare
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Version bump
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
+      prerelease:
+        description: Create an alpha pre-release
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version-file: package.json
+      - name: Bump version
+        shell: bash
+        run: |
+          if [ "${{ inputs.prerelease }}" = "true" ]; then
+            # Continue the current alpha line, or start one from the next ${{ inputs.bump }}.
+            if [[ "$(node -p "require('./package.json').version")" == *-* ]]; then
+              npm version prerelease --preid alpha --no-git-tag-version
+            else
+              npm version "pre${{ inputs.bump }}" --preid alpha --no-git-tag-version
+            fi
+          else
+            npm version "${{ inputs.bump }}" --no-git-tag-version
+          fi
+      - name: Open release pull request
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          branch="releases/v$version"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "chore: release v$version"
+          git push -u origin "$branch"
+          # Compare against the previous stable (non pre-release) tag.
+          prev="$(git tag --list 'v*' --sort=-v:refname | grep -v -- '-' | head -n1)"
+          body="$(printf 'Release v%s.' "$version")"
+          if [ -n "$prev" ]; then
+            body="$(printf '%s\n\nCompare: %s/%s/compare/%s...%s' "$body" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$prev" "$branch")"
+          fi
+          gh pr create --base main --head "$branch" \
+            --title "chore: release v$version" \
+            --body "$body"
