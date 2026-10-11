@@ -35,7 +35,7 @@
 {{ with .Site.Params.Social.twitter }}
   <meta name="twitter:site" content="@{{ . -}}" />
 {{ end -}}
-{{ range .Site.Authors -}}
+{{ range .Site.Params.Authors -}}
   {{ with .twitter -}}
     <meta name="twitter:creator" content="@{{ . }}" />
   {{ end -}}
