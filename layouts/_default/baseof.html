@@ -14,7 +14,7 @@
     {{ if (fileExists "layouts/partials/favicons.html") -}}
       {{ partialCached "favicons.html" . -}}
     {{ end -}}
-    <link rel="stylesheet" href="{{ (resources.Get "style/style.css" | css.PostCSS).RelPermalink }}?d={{ now.Format "20060102150405" }}">
+    <link rel="stylesheet" href="{{ (resources.Get "style/style.css" | css.Build (dict "minify" true)).RelPermalink }}?d={{ now.Format "20060102150405" }}">
     {{ partial "opengraph.html" . -}}
     {{ partial "twitter-cards.html" . -}}
     <script src="{{ (resources.Get "script/index.ts" | js.Build (dict "minify" true)).RelPermalink }}" defer></script>
