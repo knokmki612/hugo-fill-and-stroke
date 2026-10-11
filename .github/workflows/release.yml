@@ -11,6 +11,10 @@ on:
           - minor
           - major
         default: patch
+      prerelease:
+        description: Create an alpha pre-release
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -27,12 +31,29 @@ jobs:
         with:
           node-version-file: package.json
       - name: Bump version and push tag
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          npm version "${{ inputs.bump }}"
+          if [ "${{ inputs.prerelease }}" = "true" ]; then
+            # Continue the current alpha line, or start one from the next ${{ inputs.bump }}.
+            if [[ "$(node -p "require('./package.json').version")" == *-* ]]; then
+              npm version prerelease --preid alpha
+            else
+              npm version "pre${{ inputs.bump }}" --preid alpha
+            fi
+          else
+            npm version "${{ inputs.bump }}"
+          fi
           git push --follow-tags
       - name: Create GitHub release
+        shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "v$(node -p 'require("./package.json").version')" --generate-notes
+        run: |
+          version="v$(node -p "require('./package.json').version")"
+          if [ "${{ inputs.prerelease }}" = "true" ]; then
+            gh release create "$version" --generate-notes --prerelease
+          else
+            gh release create "$version" --generate-notes
+          fi
