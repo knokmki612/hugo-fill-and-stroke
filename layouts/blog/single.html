@@ -2,13 +2,16 @@
   {{ .Title }} - {{ .Site.Title -}}
 {{ end -}}
 {{ define "main" -}}
-  <article class="site-article">
+  <article class="site-article h-entry">
+    <a class="u-url" href="{{ .Permalink }}" hidden></a>
     <header class="article-header">
-      <h2>{{ .Title }}</h2>
+      <h2 class="p-name">{{ .Title }}</h2>
       <aside class="article-aside" aria-label="{{ i18n "ArticleMetadata" }}">
         {{ partial "aside.html" . -}}
       </aside>
     </header>
-    {{ .Content -}}
+    <div class="e-content">
+      {{ .Content -}}
+    </div>
   </article>
 {{ end -}}
