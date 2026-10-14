@@ -22,7 +22,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 - Configurable Partial Templates
   - `favicons.html`
   - `meta.html`
-  - `side-menu/bannars.html` (Optional)
+  - `side-menu/banners.html` (Optional)
 - Preset Content Types
   - blog
   - default
