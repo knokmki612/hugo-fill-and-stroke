@@ -2,9 +2,9 @@
 {{ if gt $paginator.TotalPages 1 -}}
   <ul class="pagination-list">
   {{ if $paginator.HasPrev -}}
-    <li><a rel="prev" href="{{ $paginator.Prev.URL }}" aria-label="{{ i18n "PrevAriaLabel" }}"><span aria-hidden="true">{{ i18n "Prev" }}</span></a></li>
+    <li><a rel="prev" href="{{ $paginator.Prev.URL }}">{{ i18n "Prev" }}</a></li>
   {{ else -}}
-    <li><span aria-hidden="true">{{ i18n "Begin" }}</span></li>
+    <li><span>{{ i18n "Begin" }}</span></li>
   {{ end -}}
   {{ $.Scratch.Set "__paginator.ellipsed" false -}}
   {{ range $paginator.Pagers -}}
@@ -25,9 +25,9 @@
     {{ end -}}
   {{ end -}}
   {{ if $paginator.HasNext -}}
-    <li><a rel="next" href="{{ $paginator.Next.URL }}" aria-label="{{ i18n "NextAriaLabel" }}"><span aria-hidden="true">{{ i18n "Next" }}</span></a></li>
+    <li><a rel="next" href="{{ $paginator.Next.URL }}">{{ i18n "Next" }}</a></li>
   {{ else -}}
-    <li><span aria-hidden="true">{{ i18n "End" }}</span></li>
+    <li><span>{{ i18n "End" }}</span></li>
   {{ end -}}
   </ul>
 {{ end -}}

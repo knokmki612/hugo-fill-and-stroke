@@ -34,17 +34,11 @@ other = "先頭"
 [Prev]
 other = "前"
 
-[PrevAriaLabel]
-other = "前のページ"
-
 [Next]
 other = "次"
 
 [End]
 other = "末尾"
-
-[NextAriaLabel]
-other = "次のページ"
 
 [PublishDateLabel]
 other = "公開日"
