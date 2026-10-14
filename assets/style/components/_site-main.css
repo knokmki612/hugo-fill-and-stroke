@@ -7,6 +7,12 @@
     padding: 0 0.625rem;
   }
 
+  .feed-title {
+    max-width: var(--size-container);
+    margin: 1.5rem auto 0;
+    padding: 0 0.625rem;
+  }
+
   .site-article {
     max-width: var(--size-container);
     margin: 3rem auto;

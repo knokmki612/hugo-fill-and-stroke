@@ -1,15 +1,18 @@
 {{ define "main" -}}
   {{ $blog := where .Site.RegularPages "Section" "blog" -}}
   {{ $paginator := .Paginate $blog -}}
-  {{ partial "pagination-list.html" . -}}
   <div class="h-feed">
-    <a class="p-name u-url" href="{{ .Permalink }}" hidden>{{ .Title }}</a>
+    {{ if not .IsHome -}}
+      <h2 class="feed-title p-name">{{ .Title }}</h2>
+    {{ end -}}
+    <a class="u-url" href="{{ .Permalink }}" hidden></a>
+    {{ partial "pagination-list.html" . -}}
     {{ range $key, $value := $paginator.Pages -}}
       {{ partial "article-list.html" . -}}
       {{ if ne (add $key 1) $paginator.NumberOfElements -}}
         <hr>
       {{ end -}}
     {{ end -}}
+    {{ partial "pagination-list.html" . -}}
   </div>
-  {{ partial "pagination-list.html" . -}}
 {{ end -}}
