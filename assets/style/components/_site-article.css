@@ -1,7 +1,9 @@
 .site-article {
   line-height: 1.75;
 
-  > * ~ * {
+  > * ~ *,
+  > .e-content > * ~ *,
+  > .p-summary > * ~ * {
     margin: 2rem 0;
   }
 

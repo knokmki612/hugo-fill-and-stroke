@@ -44,6 +44,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 - Cloudinary
 - Dark Mode
 - RSS feed
+- [microformats2](https://microformats.org/wiki/microformats2) (h-entry, h-feed)
 
 
 ## Installation

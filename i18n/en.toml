@@ -34,17 +34,11 @@ other = "Begin"
 [Prev]
 other = "Prev"
 
-[PrevAriaLabel]
-other = "Previous page"
-
 [Next]
 other = "Next"
 
 [End]
 other = "End"
-
-[NextAriaLabel]
-other = "Next page"
 
 [PublishDateLabel]
 other = "Publish date"
