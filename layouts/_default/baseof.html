@@ -31,10 +31,13 @@
     <script src="{{ (resources.Get "script/index.ts" | js.Build (dict "minify" true)).RelPermalink }}" defer></script>
   </head>
   <body class="site-body">
-    <header class="site-header">
+    <header class="site-header h-card">
       <div class="inner">
-        <h1><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
-        <p>{{ .Site.Params.Description }}</p>
+        <h1 class="p-name"><a class="u-url" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
+        <p class="p-note">{{ .Site.Params.Description }}</p>
+        {{ if (fileExists "layouts/partials/h-card.html") -}}
+          {{ partial "h-card.html" . -}}
+        {{ end -}}
       </div>
     </header>
     <nav class="site-header-menu" aria-label="{{ i18n "MainMenu" }}">
