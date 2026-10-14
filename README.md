@@ -43,6 +43,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 - Menu Templates with nesting
 - Cloudinary
 - Dark Mode
+- RSS feed
 
 
 ## Installation
