@@ -21,6 +21,7 @@ https://knokmki612.github.io/hugo-fill-and-stroke/
 
 - Configurable Partial Templates
   - `favicons.html`
+  - `h-card.html`
   - `header-menu.html`
   - `meta.html`
   - `footer-menu/banners.html` (Optional)
