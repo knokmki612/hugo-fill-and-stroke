@@ -17,6 +17,7 @@
     {{ with .OutputFormats.Get "rss" -}}
       {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+    {{ partial "meta.html" . -}}
     {{ $opts := dict "minify" true }}
     {{ $normalize := resources.GetRemote "https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.css" | css.Build $opts }}
     {{ $style := resources.Get "style/style.css" | css.Build $opts }}
