@@ -7,14 +7,14 @@
     "url": "https://github.com/knokmki612/hugo-fill-and-stroke/issues"
   },
   "devDependencies": {
-    "markuplint": "5.1.1",
+    "markuplint": "5.3.0",
     "stylelint": "17.16.0",
     "stylelint-config-clean-order": "10.0.0",
     "stylelint-config-standard": "40.0.0",
-    "stylelint-order": "8.1.1"
+    "stylelint-order": "8.1.2"
   },
   "engines": {
-    "node": "24.x"
+    "node": "26.x"
   },
   "homepage": "https://github.com/knokmki612/hugo-fill-and-stroke#readme",
   "keywords": [
